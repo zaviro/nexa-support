@@ -1,7 +1,9 @@
 "use client";
 
 import { type ChangeEvent, type FormEvent, useState } from "react";
+import { catalog } from "~/i18n/catalog";
 import { useLocale } from "~/i18n/locale-provider";
+import { LocalizedText } from "~/i18n/localized-text";
 
 type LoginValues = {
   email: string;
@@ -14,6 +16,8 @@ type LoginErrors = {
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const enLogin = catalog.en.login;
+const zhCNLogin = catalog["zh-CN"].login;
 
 function validateLogin(values: LoginValues): LoginErrors {
   const errors: LoginErrors = {};
@@ -84,7 +88,7 @@ export function LoginForm() {
     <form className="login-form" noValidate onSubmit={onSubmit}>
       <div className="login-form__field">
         <label className="login-form__label" htmlFor="login-email">
-          {copy.login.emailLabel}
+          <LocalizedText en={enLogin.emailLabel} zhCN={zhCNLogin.emailLabel} />
         </label>
         <input
           aria-describedby={errors.email ? "login-email-error" : undefined}
@@ -112,7 +116,10 @@ export function LoginForm() {
 
       <div className="login-form__field">
         <label className="login-form__label" htmlFor="login-password">
-          {copy.login.passwordLabel}
+          <LocalizedText
+            en={enLogin.passwordLabel}
+            zhCN={zhCNLogin.passwordLabel}
+          />
         </label>
         <input
           aria-describedby={
@@ -142,11 +149,13 @@ export function LoginForm() {
 
       <label className="login-form__remember">
         <input name="remember" type="checkbox" />
-        <span>{copy.login.rememberMe}</span>
+        <span>
+          <LocalizedText en={enLogin.rememberMe} zhCN={zhCNLogin.rememberMe} />
+        </span>
       </label>
 
       <button className="login-form__submit" type="submit">
-        {copy.login.submit}
+        <LocalizedText en={enLogin.submit} zhCN={zhCNLogin.submit} />
       </button>
 
       {submitted ? (

@@ -32,6 +32,32 @@ function contrastRatio(first: string, second: string) {
   );
 }
 
+function contrastRatioFromRgb(
+  first: readonly [number, number, number],
+  second: readonly [number, number, number],
+) {
+  const linearize = (value: number) =>
+    value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+  const luminance = ([red, green, blue]: readonly [number, number, number]) => {
+    const normalizedRed = linearize(red / 255);
+    const normalizedGreen = linearize(green / 255);
+    const normalizedBlue = linearize(blue / 255);
+
+    return (
+      0.2126 * normalizedRed +
+      0.7152 * normalizedGreen +
+      0.0722 * normalizedBlue
+    );
+  };
+  const firstLuminance = luminance(first);
+  const secondLuminance = luminance(second);
+
+  return (
+    (Math.max(firstLuminance, secondLuminance) + 0.05) /
+    (Math.min(firstLuminance, secondLuminance) + 0.05)
+  );
+}
+
 async function expectEveryLinkToNavigate(
   page: Page,
   name: string,
@@ -198,7 +224,7 @@ test("validates the local login placeholder without authentication", async ({
   await page
     .getByRole("textbox", { name: "Email address", exact: true })
     .fill("nexa@invalid");
-  await page.getByLabel("Password", { exact: true }).fill("local-only");
+  await page.getByLabel(/^Password/).fill("local-only");
   await page
     .getByRole("button", { name: "Continue to demo", exact: true })
     .click();
@@ -544,7 +570,7 @@ test("persists Simplified Chinese across routes and reloads", async ({
   await expect(
     page.getByRole("textbox", { name: "邮箱地址", exact: true }),
   ).toBeVisible();
-  await expect(page.getByLabel("密码", { exact: true })).toBeVisible();
+  await expect(page.getByLabel(/密码/)).toBeVisible();
   await expect(
     page.getByRole("checkbox", { name: "记住我", exact: true }),
   ).toBeVisible();
@@ -683,6 +709,56 @@ test("exposes stored Chinese in the first frame and remains hydration-safe", asy
   expect(pageErrors).toEqual([]);
 });
 
+test("exposes only stored Chinese login copy before hydration", async ({
+  page,
+}) => {
+  let releaseHydration: () => void = () => undefined;
+  const hydrationGate = new Promise<void>((resolve) => {
+    releaseHydration = resolve;
+  });
+
+  await page.route(/\/_next\/static\/chunks\/.*\.js/, async (route) => {
+    await hydrationGate;
+    await route.continue();
+  });
+  await page.addInitScript(() =>
+    localStorage.setItem("nexa-language:v1", "zh-CN"),
+  );
+
+  await page.goto("/login", { waitUntil: "commit" });
+  await page.locator("body").waitFor({ state: "attached" });
+
+  await expect(
+    page.getByRole("textbox", { exact: true, name: "邮箱地址" }),
+  ).toBeVisible();
+  const passwordLabel = page.getByText("密码", { exact: true });
+  await expect(passwordLabel).toBeVisible();
+  await expect(page.locator("#login-password")).toBeVisible();
+  expect(
+    await passwordLabel.evaluate(
+      (element) => element.closest("label")?.htmlFor,
+    ),
+  ).toBe("login-password");
+  await expect(
+    page.getByRole("checkbox", { exact: true, name: "记住我" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { exact: true, name: "继续体验演示" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { exact: true, name: "English" }),
+  ).toHaveCount(1);
+  await expect(
+    page.getByRole("textbox", { exact: true, name: "Email address" }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("button", { exact: true, name: "简体中文" }),
+  ).toHaveCount(0);
+
+  releaseHydration();
+  await page.waitForLoadState("networkidle");
+});
+
 test("falls back to English without runtime errors for an invalid saved locale", async ({
   page,
 }) => {
@@ -726,6 +802,70 @@ test("keeps the signal color at normal-text AA contrast", async ({ page }) => {
   expect(contrastRatio(colors.signal, colors.surface)).toBeGreaterThanOrEqual(
     4.5,
   );
+});
+
+test("keeps login field states and error text at accessible contrast", async ({
+  page,
+}) => {
+  await page.goto("/login");
+  const inputBorder = await page
+    .locator("#login-email")
+    .evaluate((element) => getComputedStyle(element).borderTopColor);
+  await page
+    .getByRole("button", { exact: true, name: "Continue to demo" })
+    .click();
+  const colors = await page.evaluate((defaultBorder) => {
+    const toRgb = (color: string): [number, number, number] => {
+      const canvas = document.createElement("canvas");
+      canvas.width = 1;
+      canvas.height = 1;
+      const context = canvas.getContext("2d");
+
+      if (context === null) {
+        throw new Error(
+          "Canvas context is required for contrast verification.",
+        );
+      }
+
+      context.fillStyle = color;
+      context.fillRect(0, 0, 1, 1);
+      const [red = 0, green = 0, blue = 0] = context.getImageData(
+        0,
+        0,
+        1,
+        1,
+      ).data;
+
+      return [red, green, blue];
+    };
+    const email = document.querySelector<HTMLInputElement>("#login-email");
+    const error = document.querySelector<HTMLElement>("#login-email-error");
+
+    if (email === null || error === null) {
+      throw new Error("The invalid login field and error message must render.");
+    }
+
+    return {
+      errorText: toRgb(getComputedStyle(error).color),
+      invalidBorder: toRgb(getComputedStyle(email).borderTopColor),
+      inputBorder: toRgb(defaultBorder),
+      surface: toRgb(
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--surface",
+        ),
+      ),
+    };
+  }, inputBorder);
+
+  expect(
+    contrastRatioFromRgb(colors.inputBorder, colors.surface),
+  ).toBeGreaterThanOrEqual(3);
+  expect(
+    contrastRatioFromRgb(colors.invalidBorder, colors.surface),
+  ).toBeGreaterThanOrEqual(3);
+  expect(
+    contrastRatioFromRgb(colors.errorText, colors.surface),
+  ).toBeGreaterThanOrEqual(4.5);
 });
 
 test("has no automated WCAG violations in either locale", async ({ page }) => {
@@ -1312,7 +1452,7 @@ for (const width of [375, 768, 1440]) {
           name: "Email address",
           exact: true,
         });
-        const password = page.getByLabel("Password", { exact: true });
+        const password = page.getByLabel(/^Password/);
         const remember = page.getByRole("checkbox", {
           name: "Remember me",
           exact: true,

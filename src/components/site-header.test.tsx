@@ -4,6 +4,7 @@ import { renderToString } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { LocaleProvider } from "~/i18n/locale-provider";
 import { LocaleScript } from "~/i18n/locale-script";
+import { LANGUAGE_STORAGE_KEY } from "~/i18n/locale-storage";
 import { SiteHeader } from "./site-header";
 
 describe("SiteHeader", () => {
@@ -55,6 +56,24 @@ describe("SiteHeader", () => {
     await user.click(screen.getByRole("button", { name: "简体中文" }));
     expect(screen.getAllByRole("button")).toHaveLength(1);
     expect(screen.getByRole("button", { name: "English" })).toBeVisible();
+  });
+
+  it("uses the pre-hydration document locale for the visible destination", async () => {
+    const user = userEvent.setup();
+    document.documentElement.lang = "zh-CN";
+    document.documentElement.dataset.locale = "zh-CN";
+    render(
+      <>
+        <LocaleScript />
+        <LocaleProvider>
+          <SiteHeader />
+        </LocaleProvider>
+      </>,
+    );
+
+    await user.click(screen.getByRole("button", { name: "English" }));
+
+    expect(window.localStorage.getItem(LANGUAGE_STORAGE_KEY)).toBe("en");
   });
 
   it("uses exact same-page feature and pricing anchors", () => {

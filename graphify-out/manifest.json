@@ -920,8 +920,8 @@
     "semantic_hash": ""
   },
   "tests/e2e/marketing-journey.spec.ts": {
-    "mtime": 1785077618.7230275,
-    "ast_hash": "add934b7cb75e044c1ecc17ecd3f04a9",
+    "mtime": 1785079147.98048,
+    "ast_hash": "a00666906249858c8225295989399e18",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-26-bilingual-marketing-journey.md": {
@@ -945,8 +945,8 @@
     "semantic_hash": ""
   },
   "src/components/language-switcher.tsx": {
-    "mtime": 1785074777.6150851,
-    "ast_hash": "07fe77927d99dbf02c443346f775242a",
+    "mtime": 1785078622.007136,
+    "ast_hash": "9ea03937ec0d2523cee56eed9579bcd3",
     "semantic_hash": ""
   },
   "src/components/site-header.tsx": {
@@ -965,8 +965,8 @@
     "semantic_hash": ""
   },
   "src/components/site-header.test.tsx": {
-    "mtime": 1785074777.6150851,
-    "ast_hash": "622fc7f70f01e10b2729b96160602cc7",
+    "mtime": 1785078609.4618902,
+    "ast_hash": "96681f2acf03714ead86129217d49ef2",
     "semantic_hash": ""
   },
   "src/i18n/locale-provider.test.tsx": {
@@ -1070,13 +1070,13 @@
     "semantic_hash": ""
   },
   "src/components/login-form.test.tsx": {
-    "mtime": 1785077618.691027,
-    "ast_hash": "a8a0fa067394bebafebcbd58556a8c02",
+    "mtime": 1785079116.3001227,
+    "ast_hash": "2c902da351f0a277220ef1c6a4674f9c",
     "semantic_hash": ""
   },
   "src/components/login-form.tsx": {
-    "mtime": 1785077618.6920269,
-    "ast_hash": "2a480e593dfcdad52d29696cd3ca94f8",
+    "mtime": 1785079116.3021228,
+    "ast_hash": "000d9bb4898086289c0e3874b740a941",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-26-login-placeholder.md": {

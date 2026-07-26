@@ -2172,8 +2172,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_layout",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "layout.tsx"
     },
     {
@@ -2183,8 +2183,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_app_layout_metadata",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "metadata"
     },
     {
@@ -2194,8 +2194,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_app_layout_geist",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "geist"
     },
     {
@@ -2205,8 +2205,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_app_layout_rootlayout",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "rootlayout()"
     },
     {
@@ -2576,7 +2576,7 @@
       "label": "LoginValues",
       "file_type": "code",
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_login_form_loginvalues",
       "community": 184,
@@ -2587,7 +2587,7 @@
       "label": "LoginErrors",
       "file_type": "code",
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_login_form_loginerrors",
       "community": 184,
@@ -2598,7 +2598,7 @@
       "label": "validateLogin()",
       "file_type": "code",
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L18",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "src_components_login_form_validatelogin",
       "community": 184,
@@ -2609,7 +2609,7 @@
       "label": "LoginForm()",
       "file_type": "code",
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L35",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "src_components_login_form_loginform",
       "community": 184,
@@ -2656,8 +2656,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_site_header_test",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "site-header.test.tsx"
     },
     {
@@ -2887,8 +2887,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_i18n_catalog",
-      "community": 175,
-      "community_name": "marketing-home.tsx",
+      "community": 189,
+      "community_name": "catalog.ts",
       "norm_label": "catalog.ts"
     },
     {
@@ -2898,8 +2898,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_i18n_catalog_supported_locales",
-      "community": 175,
-      "community_name": "marketing-home.tsx",
+      "community": 189,
+      "community_name": "catalog.ts",
       "norm_label": "supported_locales"
     },
     {
@@ -2920,8 +2920,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_i18n_catalog_featurestorycopy",
-      "community": 175,
-      "community_name": "marketing-home.tsx",
+      "community": 189,
+      "community_name": "catalog.ts",
       "norm_label": "featurestorycopy"
     },
     {
@@ -2931,8 +2931,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_i18n_catalog_workflowstepcopy",
-      "community": 175,
-      "community_name": "marketing-home.tsx",
+      "community": 189,
+      "community_name": "catalog.ts",
       "norm_label": "workflowstepcopy"
     },
     {
@@ -2942,8 +2942,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_i18n_catalog_sitecopy",
-      "community": 175,
-      "community_name": "marketing-home.tsx",
+      "community": 189,
+      "community_name": "catalog.ts",
       "norm_label": "sitecopy"
     },
     {
@@ -2964,8 +2964,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_test",
-      "community": 185,
-      "community_name": "useLocale",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "locale-provider.test.tsx"
     },
     {
@@ -2975,8 +2975,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_test_localeprobe",
-      "community": 185,
-      "community_name": "useLocale",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "localeprobe()"
     },
     {
@@ -2986,8 +2986,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_test_renderprobe",
-      "community": 185,
-      "community_name": "useLocale",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "renderprobe()"
     },
     {
@@ -2997,8 +2997,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_test_dispatchstorage",
-      "community": 185,
-      "community_name": "useLocale",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "dispatchstorage()"
     },
     {
@@ -3052,8 +3052,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_getserversnapshot",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
       "norm_label": "getserversnapshot()"
     },
     {
@@ -3085,8 +3085,8 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_localeprovider",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
       "norm_label": "localeprovider()"
     },
     {
@@ -3096,8 +3096,8 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_uselocale",
-      "community": 185,
-      "community_name": "useLocale",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "uselocale()"
     },
     {
@@ -3107,8 +3107,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_i18n_locale_script",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "locale-script.tsx"
     },
     {
@@ -3118,8 +3118,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_i18n_locale_script_localescript",
-      "community": 184,
-      "community_name": "layout.tsx",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "localescript()"
     },
     {
@@ -3255,10 +3255,21 @@
       "norm_label": "contrastratio()"
     },
     {
-      "label": "expectEveryLinkToNavigate()",
+      "label": "contrastRatioFromRgb()",
       "file_type": "code",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
       "source_location": "L35",
+      "_origin": "ast",
+      "id": "tests_e2e_marketing_journey_spec_contrastratiofromrgb",
+      "community": 173,
+      "community_name": "marketing-journey.spec.ts",
+      "norm_label": "contrastratiofromrgb()"
+    },
+    {
+      "label": "expectEveryLinkToNavigate()",
+      "file_type": "code",
+      "source_file": "tests/e2e/marketing-journey.spec.ts",
+      "source_location": "L61",
       "_origin": "ast",
       "id": "tests_e2e_marketing_journey_spec_expecteverylinktonavigate",
       "community": 173,
@@ -3269,7 +3280,7 @@
       "label": "expectVisibleChatControlsToMeetTargetSize()",
       "file_type": "code",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L52",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "tests_e2e_marketing_journey_spec_expectvisiblechatcontrolstomeettargetsize",
       "community": 173,
@@ -8552,8 +8563,8 @@
       "source_location": "L3633",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_advanced_patterns",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "8. advanced patterns"
     },
     {
@@ -8563,8 +8574,8 @@
       "source_location": "L3639",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_1_do_not_put_effect_events_in_dependency_arrays",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "8.1 do not put effect events in dependency arrays"
     },
     {
@@ -8574,8 +8585,8 @@
       "source_location": "L3691",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_2_initialize_app_once_not_per_mount",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "8.2 initialize app once, not per mount"
     },
     {
@@ -8585,8 +8596,8 @@
       "source_location": "L3729",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_3_store_event_handlers_in_refs",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "8.3 store event handlers in refs"
     },
     {
@@ -8596,8 +8607,8 @@
       "source_location": "L3765",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_4_useeffectevent_for_stable_callback_refs",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "8.4 useeffectevent for stable callback refs"
     },
     {
@@ -18449,7 +18460,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_login_form",
@@ -18460,7 +18471,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_login_form",
@@ -18471,7 +18482,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_login_form",
@@ -18482,7 +18493,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L18",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_login_form",
@@ -18498,7 +18509,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_login_form",
-      "target": "src_i18n_locale_provider",
+      "target": "src_i18n_catalog",
       "confidence_score": 1.0
     },
     {
@@ -18510,7 +18521,55 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_login_form",
+      "target": "src_i18n_catalog_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/login-form.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_login_form",
+      "target": "src_i18n_locale_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/login-form.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_login_form",
       "target": "src_i18n_locale_provider_uselocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/login-form.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_login_form",
+      "target": "src_i18n_localized_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/login-form.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_login_form",
+      "target": "src_i18n_localized_text_localizedtext",
       "confidence_score": 1.0
     },
     {
@@ -18519,7 +18578,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/login-form.tsx",
-      "source_location": "L36",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_login_form_loginform",
@@ -18648,7 +18707,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/site-header.test.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_site_header_test",
@@ -18660,7 +18719,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/site-header.test.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_site_header_test",
@@ -18713,6 +18772,18 @@
       "_origin": "ast",
       "source": "src_components_site_header_test",
       "target": "src_i18n_locale_script_localescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/site-header.test.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_site_header_test",
+      "target": "src_i18n_locale_storage",
       "confidence_score": 1.0
     },
     {
@@ -19716,6 +19787,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_marketing_journey_spec",
+      "target": "tests_e2e_marketing_journey_spec_contrastratiofromrgb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/marketing-journey.spec.ts",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_marketing_journey_spec",
       "target": "tests_e2e_marketing_journey_spec_expecteverylinktonavigate",
       "confidence_score": 1.0
     },
@@ -19723,7 +19805,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L52",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_marketing_journey_spec",
@@ -29721,5 +29803,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7a0d3477c452d492cffc3c50f5775ac0e950f7c4"
+  "built_at_commit": "ee26b7b305349822af121f2362dbf6052e466c5c"
 }

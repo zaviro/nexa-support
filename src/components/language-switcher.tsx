@@ -4,12 +4,16 @@ import { useLocale } from "~/i18n/locale-provider";
 import { LocalizedText } from "~/i18n/localized-text";
 
 export function LanguageSwitcher() {
-  const { locale, setLocale } = useLocale();
+  const { setLocale } = useLocale();
 
   return (
     <button
       className="language-switcher"
-      onClick={() => setLocale(locale === "en" ? "zh-CN" : "en")}
+      onClick={() =>
+        setLocale(
+          document.documentElement.dataset.locale === "zh-CN" ? "en" : "zh-CN",
+        )
+      }
       type="button"
     >
       <LocalizedText

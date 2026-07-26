@@ -19,7 +19,11 @@ function renderForm() {
 }
 
 describe("LoginForm", () => {
-  beforeEach(() => window.localStorage.clear());
+  beforeEach(() => {
+    window.localStorage.clear();
+    document.documentElement.lang = "en";
+    document.documentElement.dataset.locale = "en";
+  });
 
   test("associates localized missing and malformed errors without a request", async () => {
     const user = userEvent.setup();
@@ -31,9 +35,11 @@ describe("LoginForm", () => {
       screen.getByRole("textbox", { name: "Email address" }),
     ).toHaveAttribute("aria-invalid", "true");
     expect(
-      screen.getByText("Enter your email address.", { exact: true }),
+      screen
+        .getByText("Enter your email address.", { exact: true })
+        .closest('[role="alert"]'),
     ).toHaveAttribute("id", "login-email-error");
-    expect(screen.getByLabelText("Password")).toHaveAttribute(
+    expect(screen.getByLabelText(/Password/)).toHaveAttribute(
       "aria-describedby",
       "login-password-error",
     );
@@ -42,7 +48,7 @@ describe("LoginForm", () => {
       screen.getByRole("textbox", { name: "Email address" }),
       "nexa@invalid",
     );
-    await user.type(screen.getByLabelText("Password"), "local-only");
+    await user.type(screen.getByLabelText(/Password/), "local-only");
     await user.click(screen.getByRole("button", { name: "Continue to demo" }));
     expect(
       screen.getByText("Enter a valid email address.", { exact: true }),
@@ -59,7 +65,7 @@ describe("LoginForm", () => {
       screen.getByRole("textbox", { name: "Email address" }),
       "person@example.com",
     );
-    await user.type(screen.getByLabelText("Password"), "local-only");
+    await user.type(screen.getByLabelText(/Password/), "local-only");
     await user.click(screen.getByRole("checkbox", { name: "Remember me" }));
     await user.click(screen.getByRole("button", { name: "Continue to demo" }));
 
