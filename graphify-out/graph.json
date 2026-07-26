@@ -2309,6 +2309,105 @@
       "norm_label": "chatshell()"
     },
     {
+      "label": "chat-state.test.ts",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_chat_state_test",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chat-state.test.ts"
+    },
+    {
+      "label": "chat-state.ts",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_chat_state",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chat-state.ts"
+    },
+    {
+      "label": "ChatIntent",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatintent",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatintent"
+    },
+    {
+      "label": "ChatPhase",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatphase",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatphase"
+    },
+    {
+      "label": "ChatMessage",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatmessage",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatmessage"
+    },
+    {
+      "label": "ChatEvent",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatevent",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatevent"
+    },
+    {
+      "label": "ChatState",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatstate",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatstate"
+    },
+    {
+      "label": "initialChatState",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "src_components_chat_state_initialchatstate",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "initialchatstate"
+    },
+    {
+      "label": "transitionChat()",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "src_components_chat_state_transitionchat",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "transitionchat()"
+    },
+    {
       "label": "decision-path.tsx",
       "file_type": "code",
       "source_file": "src/components/decision-path.tsx",
@@ -2664,7 +2763,7 @@
       "label": "catalog",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L100",
+      "source_location": "L110",
       "_origin": "ast",
       "id": "src_i18n_catalog_catalog",
       "community": 165,
@@ -8255,8 +8354,8 @@
       "source_location": "L3633",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_advanced_patterns",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "8. advanced patterns"
     },
     {
@@ -8266,8 +8365,8 @@
       "source_location": "L3639",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_1_do_not_put_effect_events_in_dependency_arrays",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "8.1 do not put effect events in dependency arrays"
     },
     {
@@ -8277,8 +8376,8 @@
       "source_location": "L3691",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_2_initialize_app_once_not_per_mount",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "8.2 initialize app once, not per mount"
     },
     {
@@ -8288,8 +8387,8 @@
       "source_location": "L3729",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_3_store_event_handlers_in_refs",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "8.3 store event handlers in refs"
     },
     {
@@ -8299,8 +8398,8 @@
       "source_location": "L3765",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_4_useeffectevent_for_stable_callback_refs",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 180,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "8.4 useeffectevent for stable callback refs"
     },
     {
@@ -11214,7 +11313,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices",
-      "community": 175,
+      "community": 181,
       "community_name": "anthropic-best-practices.md",
       "norm_label": "anthropic-best-practices.md"
     },
@@ -11478,7 +11577,7 @@
       "source_location": "L612",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_analysis_title",
-      "community": 175,
+      "community": 181,
       "community_name": "anthropic-best-practices.md",
       "norm_label": "[analysis title]"
     },
@@ -11489,7 +11588,7 @@
       "source_location": "L614",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_executive_summary",
-      "community": 175,
+      "community": 181,
       "community_name": "anthropic-best-practices.md",
       "norm_label": "executive summary"
     },
@@ -11500,7 +11599,7 @@
       "source_location": "L617",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_key_findings",
-      "community": 175,
+      "community": 181,
       "community_name": "anthropic-best-practices.md",
       "norm_label": "key findings"
     },
@@ -11511,7 +11610,7 @@
       "source_location": "L622",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_recommendations",
-      "community": 175,
+      "community": 181,
       "community_name": "anthropic-best-practices.md",
       "norm_label": "recommendations"
     },
@@ -13925,6 +14024,171 @@
       "norm_label": "execution handoff"
     },
     {
+      "label": "2026-07-26-deterministic-chat.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat",
+      "community": 179,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "2026-07-26-deterministic-chat.md"
+    },
+    {
+      "label": "Deterministic Support Chat Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "community": 179,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "deterministic support chat implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_global_constraints",
+      "community": 179,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "File Structure",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_file_structure",
+      "community": 179,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "file structure"
+    },
+    {
+      "label": "Task 1: Deliver and verify the local deterministic chat journey",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_task_1_deliver_and_verify_the_local_deterministic_chat_journey",
+      "community": 179,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "task 1: deliver and verify the local deterministic chat journey"
+    },
+    {
+      "label": "Plan Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L334",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_plan_self_review",
+      "community": 179,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "plan self-review"
+    },
+    {
+      "label": "2026-07-26-feature-workflow.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "2026-07-26-feature-workflow.md"
+    },
+    {
+      "label": "Feature Stories and Support Workflow Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "feature stories and support workflow implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow_global_constraints",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "File Structure",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow_file_structure",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "file structure"
+    },
+    {
+      "label": "Task 1: Ship localized feature stories and the support workflow",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow_task_1_ship_localized_feature_stories_and_the_support_workflow",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "task 1: ship localized feature stories and the support workflow"
+    },
+    {
+      "label": "Independent Review Gate",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L192",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow_independent_review_gate",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "independent review gate"
+    },
+    {
+      "label": "Final Verification",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L198",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow_final_verification",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "final verification"
+    },
+    {
+      "label": "Plan Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L210",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow_plan_self_review",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "plan self-review"
+    },
+    {
+      "label": "Execution Handoff",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L216",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_feature_workflow_execution_handoff",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "execution handoff"
+    },
+    {
       "label": "2026-07-26-interactive-support-dashboard.md",
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
@@ -14153,6 +14417,61 @@
       "id": "graphify_out_memory_query_20260726_090524_where_are_issue_2_scaffolding_quality_gates_and_source_nodes",
       "community": 172,
       "community_name": "Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
+      "norm_label": "query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md"
+    },
+    {
+      "label": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
+      "norm_label": "q: how should devenv, bun, codex agent skills, global tools, secrets, and vercel be owned, isolated, reproduced, and upgraded in this scaffold?"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_answer",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_outcome",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_source_nodes",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "source nodes"
     }
   ],
@@ -18124,7 +18443,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L100",
+      "source_location": "L110",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -28214,6 +28533,149 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L334",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_plan_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_file_structure",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_task_1_deliver_and_verify_the_local_deterministic_chat_journey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_feature_workflow",
+      "target": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L216",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_feature_workflow_execution_handoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_feature_workflow_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L198",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_feature_workflow_final_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_feature_workflow_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L192",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_feature_workflow_independent_review_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L210",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_feature_workflow_plan_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-feature-workflow.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_feature_workflow_feature_stories_and_support_workflow_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_feature_workflow_task_1_ship_localized_feature_stories_and_the_support_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -28397,8 +28859,52 @@
       "source": "graphify_out_memory_query_20260726_090524_where_are_issue_2_scaffolding_quality_gates_and_q_where_are_issue_2_scaffolding_quality_gates_and_the_next_implementation_entry_point",
       "target": "graphify_out_memory_query_20260726_090524_where_are_issue_2_scaffolding_quality_gates_and_source_nodes",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global",
+      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_source_nodes",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1478c54254f13aa9c879bd15c3719194d0c066f9"
+  "built_at_commit": "bf0d6bf8c33c56392a3cd6f206e51705a63eabcf"
 }

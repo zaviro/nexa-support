@@ -1,16 +1,16 @@
-# Graph Report - issue-6-decision-path  (2026-07-26)
+# Graph Report - selfwebsite  (2026-07-26)
 
 ## Corpus Check
-- 195 files · ~113,621 words
+- 201 files · ~120,326 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1278 nodes · 1254 edges · 174 communities (93 shown, 81 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.5)
+- 1309 nodes · 1293 edges · 183 communities (102 shown, 81 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1478c542`
+- Built from commit: `bf0d6bf8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -180,6 +180,13 @@
 - marketing-journey.spec.ts
 - Decision Path Implementation Plan
 - 4. Client-Side Data Fetching
+- Evaluation and iteration
+- Checklist for effective Skills
+- Core principles
+- Deterministic Support Chat Implementation Plan
+- 8. Advanced Patterns
+- anthropic-best-practices.md
+- Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -208,7 +215,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (174 total, 81 thin omitted)
+## Communities (183 total, 81 thin omitted)
 
 ### Community 0 - "server.cjs"
 Cohesion: 0.06
@@ -442,6 +449,10 @@ Nodes (4): Choose A, B, or C, Pressure Test 3: Authority + Social Pressure, Scen
 Cohesion: 0.40
 Nodes (4): Abstract, React Best Practices, References, Table of Contents
 
+### Community 58 - "Skill structure"
+Cohesion: 0.20
+Nodes (10): Avoid deeply nested references, Naming conventions, Pattern 1: High-level guide with references, Pattern 2: Domain-specific organization, Pattern 3: Conditional details, Progressive disclosure patterns, Skill structure, Structure longer reference files with table of contents (+2 more)
+
 ### Community 59 - "8. Advanced Patterns"
 Cohesion: 0.22
 Nodes (9): Avoid time-sensitive information, Common patterns, Content guidelines, Implement feedback loops, Skill authoring best practices, Template pattern, Use consistent terminology, Use workflows for complex tasks (+1 more)
@@ -507,12 +518,12 @@ Cohesion: 0.50
 Nodes (3): framework, installCommand, $schema
 
 ### Community 158 - "Deterministic Support Chat Implementation Plan"
-Cohesion: 0.33
-Nodes (5): Deterministic Support Chat Implementation Plan, File Structure, Global Constraints, Plan Self-Review, Task 1: Deliver and verify the local deterministic chat journey
+Cohesion: 0.22
+Nodes (8): Execution Handoff, Feature Stories and Support Workflow Implementation Plan, File Structure, Final Verification, Global Constraints, Independent Review Gate, Plan Self-Review, Task 1: Ship localized feature stories and the support workflow
 
 ### Community 165 - "scaffold.spec.ts"
-Cohesion: 0.07
-Nodes (37): geist, metadata, ChatShell(), DecisionPath(), LanguageSwitcher(), MarketingHome(), SiteHeader(), ActivityVisualization (+29 more)
+Cohesion: 0.06
+Nodes (45): geist, metadata, ChatShell(), QUICK_ACTIONS, ChatEvent, ChatIntent, ChatMessage, ChatPhase (+37 more)
 
 ### Community 168 - "Nexa Support 工程交接"
 Cohesion: 0.11
@@ -542,16 +553,45 @@ Nodes (6): Decision Path Implementation Plan, Execution Handoff, File Structure,
 Cohesion: 0.40
 Nodes (5): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching
 
+### Community 176 - "Evaluation and iteration"
+Cohesion: 0.50
+Nodes (4): Build evaluations first, Develop Skills iteratively with the agent, Evaluation and iteration, Observe how agents navigate Skills
+
+### Community 177 - "Checklist for effective Skills"
+Cohesion: 0.50
+Nodes (4): Checklist for effective Skills, Code and scripts, Core quality, Testing
+
+### Community 178 - "Core principles"
+Cohesion: 0.50
+Nodes (4): Concise is key, Core principles, Set appropriate degrees of freedom, Test with all models you plan to use
+
+### Community 179 - "Deterministic Support Chat Implementation Plan"
+Cohesion: 0.33
+Nodes (5): Deterministic Support Chat Implementation Plan, File Structure, Global Constraints, Plan Self-Review, Task 1: Deliver and verify the local deterministic chat journey
+
+### Community 180 - "8. Advanced Patterns"
+Cohesion: 0.40
+Nodes (5): 8.1 Do Not Put Effect Events in Dependency Arrays, 8.2 Initialize App Once, Not Per Mount, 8.3 Store Event Handlers in Refs, 8.4 useEffectEvent for Stable Callback Refs, 8. Advanced Patterns
+
+### Community 181 - "anthropic-best-practices.md"
+Cohesion: 0.40
+Nodes (4): [Analysis Title], Executive summary, Key findings, Recommendations
+
+### Community 182 - "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?, Source Nodes
+
 ## Knowledge Gaps
-- **817 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+812 more)
+- **834 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+829 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **81 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `quality` (2× useful, score=1.999788438)
-- `scaffold.spec.ts` (2× useful, score=1.999788438) _(code changed — re-verify)_
+- `quality` (3× useful, score=2.998611433)
+- `scaffold.spec.ts` (3× useful, score=2.998611433) _(code changed — re-verify)_
+- `devenv` (2× useful, score=1.99915422)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -560,13 +600,13 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `7. JavaScript Performance` connect `7. JavaScript Performance` to `React Best Practices`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `crypto`, `http`, `fs` to the rest of the system?**
-  _817 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _834 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
 - **Should `Testing Skills With Subagents` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
 - **Should `scripts` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
+- **Should `devDependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
