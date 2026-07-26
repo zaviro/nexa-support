@@ -387,6 +387,25 @@ test("exposes stored Chinese in the first frame and remains hydration-safe", asy
     }),
   ).toBeVisible();
   await expect(
+    page.getByRole("heading", {
+      exact: true,
+      level: 2,
+      name: "常见问题",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", {
+      exact: true,
+      name: "Nexa 如何回答问题？",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", {
+      exact: true,
+      name: "How does Nexa answer questions?",
+    }),
+  ).toHaveCount(0);
+  await expect(
     page.getByRole("navigation", {
       exact: true,
       name: "Primary navigation",
@@ -561,6 +580,9 @@ test("keeps visible Chinese controls at least 44px in both dimensions", async ({
 
     expect(undersizedControls).toEqual([]);
   }
+
+  await page.goto("/");
+  await expect(page.locator(".faq-item button")).toHaveCount(5);
 
   const undersizedFaqControls = await page
     .locator(".faq-item button")

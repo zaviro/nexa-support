@@ -1,16 +1,16 @@
 # Graph Report - issue-6-decision-path  (2026-07-26)
 
 ## Corpus Check
-- 195 files · ~113,474 words
+- 195 files · ~113,621 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1278 nodes · 1253 edges · 180 communities (99 shown, 81 thin omitted)
+- 1278 nodes · 1254 edges · 174 communities (93 shown, 81 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `881980c6`
+- Built from commit: `1478c542`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -73,7 +73,6 @@
 - Pressure Test 2: Sunk Cost + Exhaustion
 - Pressure Test 3: Authority + Social Pressure
 - React Best Practices
-- Skill structure
 - 8. Advanced Patterns
 - Web Interface Guidelines
 - Anti-Patterns
@@ -170,7 +169,6 @@
 - _template.md
 - plan-document-reviewer-prompt.md
 - extraction-spec.md
-- Skill authoring best practices
 - scaffold.spec.ts
 - Nexa Support 工程交接
 - File Structure
@@ -180,10 +178,6 @@
 - marketing-journey.spec.ts
 - Decision Path Implementation Plan
 - 4. Client-Side Data Fetching
-- anthropic-best-practices.md
-- Checklist for effective Skills
-- Core principles
-- Anti-patterns to avoid
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -200,27 +194,27 @@
 ## Surprising Connections (you probably didn't know these)
 - `LocaleProbe()` --calls--> `useLocale()`  [EXTRACTED]
   src/i18n/locale-provider.test.tsx → src/i18n/locale-provider.tsx
-- `DecisionPath()` --calls--> `useLocale()`  [EXTRACTED]
-  src/components/decision-path.tsx → src/i18n/locale-provider.tsx
 - `LanguageSwitcher()` --calls--> `useLocale()`  [EXTRACTED]
   src/components/language-switcher.tsx → src/i18n/locale-provider.tsx
 - `SupportDashboard()` --calls--> `filterDashboardConversations()`  [EXTRACTED]
   src/components/support-dashboard.tsx → src/components/support-dashboard-data.ts
 - `SupportDashboard()` --calls--> `useLocale()`  [EXTRACTED]
   src/components/support-dashboard.tsx → src/i18n/locale-provider.tsx
+- `createLocaleStore()` --calls--> `readStoredLocale()`  [EXTRACTED]
+  src/i18n/locale-provider.tsx → src/i18n/locale-storage.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (180 total, 81 thin omitted)
+## Communities (174 total, 81 thin omitted)
 
 ### Community 0 - "server.cjs"
 Cohesion: 0.06
 Nodes (55): bootstrapPage(), brandMarkup(), broadcast(), browserLauncherForPlatform(), chmodOwnerOnly(), clients, companionUrl(), computeAcceptKey() (+47 more)
 
 ### Community 1 - "[Analysis Title]"
-Cohesion: 0.15
-Nodes (13): Advanced: Skills with executable code, [Analysis Title], Build evaluations first, Conditional workflow pattern, Develop Skills iteratively with the agent, Evaluation and iteration, Examples pattern, Executive summary (+5 more)
+Cohesion: 0.05
+Nodes (43): Advanced: Skills with executable code, [Analysis Title], [Analysis Title], Anti-patterns to avoid, Avoid deeply nested references, Avoid offering too many options, Avoid time-sensitive information, Avoid Windows-style paths (+35 more)
 
 ### Community 2 - "Testing Skills With Subagents"
 Cohesion: 0.05
@@ -303,8 +297,8 @@ Cohesion: 0.13
 Nodes (14): 1. Eliminating Waterfalls (CRITICAL), 2. Bundle Size Optimization (CRITICAL), 3. Server-Side Performance (HIGH), 4. Client-Side Data Fetching (MEDIUM-HIGH), 5. Re-render Optimization (MEDIUM), 6. Rendering Performance (MEDIUM), 7. JavaScript Performance (LOW-MEDIUM), 8. Advanced Patterns (LOW) (+6 more)
 
 ### Community 22 - "Returns: "OK" or lists conflicts"
-Cohesion: 0.18
-Nodes (11): Avoid assuming tools are installed, Create verifiable intermediate outputs, MCP tool references, Next steps, Package dependencies, Returns: "OK" or lists conflicts, Runtime environment, Technical notes (+3 more)
+Cohesion: 0.13
+Nodes (15): Avoid assuming tools are installed, Checklist for effective Skills, Code and scripts, Core quality, Create verifiable intermediate outputs, MCP tool references, Next steps, Package dependencies (+7 more)
 
 ### Community 23 - "Writing Skills"
 Cohesion: 0.13
@@ -446,10 +440,6 @@ Nodes (4): Choose A, B, or C, Pressure Test 3: Authority + Social Pressure, Scen
 Cohesion: 0.40
 Nodes (4): Abstract, React Best Practices, References, Table of Contents
 
-### Community 58 - "Skill structure"
-Cohesion: 0.20
-Nodes (10): Avoid deeply nested references, Naming conventions, Pattern 1: High-level guide with references, Pattern 2: Domain-specific organization, Pattern 3: Conditional details, Progressive disclosure patterns, Skill structure, Structure longer reference files with table of contents (+2 more)
-
 ### Community 59 - "8. Advanced Patterns"
 Cohesion: 0.40
 Nodes (5): 8.1 Do Not Put Effect Events in Dependency Arrays, 8.2 Initialize App Once, Not Per Mount, 8.3 Store Event Handlers in Refs, 8.4 useEffectEvent for Stable Callback Refs, 8. Advanced Patterns
@@ -514,12 +504,8 @@ Nodes (5): Global Constraints, Interactive Support Dashboard Implementation Plan
 Cohesion: 0.50
 Nodes (3): framework, installCommand, $schema
 
-### Community 158 - "Skill authoring best practices"
-Cohesion: 0.22
-Nodes (9): Avoid time-sensitive information, Common patterns, Content guidelines, Implement feedback loops, Skill authoring best practices, Template pattern, Use consistent terminology, Use workflows for complex tasks (+1 more)
-
 ### Community 165 - "scaffold.spec.ts"
-Cohesion: 0.06
+Cohesion: 0.07
 Nodes (37): geist, metadata, ChatShell(), DecisionPath(), LanguageSwitcher(), MarketingHome(), SiteHeader(), ActivityVisualization (+29 more)
 
 ### Community 168 - "Nexa Support 工程交接"
@@ -550,22 +536,6 @@ Nodes (6): Decision Path Implementation Plan, Execution Handoff, File Structure,
 Cohesion: 0.40
 Nodes (5): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching
 
-### Community 176 - "anthropic-best-practices.md"
-Cohesion: 0.40
-Nodes (4): [Analysis Title], Executive summary, Key findings, Recommendations
-
-### Community 177 - "Checklist for effective Skills"
-Cohesion: 0.50
-Nodes (4): Checklist for effective Skills, Code and scripts, Core quality, Testing
-
-### Community 178 - "Core principles"
-Cohesion: 0.50
-Nodes (4): Concise is key, Core principles, Set appropriate degrees of freedom, Test with all models you plan to use
-
-### Community 179 - "Anti-patterns to avoid"
-Cohesion: 0.67
-Nodes (3): Anti-patterns to avoid, Avoid offering too many options, Avoid Windows-style paths
-
 ## Knowledge Gaps
 - **817 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+812 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -590,7 +560,7 @@ _Questions this graph is uniquely positioned to answer:_
   _817 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
+- **Should `[Analysis Title]` be split into smaller, more focused modules?**
+  _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `Testing Skills With Subagents` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
-- **Should `scripts` be split into smaller, more focused modules?**
-  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
