@@ -23,6 +23,8 @@ describe("support dashboard data", () => {
       });
 
       for (const locale of ["en", "zh-CN"] as const) {
+        expect(conversation.topic[locale]).not.toBe("");
+        expect(conversation.waitTime[locale]).not.toBe("");
         expect(conversation.preview[locale]).not.toBe("");
         expect(conversation.summary[locale]).not.toBe("");
         expect(conversation.status[locale]).not.toBe("");

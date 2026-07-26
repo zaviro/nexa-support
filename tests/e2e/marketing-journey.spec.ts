@@ -140,6 +140,9 @@ test("changes the visible dashboard conversation", async ({ page }) => {
   const mayaConversation = dashboard.getByRole("button", {
     name: "Open Maya Chen conversation",
   });
+  const liamConversation = dashboard.getByRole("button", {
+    name: "Open Liam Foster conversation",
+  });
   const detail = dashboard.locator('[aria-live="polite"]');
 
   await expect(detail).toHaveAttribute("aria-live", "polite");
@@ -168,6 +171,25 @@ test("changes the visible dashboard conversation", async ({ page }) => {
   ).toBeVisible();
   await expect(
     detail.getByText("Waiting for human support", { exact: true }),
+  ).toBeVisible();
+
+  await liamConversation.click();
+  await expect(liamConversation).toHaveAttribute("aria-pressed", "true");
+  await dashboard
+    .getByRole("button", { name: "Human handoff", exact: true })
+    .click();
+  await expect(liamConversation).toHaveCount(0);
+  await expect(
+    dashboard.locator(".support-dashboard__conversation"),
+  ).toHaveCount(1);
+  await expect(sofiaConversation).toHaveAttribute("aria-pressed", "true");
+
+  await dashboard
+    .getByRole("button", { name: "All conversations", exact: true })
+    .click();
+  await expect(mayaConversation).toHaveAttribute("aria-pressed", "true");
+  await expect(
+    detail.getByRole("heading", { name: "Billing", level: 3 }),
   ).toBeVisible();
 });
 
@@ -564,6 +586,9 @@ test("gives dashboard controls hover feedback without weakening selected, focus,
   const selectedBackground = await mayaConversation.evaluate(
     (element) => getComputedStyle(element).backgroundColor,
   );
+  const selectedBoxShadow = await mayaConversation.evaluate(
+    (element) => getComputedStyle(element).boxShadow,
+  );
   await mayaConversation.hover();
   await expect
     .poll(() =>
@@ -573,15 +598,22 @@ test("gives dashboard controls hover feedback without weakening selected, focus,
     )
     .toBe(selectedBackground);
 
-  await liamConversation.focus();
+  await mayaConversation.focus();
   await expect
     .poll(() =>
-      liamConversation.evaluate((element) => ({
+      mayaConversation.evaluate((element) => ({
+        background: getComputedStyle(element).backgroundColor,
+        boxShadow: getComputedStyle(element).boxShadow,
         outlineStyle: getComputedStyle(element).outlineStyle,
         outlineWidth: getComputedStyle(element).outlineWidth,
       })),
     )
-    .toEqual({ outlineStyle: "solid", outlineWidth: "3px" });
+    .toEqual({
+      background: selectedBackground,
+      boxShadow: expect.stringContaining(selectedBoxShadow),
+      outlineStyle: "solid",
+      outlineWidth: "3px",
+    });
 
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect
