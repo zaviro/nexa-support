@@ -129,6 +129,28 @@ test("navigates the English marketing journey and login placeholder", async ({
   ).toHaveCount(0);
 });
 
+test("changes the visible dashboard conversation", async ({ page }) => {
+  await page.goto("/");
+  const dashboard = page.getByRole("region", {
+    name: "Nexa Support dashboard",
+  });
+  const sofiaConversation = dashboard.getByRole("button", {
+    name: "Open Sofia Ramirez conversation",
+  });
+
+  await sofiaConversation.click();
+
+  await expect(sofiaConversation).toHaveAttribute("aria-pressed", "true");
+  const detail = dashboard.locator('[aria-live="polite"]');
+  await expect(detail).toHaveAttribute("aria-live", "polite");
+  await expect(
+    detail.getByRole("heading", { name: "Refund request", level: 3 }),
+  ).toBeVisible();
+  await expect(
+    detail.getByText("Waiting for human support", { exact: true }),
+  ).toBeVisible();
+});
+
 test("persists Simplified Chinese across routes and reloads", async ({
   page,
 }) => {
@@ -145,6 +167,17 @@ test("persists Simplified Chinese across routes and reloads", async ({
   ).toBeVisible();
   await expect(
     page.getByRole("navigation", { name: "页脚导航", exact: true }),
+  ).toBeVisible();
+  const dashboard = page.getByRole("region", {
+    name: "Nexa Support 客服看板",
+    exact: true,
+  });
+  await expect(dashboard).toBeVisible();
+  await expect(
+    dashboard.getByRole("button", {
+      name: "打开 Sofia Ramirez 的会话",
+      exact: true,
+    }),
   ).toBeVisible();
   await expect(
     page.getByRole("navigation", {
@@ -411,6 +444,40 @@ test("keeps visible Chinese controls at least 44px in both dimensions", async ({
   }
 });
 
+test("keeps dashboard controls at least 44px in both locales", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 900 });
+  await page.goto("/");
+
+  for (const languageButtonName of ["简体中文", "English"]) {
+    const undersizedControls = await page
+      .locator(".support-dashboard button")
+      .evaluateAll((controls) =>
+        controls.flatMap((control) => {
+          const rect = control.getBoundingClientRect();
+
+          if (rect.width >= 44 && rect.height >= 44) {
+            return [];
+          }
+
+          return [
+            {
+              height: Math.round(rect.height),
+              name: control.getAttribute("aria-label") ?? control.textContent,
+              width: Math.round(rect.width),
+            },
+          ];
+        }),
+      );
+
+    expect(undersizedControls).toEqual([]);
+    await page
+      .getByRole("button", { exact: true, name: languageButtonName })
+      .click();
+  }
+});
+
 test("keeps the tablet chat preview clear of the support route", async ({
   page,
 }) => {
@@ -475,6 +542,27 @@ for (const width of [375, 768, 1440]) {
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= window.innerWidth,
+      ),
+    ).toBe(true);
+    const dashboard = page.getByRole("region", {
+      name: "Nexa Support dashboard",
+      exact: true,
+    });
+    const bounds = await dashboard.boundingBox();
+
+    expect(bounds).not.toBeNull();
+
+    if (bounds === null) {
+      throw new Error(
+        "Dashboard must be visible to verify its viewport bounds.",
+      );
+    }
+
+    expect(bounds.x).toBeGreaterThanOrEqual(0);
+    expect(bounds.x + bounds.width).toBeLessThanOrEqual(width);
+    expect(
+      await dashboard.evaluate(
+        (element) => element.scrollWidth <= element.clientWidth,
       ),
     ).toBe(true);
   });

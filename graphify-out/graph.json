@@ -2323,7 +2323,7 @@
       "label": "RouteMap()",
       "file_type": "code",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_marketing_home_routemap",
       "community": 165,
@@ -2334,7 +2334,7 @@
       "label": "MarketingHome()",
       "file_type": "code",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L89",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "src_components_marketing_home_marketinghome",
       "community": 165,
@@ -2373,6 +2373,182 @@
       "community": 165,
       "community_name": "scaffold.spec.ts",
       "norm_label": "siteheader()"
+    },
+    {
+      "label": "support-dashboard-data.test.ts",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard-data.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_data_test",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "support-dashboard-data.test.ts"
+    },
+    {
+      "label": "support-dashboard-data.ts",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_data",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "support-dashboard-data.ts"
+    },
+    {
+      "label": "DashboardQueue",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_data_dashboardqueue",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "dashboardqueue"
+    },
+    {
+      "label": "LocalizedDashboardText",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_data_localizeddashboardtext",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "localizeddashboardtext"
+    },
+    {
+      "label": "DashboardConversation",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_data_dashboardconversation",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "dashboardconversation"
+    },
+    {
+      "label": "dashboardConversations",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_data_dashboardconversations",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "dashboardconversations"
+    },
+    {
+      "label": "filterDashboardConversations()",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_data_filterdashboardconversations",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "filterdashboardconversations()"
+    },
+    {
+      "label": "support-dashboard.test.tsx",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_test",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "support-dashboard.test.tsx"
+    },
+    {
+      "label": "support-dashboard.tsx",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "support-dashboard.tsx"
+    },
+    {
+      "label": "queues",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_queues",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "queues"
+    },
+    {
+      "label": "ActivityVisualization",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_activityvisualization",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "activityvisualization"
+    },
+    {
+      "label": "fallbackActivityVisualization",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_fallbackactivityvisualization",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "fallbackactivityvisualization"
+    },
+    {
+      "label": "activityVisualizations",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_activityvisualizations",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "activityvisualizations"
+    },
+    {
+      "label": "getInitialConversation()",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_getinitialconversation",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "getinitialconversation()"
+    },
+    {
+      "label": "initialConversation",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_initialconversation",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "initialconversation"
+    },
+    {
+      "label": "SupportDashboard()",
+      "file_type": "code",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "src_components_support_dashboard_supportdashboard",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "supportdashboard()"
     },
     {
       "label": "env.js",
@@ -2444,7 +2620,7 @@
       "label": "catalog",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L47",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "src_i18n_catalog_catalog",
       "community": 165,
@@ -10994,8 +11170,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "anthropic-best-practices.md"
     },
     {
@@ -11005,8 +11181,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_skill_authoring_best_practices",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "skill authoring best practices"
     },
     {
@@ -11016,8 +11192,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_core_principles",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "core principles"
     },
     {
@@ -11027,8 +11203,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_concise_is_key",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "concise is key"
     },
     {
@@ -11038,8 +11214,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_set_appropriate_degrees_of_freedom",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "set appropriate degrees of freedom"
     },
     {
@@ -11049,8 +11225,8 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_test_with_all_models_you_plan_to_use",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "test with all models you plan to use"
     },
     {
@@ -11060,8 +11236,8 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_skill_structure",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "skill structure"
     },
     {
@@ -11071,8 +11247,8 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_naming_conventions",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "naming conventions"
     },
     {
@@ -11082,8 +11258,8 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_writing_effective_descriptions",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "writing effective descriptions"
     },
     {
@@ -11093,8 +11269,8 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_progressive_disclosure_patterns",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "progressive disclosure patterns"
     },
     {
@@ -11104,8 +11280,8 @@
       "source_location": "L245",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_visual_overview_from_simple_to_complex",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "visual overview: from simple to complex"
     },
     {
@@ -11115,8 +11291,8 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_1_high_level_guide_with_references",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "pattern 1: high-level guide with references"
     },
     {
@@ -11126,8 +11302,8 @@
       "source_location": "L297",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_2_domain_specific_organization",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "pattern 2: domain-specific organization"
     },
     {
@@ -11137,8 +11313,8 @@
       "source_location": "L332",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_3_conditional_details",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "pattern 3: conditional details"
     },
     {
@@ -11148,8 +11324,8 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_deeply_nested_references",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "avoid deeply nested references"
     },
     {
@@ -11159,8 +11335,8 @@
       "source_location": "L383",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_structure_longer_reference_files_with_table_of_contents",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill structure",
       "norm_label": "structure longer reference files with table of contents"
     },
     {
@@ -11170,8 +11346,8 @@
       "source_location": "L410",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_workflows_and_feedback_loops",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "workflows and feedback loops"
     },
     {
@@ -11181,8 +11357,8 @@
       "source_location": "L412",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_use_workflows_for_complex_tasks",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "use workflows for complex tasks"
     },
     {
@@ -11192,8 +11368,8 @@
       "source_location": "L503",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_implement_feedback_loops",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "implement feedback loops"
     },
     {
@@ -11203,8 +11379,8 @@
       "source_location": "L547",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_content_guidelines",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "content guidelines"
     },
     {
@@ -11214,8 +11390,8 @@
       "source_location": "L549",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_time_sensitive_information",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "avoid time-sensitive information"
     },
     {
@@ -11225,8 +11401,8 @@
       "source_location": "L580",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_use_consistent_terminology",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "use consistent terminology"
     },
     {
@@ -11236,8 +11412,8 @@
       "source_location": "L598",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_common_patterns",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "common patterns"
     },
     {
@@ -11247,8 +11423,8 @@
       "source_location": "L600",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_template_pattern",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 174,
+      "community_name": "Skill authoring best practices",
       "norm_label": "template pattern"
     },
     {
@@ -11258,8 +11434,8 @@
       "source_location": "L612",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_analysis_title",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "[analysis title]"
     },
     {
@@ -11269,8 +11445,8 @@
       "source_location": "L614",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_executive_summary",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "executive summary"
     },
     {
@@ -11280,8 +11456,8 @@
       "source_location": "L617",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_key_findings",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "key findings"
     },
     {
@@ -11291,8 +11467,8 @@
       "source_location": "L622",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_recommendations",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "recommendations"
     },
     {
@@ -11368,8 +11544,8 @@
       "source_location": "L721",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_evaluation_and_iteration",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "evaluation and iteration"
     },
     {
@@ -11379,8 +11555,8 @@
       "source_location": "L723",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_build_evaluations_first",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "build evaluations first"
     },
     {
@@ -11390,8 +11566,8 @@
       "source_location": "L756",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_develop_skills_iteratively_with_the_agent",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "develop skills iteratively with the agent"
     },
     {
@@ -11401,8 +11577,8 @@
       "source_location": "L812",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_observe_how_agents_navigate_skills",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "observe how agents navigate skills"
     },
     {
@@ -11588,8 +11764,8 @@
       "source_location": "L1101",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_checklist_for_effective_skills",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "checklist for effective skills"
     },
     {
@@ -11599,8 +11775,8 @@
       "source_location": "L1105",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_core_quality",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "core quality"
     },
     {
@@ -11610,8 +11786,8 @@
       "source_location": "L1118",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_code_and_scripts",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "code and scripts"
     },
     {
@@ -11621,8 +11797,8 @@
       "source_location": "L1129",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_testing",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "testing"
     },
     {
@@ -13626,6 +13802,72 @@
       "community": 169,
       "community_name": "File Structure",
       "norm_label": "task 5: review the real ui and close issue #3 with fresh evidence"
+    },
+    {
+      "label": "2026-07-26-interactive-support-dashboard.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard",
+      "community": 77,
+      "community_name": "Global Constraints",
+      "norm_label": "2026-07-26-interactive-support-dashboard.md"
+    },
+    {
+      "label": "Interactive Support Dashboard Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_interactive_support_dashboard_implementation_plan",
+      "community": 77,
+      "community_name": "Global Constraints",
+      "norm_label": "interactive support dashboard implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_global_constraints",
+      "community": 77,
+      "community_name": "Global Constraints",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "Task 1: Dashboard fixture and selection model",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_task_1_dashboard_fixture_and_selection_model",
+      "community": 77,
+      "community_name": "Global Constraints",
+      "norm_label": "task 1: dashboard fixture and selection model"
+    },
+    {
+      "label": "Task 2: Interactive bilingual dashboard",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L94",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_task_2_interactive_bilingual_dashboard",
+      "community": 77,
+      "community_name": "Global Constraints",
+      "norm_label": "task 2: interactive bilingual dashboard"
+    },
+    {
+      "label": "Task 3: Browser behavior and responsive evidence",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_task_3_browser_behavior_and_responsive_evidence",
+      "community": 77,
+      "community_name": "Global Constraints",
+      "norm_label": "task 3: browser behavior and responsive evidence"
     },
     {
       "label": "query_20260726_085524_\u6574\u4e2a\u884c\u52a8\u4e2d\u4f3c\u4e4e\u9047\u5230\u4e0d\u5c11\u95ee\u9898\u82b1\u4e86\u4e00\u6bb5\u65f6\u95f4_\u51fa\u4e86\u4ec0\u4e48\u95ee\u9898_\u662f\u6709\u4ec0\u4e48\u6211\u4eec\u4e4b\u524d\u7684\u8ba1\u5212\u6ca1\u6709\u5b89\u6392\u597d\u7684\u5417.md",
@@ -16814,7 +17056,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L89",
+      "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -16825,7 +17067,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -16854,6 +17096,30 @@
       "_origin": "ast",
       "source": "src_components_marketing_home",
       "target": "src_components_site_header_siteheader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/marketing-home.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_marketing_home",
+      "target": "src_components_support_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/marketing-home.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_marketing_home",
+      "target": "src_components_support_dashboard_supportdashboard",
       "confidence_score": 1.0
     },
     {
@@ -17036,6 +17302,342 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data_test",
+      "target": "src_components_support_dashboard_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data_test",
+      "target": "src_components_support_dashboard_data_dashboardconversations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data_test",
+      "target": "src_components_support_dashboard_data_filterdashboardconversations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data",
+      "target": "src_components_support_dashboard_data_dashboardconversation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data",
+      "target": "src_components_support_dashboard_data_dashboardconversations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data",
+      "target": "src_components_support_dashboard_data_dashboardqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data",
+      "target": "src_components_support_dashboard_data_filterdashboardconversations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data",
+      "target": "src_components_support_dashboard_data_localizeddashboardtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data",
+      "target": "src_i18n_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard-data.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_data",
+      "target": "src_i18n_catalog_locale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_data_dashboardqueue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_data_dashboardconversations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_data_filterdashboardconversations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_supportdashboard",
+      "target": "src_components_support_dashboard_data_filterdashboardconversations"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_test",
+      "target": "src_components_support_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_test",
+      "target": "src_components_support_dashboard_supportdashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_test",
+      "target": "src_i18n_locale_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_test",
+      "target": "src_i18n_locale_provider_localeprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_activityvisualization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_activityvisualizations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_fallbackactivityvisualization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_getinitialconversation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_initialconversation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_queues",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_components_support_dashboard_supportdashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_i18n_locale_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard",
+      "target": "src_i18n_locale_provider_uselocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/support-dashboard.tsx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_supportdashboard",
+      "target": "src_i18n_locale_provider_uselocale"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/env.js",
@@ -17050,7 +17652,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L47",
+      "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -27074,6 +27676,61 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard",
+      "target": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_interactive_support_dashboard_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_interactive_support_dashboard_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_global_constraints",
+      "target": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_task_1_dashboard_fixture_and_selection_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_global_constraints",
+      "target": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_task_2_interactive_bilingual_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_global_constraints",
+      "target": "docs_superpowers_plans_2026_07_26_interactive_support_dashboard_task_3_browser_behavior_and_responsive_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260726_085524_\u6574\u4e2a\u884c\u52a8\u4e2d\u4f3c\u4e4e\u9047\u5230\u4e0d\u5c11\u95ee\u9898\u82b1\u4e86\u4e00\u6bb5\u65f6\u95f4_\u51fa\u4e86\u4ec0\u4e48\u95ee\u9898_\u662f\u6709\u4ec0\u4e48\u6211\u4eec\u4e4b\u524d\u7684\u8ba1\u5212\u6ca1\u6709\u5b89\u6392\u597d\u7684\u5417.md",
       "source_location": "L10",
       "weight": 1.0,
@@ -27205,5 +27862,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "05404d329c116fcb1f5221c4fc110dd4f5ad79ab"
+  "built_at_commit": "2aea1c518a127b08315827a4af98aa946efb958c"
 }
