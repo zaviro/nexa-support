@@ -342,6 +342,10 @@ test("offers a visible keyboard skip link on every surface", async ({
     });
     await expect(skipLink).toBeFocused();
     await expect(skipLink).toBeInViewport();
+    const focusedSize = await skipLink.boundingBox();
+    expect(focusedSize).not.toBeNull();
+    expect(focusedSize?.width).toBeGreaterThanOrEqual(44);
+    expect(focusedSize?.height).toBeGreaterThanOrEqual(44);
     await skipLink.click();
     await expect(page).toHaveURL(/#main-content$/);
     await expect(page.locator("#main-content")).toBeFocused();
