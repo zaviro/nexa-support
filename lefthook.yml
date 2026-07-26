@@ -1,0 +1,12 @@
+pre-commit:
+  jobs:
+    - name: biome
+      run: bunx biome check --staged --no-errors-on-unmatched
+
+pre-push:
+  parallel: true
+  jobs:
+    - name: typecheck
+      run: bun run typecheck
+    - name: unit tests
+      run: bun run test:unit

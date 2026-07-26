@@ -1,0 +1,160 @@
+{
+  "generated_at": "2026-07-26T09:04:28.596182+00:00",
+  "nodes": {
+    "agents_skills_using_git_worktrees_skill_using_git_worktrees": {
+      "code_fingerprint": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+      "label": "Using Git Worktrees",
+      "last": "2026-07-26T08:55:24.358816+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T08:55:24.358816+00:00",
+          "outcome": "useful",
+          "q": "整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？"
+        }
+      ],
+      "score": 0.999854472,
+      "source_file": ".agents/skills/using-git-worktrees/SKILL.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "agents_skills_using_superpowers_references_codex_tools_environment_detection": {
+      "code_fingerprint": "d3f113a8ebbd748e8ba847b09b57b7685442775ca4ee194d693ce3663f8fac68",
+      "label": "Environment Detection",
+      "last": "2026-07-26T08:55:24.358816+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T08:55:24.358816+00:00",
+          "outcome": "useful",
+          "q": "整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？"
+        }
+      ],
+      "score": 0.999854472,
+      "source_file": ".agents/skills/using-superpowers/references/codex-tools.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "agents_skills_writing_plans_skill_scope_check": {
+      "code_fingerprint": "72190c88b2b5a67a96b91d66aa72b9161913e10e8769da3f28a226f4cc7b99d0",
+      "label": "Scope Check",
+      "last": "2026-07-26T08:55:24.358816+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T08:55:24.358816+00:00",
+          "outcome": "useful",
+          "q": "整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？"
+        }
+      ],
+      "score": 0.999854472,
+      "source_file": ".agents/skills/writing-plans/SKILL.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "agents_skills_writing_skills_anthropic_best_practices_runtime_environment": {
+      "code_fingerprint": "217629b356c09c9bd11017c9788e8fc654ca1b32c92d4a51cd490e16dd65e59a",
+      "label": "Runtime environment",
+      "last": "2026-07-26T09:00:21.658705+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T09:00:21.658705+00:00",
+          "outcome": "useful",
+          "q": "这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？"
+        }
+      ],
+      "score": 0.999933967,
+      "source_file": ".agents/skills/writing-skills/anthropic-best-practices.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "handoff_devenv": {
+      "code_fingerprint": "c2a38b4986df72a07e62805620a8a4f224839dd4a5f467e6b7b314da87256896",
+      "label": "devenv",
+      "last": "2026-07-26T09:00:21.658705+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T09:00:21.658705+00:00",
+          "outcome": "useful",
+          "q": "这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？"
+        }
+      ],
+      "score": 0.999933967,
+      "source_file": "HANDOFF.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "package_scripts": {
+      "code_fingerprint": "ef4ee079d0ec9cb45b5199330fabed7627a0383428669f327272155e24233987",
+      "label": "scripts",
+      "last": "2026-07-26T09:00:21.658705+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T09:00:21.658705+00:00",
+          "outcome": "useful",
+          "q": "这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？"
+        }
+      ],
+      "score": 0.999933967,
+      "source_file": "package.json",
+      "status": "tentative",
+      "uses": 1
+    },
+    "package_scripts_quality": {
+      "code_fingerprint": "ef4ee079d0ec9cb45b5199330fabed7627a0383428669f327272155e24233987",
+      "label": "quality",
+      "last": "2026-07-26T09:00:21.658705+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T09:00:21.658705+00:00",
+          "outcome": "useful",
+          "q": "这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？"
+        },
+        {
+          "date": "2026-07-26T08:55:24.358816+00:00",
+          "outcome": "useful",
+          "q": "整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？"
+        }
+      ],
+      "score": 1.999788438,
+      "source_file": "package.json",
+      "status": "preferred",
+      "uses": 2
+    },
+    "tests_e2e_scaffold_spec": {
+      "code_fingerprint": "f5ee8043ec71e5e965fa83c19beed1b8698d9895eedc8072a080393198221700",
+      "label": "scaffold.spec.ts",
+      "last": "2026-07-26T09:00:21.658705+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T09:00:21.658705+00:00",
+          "outcome": "useful",
+          "q": "这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？"
+        },
+        {
+          "date": "2026-07-26T08:55:24.358816+00:00",
+          "outcome": "useful",
+          "q": "整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？"
+        }
+      ],
+      "score": 1.999788438,
+      "source_file": "tests/e2e/scaffold.spec.ts",
+      "status": "preferred",
+      "uses": 2
+    },
+    "vercel_json_vercel": {
+      "code_fingerprint": "e8ed12dd1fb4b21dae3a3564360959ed55c361d25a531aa32b229cfe2c2388f0",
+      "label": "vercel.json",
+      "last": "2026-07-26T09:00:21.658705+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-26T09:00:21.658705+00:00",
+          "outcome": "useful",
+          "q": "这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？"
+        }
+      ],
+      "score": 0.999933967,
+      "source_file": "vercel.json",
+      "status": "tentative",
+      "uses": 1
+    }
+  },
+  "version": 1
+}
