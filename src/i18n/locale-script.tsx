@@ -8,9 +8,26 @@ const localeScript = `try {
   document.documentElement.dataset.locale = "en";
 }`;
 
+const localeStyles = `
+  .localized-text--zh-cn {
+    display: none;
+  }
+
+  html[data-locale="zh-CN"] .localized-text--en {
+    display: none;
+  }
+
+  html[data-locale="zh-CN"] .localized-text--zh-cn {
+    display: inline;
+  }
+`;
+
 export function LocaleScript() {
   return (
-    // biome-ignore lint/security/noDangerouslySetInnerHtml: This static local script contains no user content.
-    <script dangerouslySetInnerHTML={{ __html: localeScript }} />
+    <>
+      <style>{localeStyles}</style>
+      {/* biome-ignore lint/security/noDangerouslySetInnerHtml: This static local script contains no user content. */}
+      <script dangerouslySetInnerHTML={{ __html: localeScript }} />
+    </>
   );
 }

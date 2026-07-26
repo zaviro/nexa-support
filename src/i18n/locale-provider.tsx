@@ -3,9 +3,9 @@
 import {
   createContext,
   type ReactNode,
-  useCallback,
   useContext,
   useMemo,
+  useRef,
   useSyncExternalStore,
 } from "react";
 import { catalog, type Locale, type SiteCopy } from "./catalog";
@@ -19,11 +19,6 @@ import {
 const LANGUAGE_CHANGE_EVENT = "nexa-language-change";
 const UNINITIALIZED_SNAPSHOT = Symbol("uninitialized locale snapshot");
 
-let cachedRawLocale: string | null | typeof UNINITIALIZED_SNAPSHOT =
-  UNINITIALIZED_SNAPSHOT;
-let cachedLocale: Locale = DEFAULT_LOCALE;
-let inMemoryLocale: Locale | null = null;
-
 type LocaleContextValue = {
   locale: Locale;
   copy: SiteCopy;
@@ -36,60 +31,95 @@ function getServerSnapshot(): Locale {
   return DEFAULT_LOCALE;
 }
 
-function getClientSnapshot(): Locale {
-  let rawLocale: string | null;
-
-  try {
-    rawLocale = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-  } catch {
-    return inMemoryLocale ?? DEFAULT_LOCALE;
-  }
-
-  if (inMemoryLocale !== null) {
-    if (rawLocale === inMemoryLocale) {
-      inMemoryLocale = null;
-    } else {
-      return inMemoryLocale;
-    }
-  }
-
-  if (rawLocale !== cachedRawLocale) {
-    cachedRawLocale = rawLocale;
-    cachedLocale = readStoredLocale({ getItem: () => rawLocale });
-  }
-
-  return cachedLocale;
-}
-
-function subscribeToLocale(onStoreChange: () => void): () => void {
-  window.addEventListener(LANGUAGE_CHANGE_EVENT, onStoreChange);
-
-  return () => {
-    window.removeEventListener(LANGUAGE_CHANGE_EVENT, onStoreChange);
-  };
-}
-
-function updateLocale(locale: Locale): void {
-  inMemoryLocale = locale;
-  cachedRawLocale = locale;
-  cachedLocale = locale;
-
-  writeStoredLocale(locale);
+function applyDocumentLocale(locale: Locale): void {
   document.documentElement.lang = locale;
   document.documentElement.dataset.locale = locale;
-  window.dispatchEvent(new Event(LANGUAGE_CHANGE_EVENT));
+}
+
+function createLocaleStore() {
+  let cachedRawLocale: string | null | typeof UNINITIALIZED_SNAPSHOT =
+    UNINITIALIZED_SNAPSHOT;
+  let cachedLocale: Locale = DEFAULT_LOCALE;
+  let inMemoryLocale: Locale | null = null;
+
+  function getClientSnapshot(): Locale {
+    let rawLocale: string | null;
+
+    try {
+      rawLocale = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    } catch {
+      return inMemoryLocale ?? DEFAULT_LOCALE;
+    }
+
+    if (inMemoryLocale !== null) {
+      if (rawLocale === inMemoryLocale) {
+        inMemoryLocale = null;
+      } else {
+        return inMemoryLocale;
+      }
+    }
+
+    if (rawLocale !== cachedRawLocale) {
+      cachedRawLocale = rawLocale;
+      cachedLocale = readStoredLocale({ getItem: () => rawLocale });
+    }
+
+    return cachedLocale;
+  }
+
+  function subscribe(onStoreChange: () => void): () => void {
+    const onLanguageChange = () => {
+      onStoreChange();
+    };
+    const onStorage = (event: StorageEvent) => {
+      if (event.key !== null && event.key !== LANGUAGE_STORAGE_KEY) {
+        return;
+      }
+
+      inMemoryLocale = null;
+      cachedRawLocale = UNINITIALIZED_SNAPSHOT;
+      applyDocumentLocale(readStoredLocale());
+      onStoreChange();
+    };
+
+    window.addEventListener(LANGUAGE_CHANGE_EVENT, onLanguageChange);
+    window.addEventListener("storage", onStorage);
+
+    return () => {
+      window.removeEventListener(LANGUAGE_CHANGE_EVENT, onLanguageChange);
+      window.removeEventListener("storage", onStorage);
+    };
+  }
+
+  function setLocale(locale: Locale): void {
+    inMemoryLocale = locale;
+    cachedRawLocale = locale;
+    cachedLocale = locale;
+
+    writeStoredLocale(locale);
+    applyDocumentLocale(locale);
+    window.dispatchEvent(new Event(LANGUAGE_CHANGE_EVENT));
+  }
+
+  return { getClientSnapshot, setLocale, subscribe };
 }
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
+  const storeRef = useRef<ReturnType<typeof createLocaleStore> | null>(null);
+
+  if (storeRef.current === null) {
+    storeRef.current = createLocaleStore();
+  }
+
+  const store = storeRef.current;
   const locale = useSyncExternalStore(
-    subscribeToLocale,
-    getClientSnapshot,
+    store.subscribe,
+    store.getClientSnapshot,
     getServerSnapshot,
   );
-  const setLocale = useCallback(updateLocale, []);
   const value = useMemo(
-    () => ({ locale, copy: catalog[locale], setLocale }),
-    [locale, setLocale],
+    () => ({ locale, copy: catalog[locale], setLocale: store.setLocale }),
+    [locale, store],
   );
 
   return (
