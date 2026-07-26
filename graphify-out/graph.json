@@ -11995,8 +11995,8 @@
       "source_location": "L721",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_evaluation_and_iteration",
-      "community": 176,
-      "community_name": "Evaluation and iteration",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "evaluation and iteration"
     },
     {
@@ -12006,8 +12006,8 @@
       "source_location": "L723",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_build_evaluations_first",
-      "community": 176,
-      "community_name": "Evaluation and iteration",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "build evaluations first"
     },
     {
@@ -12017,8 +12017,8 @@
       "source_location": "L756",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_develop_skills_iteratively_with_the_agent",
-      "community": 176,
-      "community_name": "Evaluation and iteration",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "develop skills iteratively with the agent"
     },
     {
@@ -12028,8 +12028,8 @@
       "source_location": "L812",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_observe_how_agents_navigate_skills",
-      "community": 176,
-      "community_name": "Evaluation and iteration",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "observe how agents navigate skills"
     },
     {
@@ -12039,8 +12039,8 @@
       "source_location": "L823",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_anti_patterns_to_avoid",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 191,
+      "community_name": "Anti-patterns to avoid",
       "norm_label": "anti-patterns to avoid"
     },
     {
@@ -12050,8 +12050,8 @@
       "source_location": "L825",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_windows_style_paths",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 191,
+      "community_name": "Anti-patterns to avoid",
       "norm_label": "avoid windows-style paths"
     },
     {
@@ -12061,8 +12061,8 @@
       "source_location": "L834",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_offering_too_many_options",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 191,
+      "community_name": "Anti-patterns to avoid",
       "norm_label": "avoid offering too many options"
     },
     {
@@ -15110,6 +15110,61 @@
       "id": "graphify_out_memory_query_20260726_090524_where_are_issue_2_scaffolding_quality_gates_and_source_nodes",
       "community": 172,
       "community_name": "Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
+      "norm_label": "query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md"
+    },
+    {
+      "label": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
+      "norm_label": "q: how should devenv, bun, codex agent skills, global tools, secrets, and vercel be owned, isolated, reproduced, and upgraded in this scaffold?"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_answer",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_outcome",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_source_nodes",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "source nodes"
     }
   ],
@@ -30449,8 +30504,52 @@
       "source": "graphify_out_memory_query_20260726_090524_where_are_issue_2_scaffolding_quality_gates_and_q_where_are_issue_2_scaffolding_quality_gates_and_the_next_implementation_entry_point",
       "target": "graphify_out_memory_query_20260726_090524_where_are_issue_2_scaffolding_quality_gates_and_source_nodes",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global",
+      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
+      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_source_nodes",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "96972f120c40468e6cefa17ebc649aff5ff016ec"
+  "built_at_commit": "840080014ce7fcf72464e3c4985835fe5736893a"
 }

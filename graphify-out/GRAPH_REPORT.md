@@ -1,16 +1,16 @@
-# Graph Report - issue-11-deploy  (2026-07-27)
+# Graph Report - selfwebsite  (2026-07-27)
 
 ## Corpus Check
-- 210 files · ~135,701 words
+- 211 files · ~135,971 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1367 nodes · 1373 edges · 191 communities (111 shown, 80 thin omitted)
+- 1372 nodes · 1377 edges · 192 communities (112 shown, 80 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `96972f12`
+- Built from commit: `84008001`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -194,6 +194,7 @@
 - 4. Client-Side Data Fetching
 - catalog.ts
 - accessibility-hardening.spec.ts
+- Anti-patterns to avoid
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -222,15 +223,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (191 total, 80 thin omitted)
+## Communities (192 total, 80 thin omitted)
 
 ### Community 0 - "server.cjs"
 Cohesion: 0.06
 Nodes (55): bootstrapPage(), brandMarkup(), broadcast(), browserLauncherForPlatform(), chmodOwnerOnly(), clients, companionUrl(), computeAcceptKey() (+47 more)
 
 ### Community 1 - "[Analysis Title]"
-Cohesion: 0.17
-Nodes (12): Advanced: Skills with executable code, [Analysis Title], Anti-patterns to avoid, Avoid offering too many options, Avoid Windows-style paths, Conditional workflow pattern, Examples pattern, Executive summary (+4 more)
+Cohesion: 0.15
+Nodes (13): Advanced: Skills with executable code, [Analysis Title], Build evaluations first, Conditional workflow pattern, Develop Skills iteratively with the agent, Evaluation and iteration, Examples pattern, Executive summary (+5 more)
 
 ### Community 2 - "Testing Skills With Subagents"
 Cohesion: 0.05
@@ -561,8 +562,8 @@ Cohesion: 0.22
 Nodes (7): DecisionPath(), LanguageSwitcher(), MarketingHome(), SiteHeader(), catalog, LocalizedText(), LocalizedTextProps
 
 ### Community 176 - "Evaluation and iteration"
-Cohesion: 0.50
-Nodes (4): Build evaluations first, Develop Skills iteratively with the agent, Evaluation and iteration, Observe how agents navigate Skills
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?, Source Nodes
 
 ### Community 177 - "Checklist for effective Skills"
 Cohesion: 0.50
@@ -620,16 +621,21 @@ Nodes (4): FeatureStoryCopy, SiteCopy, SUPPORTED_LOCALES, WorkflowStepCopy
 Cohesion: 0.22
 Nodes (4): expectTabSequence(), expectVisibleFocus(), locales, viewports
 
+### Community 191 - "Anti-patterns to avoid"
+Cohesion: 0.67
+Nodes (3): Anti-patterns to avoid, Avoid offering too many options, Avoid Windows-style paths
+
 ## Knowledge Gaps
-- **861 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+856 more)
+- **864 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+859 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **80 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `quality` (2× useful, score=1.999788438)
-- `scaffold.spec.ts` (2× useful, score=1.999788438) _(code changed — re-verify)_
+- `quality` (3× useful, score=2.998611433) _(code changed — re-verify)_
+- `scaffold.spec.ts` (3× useful, score=2.998611433) _(code changed — re-verify)_
+- `devenv` (2× useful, score=1.99915422)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -641,7 +647,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Writing Skills` connect `Writing Skills` to `Testing Skills With Subagents`, `File Organization`, `Skill Types`, `Skill Discovery Optimization (SDO)`, `Bulletproofing Skills Against Rationalization`, `Anti-Patterns`, `Testing All Skill Types`, `RED-GREEN-REFACTOR for Skills`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `crypto`, `http`, `fs` to the rest of the system?**
-  _861 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _864 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
 - **Should `Testing Skills With Subagents` be split into smaller, more focused modules?**
