@@ -920,8 +920,8 @@
     "semantic_hash": ""
   },
   "tests/e2e/marketing-journey.spec.ts": {
-    "mtime": 1785069807.9300382,
-    "ast_hash": "dd0a1e25b04f02e80b48de230f0f268f",
+    "mtime": 1785070988.785707,
+    "ast_hash": "bc6199a373854d99a13f665c05c8ac6a",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-26-bilingual-marketing-journey.md": {
@@ -995,13 +995,13 @@
     "semantic_hash": ""
   },
   "src/components/support-dashboard-data.test.ts": {
-    "mtime": 1785067372.6073039,
-    "ast_hash": "a477b77f7250260c8040fb068bb52c9e",
+    "mtime": 1785070794.3454473,
+    "ast_hash": "16ad1ccd7697b21fd1ec08f99c2fe761",
     "semantic_hash": ""
   },
   "src/components/support-dashboard-data.ts": {
-    "mtime": 1785067398.804764,
-    "ast_hash": "e34beb0c434f5c783b192557a5280416",
+    "mtime": 1785070898.8292797,
+    "ast_hash": "f481b6d6dcdc8036e83341aeaf6b454e",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md": {
@@ -1010,13 +1010,13 @@
     "semantic_hash": ""
   },
   "src/components/support-dashboard.test.tsx": {
-    "mtime": 1785068788.0269616,
-    "ast_hash": "d59ca9863eb460a17993193c431ce54b",
+    "mtime": 1785070988.7667065,
+    "ast_hash": "b7a5577d1bd32caf6b9edb76d2f06bd5",
     "semantic_hash": ""
   },
   "src/components/support-dashboard.tsx": {
-    "mtime": 1785068850.2024834,
-    "ast_hash": "42e8cee8a631492638e92c6214f7b224",
+    "mtime": 1785070898.8302796,
+    "ast_hash": "02f79b9c7a6e77194accbaa10cd8b12b",
     "semantic_hash": ""
   }
 }

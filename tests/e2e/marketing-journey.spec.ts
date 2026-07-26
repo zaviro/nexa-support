@@ -148,6 +148,17 @@ test("changes the visible dashboard conversation", async ({ page }) => {
   await expect(
     detail.getByRole("heading", { name: "Billing", level: 3 }),
   ).toBeVisible();
+  await expect(detail.getByText("2 min", { exact: true })).toBeVisible();
+  await expect(
+    dashboard.getByText("Can I update the card for our next renewal?", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    detail.getByText("Asked how to update the payment method before renewal.", {
+      exact: true,
+    }),
+  ).toBeVisible();
   await expect(detail.getByText("AI resolving", { exact: true })).toBeVisible();
 
   await sofiaConversation.click();
@@ -187,6 +198,26 @@ test("persists Simplified Chinese across routes and reloads", async ({
       name: "打开 Sofia Ramirez 的会话",
       exact: true,
     }),
+  ).toBeVisible();
+  const chineseDetail = dashboard.locator('[aria-live="polite"]');
+  await expect(
+    chineseDetail.getByRole("heading", { name: "账单", level: 3 }),
+  ).toBeVisible();
+  await expect(
+    chineseDetail.getByText("2 分钟", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    dashboard.getByText("我可以更新下一次续费使用的信用卡吗？", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    chineseDetail.getByText("咨询如何在续费前更新付款方式。", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    chineseDetail.getByText("AI 正在处理", { exact: true }),
   ).toBeVisible();
   await expect(
     page.getByRole("navigation", {
@@ -487,6 +518,102 @@ test("keeps dashboard controls at least 44px in both locales", async ({
   }
 });
 
+test("gives dashboard controls hover feedback without weakening selected, focus, or reduced-motion states", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const dashboard = page.getByRole("region", {
+    name: "Nexa Support dashboard",
+    exact: true,
+  });
+  const aiFilter = dashboard.getByRole("button", {
+    name: "AI resolving",
+    exact: true,
+  });
+  const mayaConversation = dashboard.getByRole("button", {
+    name: "Open Maya Chen conversation",
+    exact: true,
+  });
+  const liamConversation = dashboard.getByRole("button", {
+    name: "Open Liam Foster conversation",
+    exact: true,
+  });
+  const initialFilterBackground = await aiFilter.evaluate(
+    (element) => getComputedStyle(element).backgroundColor,
+  );
+  const initialConversationBackground = await liamConversation.evaluate(
+    (element) => getComputedStyle(element).backgroundColor,
+  );
+
+  await aiFilter.hover();
+  await expect
+    .poll(() =>
+      aiFilter.evaluate((element) => getComputedStyle(element).backgroundColor),
+    )
+    .not.toBe(initialFilterBackground);
+
+  await liamConversation.hover();
+  await expect
+    .poll(() =>
+      liamConversation.evaluate(
+        (element) => getComputedStyle(element).backgroundColor,
+      ),
+    )
+    .not.toBe(initialConversationBackground);
+
+  const selectedBackground = await mayaConversation.evaluate(
+    (element) => getComputedStyle(element).backgroundColor,
+  );
+  await mayaConversation.hover();
+  await expect
+    .poll(() =>
+      mayaConversation.evaluate(
+        (element) => getComputedStyle(element).backgroundColor,
+      ),
+    )
+    .toBe(selectedBackground);
+
+  await liamConversation.focus();
+  await expect
+    .poll(() =>
+      liamConversation.evaluate((element) => ({
+        outlineStyle: getComputedStyle(element).outlineStyle,
+        outlineWidth: getComputedStyle(element).outlineWidth,
+      })),
+    )
+    .toEqual({ outlineStyle: "solid", outlineWidth: "3px" });
+
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expect
+    .poll(() =>
+      aiFilter.evaluate((element) =>
+        getComputedStyle(element)
+          .transitionDuration.split(",")
+          .every((duration) => {
+            const value = Number.parseFloat(duration);
+            return duration.trim().endsWith("ms")
+              ? value <= 0.01
+              : value * 1000 <= 0.01;
+          }),
+      ),
+    )
+    .toBe(true);
+  await expect
+    .poll(() =>
+      liamConversation.evaluate((element) =>
+        getComputedStyle(element)
+          .transitionDuration.split(",")
+          .every((duration) => {
+            const value = Number.parseFloat(duration);
+            return duration.trim().endsWith("ms")
+              ? value <= 0.01
+              : value * 1000 <= 0.01;
+          }),
+      ),
+    )
+    .toBe(true);
+});
+
 test("keeps the tablet chat preview clear of the support route", async ({
   page,
 }) => {
@@ -543,36 +670,50 @@ test("protects Nexa brand names from automatic translation", async ({
 });
 
 for (const width of [375, 768, 1440]) {
-  test(`keeps the marketing shell inside the viewport at ${width}px`, async ({
-    page,
-  }) => {
-    await page.setViewportSize({ width, height: 900 });
-    await page.goto("/");
-    expect(
-      await page.evaluate(
-        () => document.documentElement.scrollWidth <= window.innerWidth,
-      ),
-    ).toBe(true);
-    const dashboard = page.getByRole("region", {
-      name: "Nexa Support dashboard",
-      exact: true,
-    });
-    const bounds = await dashboard.boundingBox();
-
-    expect(bounds).not.toBeNull();
-
-    if (bounds === null) {
-      throw new Error(
-        "Dashboard must be visible to verify its viewport bounds.",
+  for (const locale of [
+    { regionName: "Nexa Support dashboard", storageValue: "en" },
+    { regionName: "Nexa Support 客服看板", storageValue: "zh-CN" },
+  ] as const) {
+    test(`keeps the ${locale.storageValue} marketing shell inside the viewport at ${width}px`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.addInitScript(
+        ({ storageKey, storageValue }) => {
+          localStorage.setItem(storageKey, storageValue);
+        },
+        {
+          storageKey: "nexa-language:v1",
+          storageValue: locale.storageValue,
+        },
       );
-    }
+      await page.goto("/");
+      expect(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= window.innerWidth,
+        ),
+      ).toBe(true);
+      const dashboard = page.getByRole("region", {
+        name: locale.regionName,
+        exact: true,
+      });
+      const bounds = await dashboard.boundingBox();
 
-    expect(bounds.x).toBeGreaterThanOrEqual(0);
-    expect(bounds.x + bounds.width).toBeLessThanOrEqual(width);
-    expect(
-      await dashboard.evaluate(
-        (element) => element.scrollWidth <= element.clientWidth,
-      ),
-    ).toBe(true);
-  });
+      expect(bounds).not.toBeNull();
+
+      if (bounds === null) {
+        throw new Error(
+          "Dashboard must be visible to verify its viewport bounds.",
+        );
+      }
+
+      expect(bounds.x).toBeGreaterThanOrEqual(0);
+      expect(bounds.x + bounds.width).toBeLessThanOrEqual(width);
+      expect(
+        await dashboard.evaluate(
+          (element) => element.scrollWidth <= element.clientWidth,
+        ),
+      ).toBe(true);
+    });
+  }
 }

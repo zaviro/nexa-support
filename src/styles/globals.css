@@ -660,6 +660,16 @@ html[data-locale="zh-CN"] .login-card h1 {
   cursor: pointer;
   font-size: 0.7rem;
   font-weight: 680;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.support-dashboard__filter:hover:not([aria-pressed="true"]) {
+  border-color: var(--signal);
+  background: color-mix(in srgb, var(--route) 48%, var(--surface));
+  color: var(--evergreen);
 }
 
 .support-dashboard__filter[aria-pressed="true"] {
@@ -686,11 +696,22 @@ html[data-locale="zh-CN"] .login-card h1 {
   background: var(--surface);
   cursor: pointer;
   text-align: left;
+  transition: background-color 160ms ease;
+}
+
+.support-dashboard__conversation:hover:not([aria-pressed="true"]) {
+  background: color-mix(in srgb, var(--route) 24%, var(--surface));
 }
 
 .support-dashboard__conversation[aria-pressed="true"] {
   background: color-mix(in srgb, var(--route) 38%, var(--surface));
   box-shadow: inset 0.25rem 0 0 var(--signal);
+}
+
+.support-dashboard__conversation[aria-pressed="true"]:focus-visible {
+  box-shadow:
+    inset 0.25rem 0 0 var(--signal),
+    0 0 0 5px var(--evergreen);
 }
 
 .support-dashboard__conversation-topline strong {

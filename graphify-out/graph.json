@@ -2444,7 +2444,7 @@
       "label": "filterDashboardConversations()",
       "file_type": "code",
       "source_file": "src/components/support-dashboard-data.ts",
-      "source_location": "L78",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "src_components_support_dashboard_data_filterdashboardconversations",
       "community": 165,
@@ -7683,8 +7683,8 @@
       "source_location": "L1366",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_client_side_data_fetching",
-      "community": 58,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4. client-side data fetching"
     },
     {
@@ -7694,8 +7694,8 @@
       "source_location": "L1372",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_1_deduplicate_global_event_listeners",
-      "community": 58,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.1 deduplicate global event listeners"
     },
     {
@@ -7705,8 +7705,8 @@
       "source_location": "L1442",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_2_use_passive_event_listeners_for_scrolling_performance",
-      "community": 58,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.2 use passive event listeners for scrolling performance"
     },
     {
@@ -7716,8 +7716,8 @@
       "source_location": "L1486",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_3_use_swr_for_automatic_deduplication",
-      "community": 58,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.3 use swr for automatic deduplication"
     },
     {
@@ -7727,8 +7727,8 @@
       "source_location": "L1538",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_4_version_and_minimize_localstorage_data",
-      "community": 58,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.4 version and minimize localstorage data"
     },
     {
@@ -11170,8 +11170,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices",
-      "community": 175,
-      "community_name": "anthropic-best-practices.md",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "anthropic-best-practices.md"
     },
     {
@@ -11181,8 +11181,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_skill_authoring_best_practices",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "skill authoring best practices"
     },
     {
@@ -11192,8 +11192,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_core_principles",
-      "community": 178,
-      "community_name": "Core principles",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "core principles"
     },
     {
@@ -11203,8 +11203,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_concise_is_key",
-      "community": 178,
-      "community_name": "Core principles",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "concise is key"
     },
     {
@@ -11214,8 +11214,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_set_appropriate_degrees_of_freedom",
-      "community": 178,
-      "community_name": "Core principles",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "set appropriate degrees of freedom"
     },
     {
@@ -11225,8 +11225,8 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_test_with_all_models_you_plan_to_use",
-      "community": 178,
-      "community_name": "Core principles",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "test with all models you plan to use"
     },
     {
@@ -11236,8 +11236,8 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_skill_structure",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "skill structure"
     },
     {
@@ -11247,8 +11247,8 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_naming_conventions",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "naming conventions"
     },
     {
@@ -11258,8 +11258,8 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_writing_effective_descriptions",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "writing effective descriptions"
     },
     {
@@ -11269,8 +11269,8 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_progressive_disclosure_patterns",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "progressive disclosure patterns"
     },
     {
@@ -11280,8 +11280,8 @@
       "source_location": "L245",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_visual_overview_from_simple_to_complex",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "visual overview: from simple to complex"
     },
     {
@@ -11291,8 +11291,8 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_1_high_level_guide_with_references",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "pattern 1: high-level guide with references"
     },
     {
@@ -11302,8 +11302,8 @@
       "source_location": "L297",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_2_domain_specific_organization",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "pattern 2: domain-specific organization"
     },
     {
@@ -11313,8 +11313,8 @@
       "source_location": "L332",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_3_conditional_details",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "pattern 3: conditional details"
     },
     {
@@ -11324,8 +11324,8 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_deeply_nested_references",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "avoid deeply nested references"
     },
     {
@@ -11335,8 +11335,8 @@
       "source_location": "L383",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_structure_longer_reference_files_with_table_of_contents",
-      "community": 158,
-      "community_name": "Skill structure",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "structure longer reference files with table of contents"
     },
     {
@@ -11346,8 +11346,8 @@
       "source_location": "L410",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_workflows_and_feedback_loops",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "workflows and feedback loops"
     },
     {
@@ -11357,8 +11357,8 @@
       "source_location": "L412",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_use_workflows_for_complex_tasks",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "use workflows for complex tasks"
     },
     {
@@ -11368,8 +11368,8 @@
       "source_location": "L503",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_implement_feedback_loops",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "implement feedback loops"
     },
     {
@@ -11379,8 +11379,8 @@
       "source_location": "L547",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_content_guidelines",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "content guidelines"
     },
     {
@@ -11390,8 +11390,8 @@
       "source_location": "L549",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_time_sensitive_information",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "avoid time-sensitive information"
     },
     {
@@ -11401,8 +11401,8 @@
       "source_location": "L580",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_use_consistent_terminology",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "use consistent terminology"
     },
     {
@@ -11412,8 +11412,8 @@
       "source_location": "L598",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_common_patterns",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "common patterns"
     },
     {
@@ -11423,8 +11423,8 @@
       "source_location": "L600",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_template_pattern",
-      "community": 174,
-      "community_name": "Skill authoring best practices",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "template pattern"
     },
     {
@@ -11434,8 +11434,8 @@
       "source_location": "L612",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_analysis_title",
-      "community": 175,
-      "community_name": "anthropic-best-practices.md",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "[analysis title]"
     },
     {
@@ -11445,8 +11445,8 @@
       "source_location": "L614",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_executive_summary",
-      "community": 175,
-      "community_name": "anthropic-best-practices.md",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "executive summary"
     },
     {
@@ -11456,8 +11456,8 @@
       "source_location": "L617",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_key_findings",
-      "community": 175,
-      "community_name": "anthropic-best-practices.md",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "key findings"
     },
     {
@@ -11467,8 +11467,8 @@
       "source_location": "L622",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_recommendations",
-      "community": 175,
-      "community_name": "anthropic-best-practices.md",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "recommendations"
     },
     {
@@ -11544,8 +11544,8 @@
       "source_location": "L721",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_evaluation_and_iteration",
-      "community": 176,
-      "community_name": "Evaluation and iteration",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "evaluation and iteration"
     },
     {
@@ -11555,8 +11555,8 @@
       "source_location": "L723",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_build_evaluations_first",
-      "community": 176,
-      "community_name": "Evaluation and iteration",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "build evaluations first"
     },
     {
@@ -11566,8 +11566,8 @@
       "source_location": "L756",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_develop_skills_iteratively_with_the_agent",
-      "community": 176,
-      "community_name": "Evaluation and iteration",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "develop skills iteratively with the agent"
     },
     {
@@ -11577,8 +11577,8 @@
       "source_location": "L812",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_observe_how_agents_navigate_skills",
-      "community": 176,
-      "community_name": "Evaluation and iteration",
+      "community": 1,
+      "community_name": "[Analysis Title]",
       "norm_label": "observe how agents navigate skills"
     },
     {
@@ -11764,8 +11764,8 @@
       "source_location": "L1101",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_checklist_for_effective_skills",
-      "community": 177,
-      "community_name": "Checklist for effective Skills",
+      "community": 22,
+      "community_name": "Returns: \"OK\" or lists conflicts",
       "norm_label": "checklist for effective skills"
     },
     {
@@ -11775,8 +11775,8 @@
       "source_location": "L1105",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_core_quality",
-      "community": 177,
-      "community_name": "Checklist for effective Skills",
+      "community": 22,
+      "community_name": "Returns: \"OK\" or lists conflicts",
       "norm_label": "core quality"
     },
     {
@@ -11786,8 +11786,8 @@
       "source_location": "L1118",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_code_and_scripts",
-      "community": 177,
-      "community_name": "Checklist for effective Skills",
+      "community": 22,
+      "community_name": "Returns: \"OK\" or lists conflicts",
       "norm_label": "code and scripts"
     },
     {
@@ -11797,8 +11797,8 @@
       "source_location": "L1129",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_testing",
-      "community": 177,
-      "community_name": "Checklist for effective Skills",
+      "community": 22,
+      "community_name": "Returns: \"OK\" or lists conflicts",
       "norm_label": "testing"
     },
     {
@@ -17386,7 +17386,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/support-dashboard-data.ts",
-      "source_location": "L78",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_support_dashboard_data",
@@ -17481,7 +17481,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/support-dashboard.test.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_support_dashboard_test",
@@ -17493,7 +17493,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/support-dashboard.test.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_support_dashboard_test",
@@ -17522,6 +17522,18 @@
       "_origin": "ast",
       "source": "src_components_support_dashboard_test",
       "target": "src_i18n_locale_provider_localeprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/support-dashboard.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_support_dashboard_test",
+      "target": "src_i18n_locale_storage",
       "confidence_score": 1.0
     },
     {
@@ -27862,5 +27874,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2aea1c518a127b08315827a4af98aa946efb958c"
+  "built_at_commit": "5bbb1d9f0759729a69886f64b7b256e030834021"
 }

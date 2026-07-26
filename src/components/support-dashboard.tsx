@@ -156,7 +156,7 @@ export function SupportDashboard() {
                 >
                   <span className="support-dashboard__conversation-topline">
                     <strong>{conversation.customer}</strong>
-                    <span>{conversation.waitTime}</span>
+                    <span>{conversation.waitTime[locale]}</span>
                   </span>
                   <span>{conversation.preview[locale]}</span>
                   <span className="support-dashboard__conversation-queue">
@@ -175,9 +175,9 @@ export function SupportDashboard() {
         >
           <div className="support-dashboard__detail-heading">
             <span>{copy.dashboard.detail.label}</span>
-            <span>{selectedConversation.waitTime}</span>
+            <span>{selectedConversation.waitTime[locale]}</span>
           </div>
-          <h3>{selectedConversation.topic}</h3>
+          <h3>{selectedConversation.topic[locale]}</h3>
           <p>{selectedConversation.summary[locale]}</p>
           <dl className="support-dashboard__detail-meta">
             <div>

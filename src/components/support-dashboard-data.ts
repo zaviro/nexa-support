@@ -7,9 +7,9 @@ type LocalizedDashboardText = Record<Locale, string>;
 export type DashboardConversation = {
   id: string;
   customer: string;
-  topic: string;
+  topic: LocalizedDashboardText;
   queue: Exclude<DashboardQueue, "all">;
-  waitTime: string;
+  waitTime: LocalizedDashboardText;
   preview: LocalizedDashboardText;
   summary: LocalizedDashboardText;
   status: LocalizedDashboardText;
@@ -19,9 +19,15 @@ export const dashboardConversations: readonly DashboardConversation[] = [
   {
     id: "conv-billing",
     customer: "Maya Chen",
-    topic: "Billing",
+    topic: {
+      en: "Billing",
+      "zh-CN": "账单",
+    },
     queue: "ai",
-    waitTime: "2 min",
+    waitTime: {
+      en: "2 min",
+      "zh-CN": "2 分钟",
+    },
     preview: {
       en: "Can I update the card for our next renewal?",
       "zh-CN": "我可以更新下一次续费使用的信用卡吗？",
@@ -38,9 +44,15 @@ export const dashboardConversations: readonly DashboardConversation[] = [
   {
     id: "conv-setup",
     customer: "Liam Foster",
-    topic: "Product setup",
+    topic: {
+      en: "Product setup",
+      "zh-CN": "产品设置",
+    },
     queue: "ai",
-    waitTime: "5 min",
+    waitTime: {
+      en: "5 min",
+      "zh-CN": "5 分钟",
+    },
     preview: {
       en: "Where do I add teammates to our workspace?",
       "zh-CN": "我在哪里可以将队友添加到工作区？",
@@ -57,9 +69,15 @@ export const dashboardConversations: readonly DashboardConversation[] = [
   {
     id: "conv-refund",
     customer: "Sofia Ramirez",
-    topic: "Refund request",
+    topic: {
+      en: "Refund request",
+      "zh-CN": "退款申请",
+    },
     queue: "human",
-    waitTime: "12 min",
+    waitTime: {
+      en: "12 min",
+      "zh-CN": "12 分钟",
+    },
     preview: {
       en: "I need a refund for my annual plan.",
       "zh-CN": "我需要为年度套餐申请退款。",
