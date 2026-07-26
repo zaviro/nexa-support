@@ -2,6 +2,7 @@ import Link from "next/link";
 import { catalog } from "~/i18n/catalog";
 import { LocalizedText } from "~/i18n/localized-text";
 import { ChatShell } from "./chat-shell";
+import { DecisionPath } from "./decision-path";
 import { SiteHeader } from "./site-header";
 import { SupportDashboard } from "./support-dashboard";
 
@@ -272,91 +273,7 @@ export function MarketingHome() {
           </div>
         </section>
 
-        <section
-          aria-labelledby="pricing-title"
-          className="editorial-section pricing-section"
-          id="pricing"
-        >
-          <div className="section-heading">
-            <p className="section-kicker">
-              <span aria-hidden="true">N—03</span>
-              <LocalizedText en="Pricing preview" zhCN="价格预览" />
-            </p>
-            <h2 id="pricing-title">
-              <LocalizedText
-                en={catalog.en.pricing.title}
-                zhCN={catalog["zh-CN"].pricing.title}
-              />
-            </h2>
-            <p>
-              <LocalizedText
-                en={catalog.en.pricing.description}
-                zhCN={catalog["zh-CN"].pricing.description}
-              />
-            </p>
-          </div>
-
-          <div className="pricing-ledger">
-            <article className="price-plan">
-              <div className="price-plan__heading">
-                <h3>Starter</h3>
-                <span>
-                  <LocalizedText
-                    en="For focused support"
-                    zhCN="适合专注型客服"
-                  />
-                </span>
-              </div>
-              <p className="price-plan__price">
-                <strong>¥99</strong>
-                <span>
-                  <LocalizedText en="/ month" zhCN="/ 月" />
-                </span>
-              </p>
-              <p>
-                <LocalizedText
-                  en="A clear starting point for a growing SaaS team."
-                  zhCN="为成长中的 SaaS 团队提供清晰的起点。"
-                />
-              </p>
-              <Link className="button button--outline" href="/login">
-                <LocalizedText
-                  en={catalog.en.navigation.startFree}
-                  zhCN={catalog["zh-CN"].navigation.startFree}
-                />
-              </Link>
-            </article>
-            <article className="price-plan price-plan--featured">
-              <div className="price-plan__heading">
-                <h3>Pro</h3>
-                <span>
-                  <LocalizedText
-                    en="For a scaling team"
-                    zhCN="适合扩展中的团队"
-                  />
-                </span>
-              </div>
-              <p className="price-plan__price">
-                <strong>¥299</strong>
-                <span>
-                  <LocalizedText en="/ month" zhCN="/ 月" />
-                </span>
-              </p>
-              <p>
-                <LocalizedText
-                  en="More room for teams with a growing support rhythm."
-                  zhCN="为客服节奏不断增长的团队提供更多空间。"
-                />
-              </p>
-              <Link className="button button--paper" href="/login">
-                <LocalizedText
-                  en={catalog.en.navigation.startFree}
-                  zhCN={catalog["zh-CN"].navigation.startFree}
-                />
-              </Link>
-            </article>
-          </div>
-        </section>
+        <DecisionPath />
       </main>
 
       <footer className="site-footer">

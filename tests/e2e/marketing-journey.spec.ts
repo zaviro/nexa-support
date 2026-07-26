@@ -129,6 +129,63 @@ test("navigates the English marketing journey and login placeholder", async ({
   ).toHaveCount(0);
 });
 
+test("shows truthful localized decision information and an observable FAQ accordion", async ({
+  page,
+}) => {
+  await page.goto("/");
+
+  await expect(page.getByText("Demo testimonial", { exact: true })).toHaveCount(
+    2,
+  );
+  await expect(page.getByText("¥99", { exact: true })).toBeVisible();
+  await expect(page.getByText("¥299", { exact: true })).toBeVisible();
+  await expect(page.getByText("/ month", { exact: true })).toHaveCount(2);
+  const pricing = page.locator("#pricing");
+  const pricingLinks = pricing.getByRole("link", {
+    name: "Start free",
+    exact: true,
+  });
+  await expect(pricingLinks).toHaveCount(2);
+  for (let index = 0; index < 2; index += 1) {
+    await expect(pricingLinks.nth(index)).toHaveAttribute("href", "/login");
+  }
+
+  const aiAnswer = page.getByRole("button", {
+    name: "How does Nexa answer questions?",
+    exact: true,
+  });
+  await expect(aiAnswer).toHaveAttribute("aria-expanded", "false");
+  await aiAnswer.focus();
+  await page.keyboard.press("Enter");
+  await expect(aiAnswer).toHaveAttribute("aria-expanded", "true");
+  await expect(page.locator("#faq-answer-ai-answers")).toBeVisible();
+  await expect(aiAnswer).toHaveCSS("outline-style", "solid");
+  await page.keyboard.press("Space");
+  await expect(aiAnswer).toHaveAttribute("aria-expanded", "false");
+  await expect(page.locator("#faq-answer-ai-answers")).toHaveCount(0);
+
+  await page.getByRole("button", { name: "简体中文", exact: true }).click();
+  await expect(page.getByText("演示评价", { exact: true })).toHaveCount(2);
+  await expect(
+    page.getByRole("heading", { name: "常见问题", level: 2 }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Nexa 如何回答问题？" }),
+  ).toBeVisible();
+
+  const chinesePricingLinks = page.locator("#pricing").getByRole("link", {
+    name: "免费试用",
+    exact: true,
+  });
+  await expect(chinesePricingLinks).toHaveCount(2);
+  for (let index = 0; index < 2; index += 1) {
+    await expect(chinesePricingLinks.nth(index)).toHaveAttribute(
+      "href",
+      "/login",
+    );
+  }
+});
+
 test("changes the visible dashboard conversation", async ({ page }) => {
   await page.goto("/");
   const dashboard = page.getByRole("region", {
@@ -504,6 +561,39 @@ test("keeps visible Chinese controls at least 44px in both dimensions", async ({
 
     expect(undersizedControls).toEqual([]);
   }
+
+  const undersizedFaqControls = await page
+    .locator(".faq-item button")
+    .evaluateAll((controls) =>
+      controls.flatMap((control) => {
+        const rect = control.getBoundingClientRect();
+        const styles = getComputedStyle(control);
+        const isVisible =
+          styles.display !== "none" &&
+          styles.visibility !== "hidden" &&
+          rect.width > 0 &&
+          rect.height > 0;
+
+        if (!isVisible || (rect.width >= 44 && rect.height >= 44)) {
+          return [];
+        }
+
+        return [
+          {
+            height: Math.round(rect.height),
+            text: control.textContent?.replace(/\s+/g, " ").trim() ?? "",
+            width: Math.round(rect.width),
+          },
+        ];
+      }),
+    );
+
+  expect(undersizedFaqControls).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    ),
+  ).toBe(true);
 });
 
 test("keeps dashboard controls at least 44px in both locales", async ({

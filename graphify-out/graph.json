@@ -2287,6 +2287,28 @@
       "norm_label": "chatshell()"
     },
     {
+      "label": "decision-path.tsx",
+      "file_type": "code",
+      "source_file": "src/components/decision-path.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_decision_path",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "decision-path.tsx"
+    },
+    {
+      "label": "DecisionPath()",
+      "file_type": "code",
+      "source_file": "src/components/decision-path.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_components_decision_path_decisionpath",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "decisionpath()"
+    },
+    {
       "label": "language-switcher.tsx",
       "file_type": "code",
       "source_file": "src/components/language-switcher.tsx",
@@ -2323,7 +2345,7 @@
       "label": "RouteMap()",
       "file_type": "code",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_marketing_home_routemap",
       "community": 165,
@@ -2334,7 +2356,7 @@
       "label": "MarketingHome()",
       "file_type": "code",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L90",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "src_components_marketing_home_marketinghome",
       "community": 165,
@@ -2620,7 +2642,7 @@
       "label": "catalog",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L68",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "src_i18n_catalog_catalog",
       "community": 165,
@@ -7683,8 +7705,8 @@
       "source_location": "L1366",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_client_side_data_fetching",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4. client-side data fetching"
     },
     {
@@ -7694,8 +7716,8 @@
       "source_location": "L1372",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_1_deduplicate_global_event_listeners",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.1 deduplicate global event listeners"
     },
     {
@@ -7705,8 +7727,8 @@
       "source_location": "L1442",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_2_use_passive_event_listeners_for_scrolling_performance",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.2 use passive event listeners for scrolling performance"
     },
     {
@@ -7716,8 +7738,8 @@
       "source_location": "L1486",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_3_use_swr_for_automatic_deduplication",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.3 use swr for automatic deduplication"
     },
     {
@@ -7727,8 +7749,8 @@
       "source_location": "L1538",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_4_version_and_minimize_localstorage_data",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.4 version and minimize localstorage data"
     },
     {
@@ -11170,8 +11192,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "anthropic-best-practices.md"
     },
     {
@@ -11181,8 +11203,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_skill_authoring_best_practices",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "skill authoring best practices"
     },
     {
@@ -11192,8 +11214,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_core_principles",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "core principles"
     },
     {
@@ -11203,8 +11225,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_concise_is_key",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "concise is key"
     },
     {
@@ -11214,8 +11236,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_set_appropriate_degrees_of_freedom",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "set appropriate degrees of freedom"
     },
     {
@@ -11225,8 +11247,8 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_test_with_all_models_you_plan_to_use",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "test with all models you plan to use"
     },
     {
@@ -11236,8 +11258,8 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_skill_structure",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "skill structure"
     },
     {
@@ -11247,8 +11269,8 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_naming_conventions",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "naming conventions"
     },
     {
@@ -11258,8 +11280,8 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_writing_effective_descriptions",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "writing effective descriptions"
     },
     {
@@ -11269,8 +11291,8 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_progressive_disclosure_patterns",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "progressive disclosure patterns"
     },
     {
@@ -11280,8 +11302,8 @@
       "source_location": "L245",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_visual_overview_from_simple_to_complex",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "visual overview: from simple to complex"
     },
     {
@@ -11291,8 +11313,8 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_1_high_level_guide_with_references",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "pattern 1: high-level guide with references"
     },
     {
@@ -11302,8 +11324,8 @@
       "source_location": "L297",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_2_domain_specific_organization",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "pattern 2: domain-specific organization"
     },
     {
@@ -11313,8 +11335,8 @@
       "source_location": "L332",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_3_conditional_details",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "pattern 3: conditional details"
     },
     {
@@ -11324,8 +11346,8 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_deeply_nested_references",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "avoid deeply nested references"
     },
     {
@@ -11335,8 +11357,8 @@
       "source_location": "L383",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_structure_longer_reference_files_with_table_of_contents",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "structure longer reference files with table of contents"
     },
     {
@@ -11346,8 +11368,8 @@
       "source_location": "L410",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_workflows_and_feedback_loops",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "workflows and feedback loops"
     },
     {
@@ -11357,8 +11379,8 @@
       "source_location": "L412",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_use_workflows_for_complex_tasks",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "use workflows for complex tasks"
     },
     {
@@ -11368,8 +11390,8 @@
       "source_location": "L503",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_implement_feedback_loops",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "implement feedback loops"
     },
     {
@@ -11379,8 +11401,8 @@
       "source_location": "L547",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_content_guidelines",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "content guidelines"
     },
     {
@@ -11390,8 +11412,8 @@
       "source_location": "L549",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_time_sensitive_information",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "avoid time-sensitive information"
     },
     {
@@ -11401,8 +11423,8 @@
       "source_location": "L580",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_use_consistent_terminology",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "use consistent terminology"
     },
     {
@@ -11412,8 +11434,8 @@
       "source_location": "L598",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_common_patterns",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "common patterns"
     },
     {
@@ -11423,8 +11445,8 @@
       "source_location": "L600",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_template_pattern",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 158,
+      "community_name": "Skill authoring best practices",
       "norm_label": "template pattern"
     },
     {
@@ -11434,8 +11456,8 @@
       "source_location": "L612",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_analysis_title",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "[analysis title]"
     },
     {
@@ -11445,8 +11467,8 @@
       "source_location": "L614",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_executive_summary",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "executive summary"
     },
     {
@@ -11456,8 +11478,8 @@
       "source_location": "L617",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_key_findings",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "key findings"
     },
     {
@@ -11467,8 +11489,8 @@
       "source_location": "L622",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_recommendations",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "recommendations"
     },
     {
@@ -11588,8 +11610,8 @@
       "source_location": "L823",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_anti_patterns_to_avoid",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 179,
+      "community_name": "Anti-patterns to avoid",
       "norm_label": "anti-patterns to avoid"
     },
     {
@@ -11599,8 +11621,8 @@
       "source_location": "L825",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_windows_style_paths",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 179,
+      "community_name": "Anti-patterns to avoid",
       "norm_label": "avoid windows-style paths"
     },
     {
@@ -11610,8 +11632,8 @@
       "source_location": "L834",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_offering_too_many_options",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 179,
+      "community_name": "Anti-patterns to avoid",
       "norm_label": "avoid offering too many options"
     },
     {
@@ -11764,8 +11786,8 @@
       "source_location": "L1101",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_checklist_for_effective_skills",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "checklist for effective skills"
     },
     {
@@ -11775,8 +11797,8 @@
       "source_location": "L1105",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_core_quality",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "core quality"
     },
     {
@@ -11786,8 +11808,8 @@
       "source_location": "L1118",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_code_and_scripts",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "code and scripts"
     },
     {
@@ -11797,8 +11819,8 @@
       "source_location": "L1129",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_testing",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "testing"
     },
     {
@@ -13802,6 +13824,83 @@
       "community": 169,
       "community_name": "File Structure",
       "norm_label": "task 5: review the real ui and close issue #3 with fresh evidence"
+    },
+    {
+      "label": "2026-07-26-decision-path.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_decision_path",
+      "community": 174,
+      "community_name": "Decision Path Implementation Plan",
+      "norm_label": "2026-07-26-decision-path.md"
+    },
+    {
+      "label": "Decision Path Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_decision_path_decision_path_implementation_plan",
+      "community": 174,
+      "community_name": "Decision Path Implementation Plan",
+      "norm_label": "decision path implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_decision_path_global_constraints",
+      "community": 174,
+      "community_name": "Decision Path Implementation Plan",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "File Structure",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_decision_path_file_structure",
+      "community": 174,
+      "community_name": "Decision Path Implementation Plan",
+      "norm_label": "file structure"
+    },
+    {
+      "label": "Task 1: Ship the localized trust, pricing, and FAQ decision path",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_decision_path_task_1_ship_the_localized_trust_pricing_and_faq_decision_path",
+      "community": 174,
+      "community_name": "Decision Path Implementation Plan",
+      "norm_label": "task 1: ship the localized trust, pricing, and faq decision path"
+    },
+    {
+      "label": "Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L209",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_decision_path_self_review",
+      "community": 174,
+      "community_name": "Decision Path Implementation Plan",
+      "norm_label": "self-review"
+    },
+    {
+      "label": "Execution Handoff",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L215",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_decision_path_execution_handoff",
+      "community": 174,
+      "community_name": "Decision Path Implementation Plan",
+      "norm_label": "execution handoff"
     },
     {
       "label": "2026-07-26-interactive-support-dashboard.md",
@@ -16960,6 +17059,77 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/decision-path.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_decision_path",
+      "target": "src_components_decision_path_decisionpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/decision-path.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_decision_path",
+      "target": "src_i18n_locale_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/decision-path.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_decision_path",
+      "target": "src_i18n_locale_provider_uselocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/marketing-home.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_marketing_home",
+      "target": "src_components_decision_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/decision-path.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_decision_path_decisionpath",
+      "target": "src_i18n_locale_provider_uselocale"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/marketing-home.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_marketing_home",
+      "target": "src_components_decision_path_decisionpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/language-switcher.tsx",
       "source_location": "L6",
       "weight": 1.0,
@@ -17056,7 +17226,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L90",
+      "source_location": "L91",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17067,7 +17237,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17079,7 +17249,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17091,7 +17261,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17103,7 +17273,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17115,7 +17285,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17664,7 +17834,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L68",
+      "source_location": "L100",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -27688,6 +27858,72 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_decision_path",
+      "target": "docs_superpowers_plans_2026_07_26_decision_path_decision_path_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L215",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_decision_path_decision_path_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_decision_path_execution_handoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_decision_path_decision_path_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_decision_path_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_decision_path_decision_path_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_decision_path_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L209",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_decision_path_decision_path_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_decision_path_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-decision-path.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_decision_path_file_structure",
+      "target": "docs_superpowers_plans_2026_07_26_decision_path_task_1_ship_the_localized_trust_pricing_and_faq_decision_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -27874,5 +28110,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "5bbb1d9f0759729a69886f64b7b256e030834021"
+  "built_at_commit": "881980c6b75f674e60ffc7af5f4f7c8142ed1d0f"
 }
