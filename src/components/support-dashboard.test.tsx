@@ -22,4 +22,27 @@ describe("SupportDashboard", () => {
     ).toBeVisible();
     expect(screen.getByText("Waiting for human support")).toBeVisible();
   });
+
+  test("updates the activity visualization for a different AI conversation", async () => {
+    const user = userEvent.setup();
+    const { container } = render(
+      <LocaleProvider>
+        <SupportDashboard />
+      </LocaleProvider>,
+    );
+
+    const initialActivityPath = container
+      .querySelector(".support-dashboard__activity path")
+      ?.getAttribute("d");
+
+    await user.click(
+      screen.getByRole("button", { name: "Open Liam Foster conversation" }),
+    );
+
+    expect(
+      container
+        .querySelector(".support-dashboard__activity path")
+        ?.getAttribute("d"),
+    ).not.toBe(initialActivityPath);
+  });
 });

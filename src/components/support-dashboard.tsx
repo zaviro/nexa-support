@@ -9,6 +9,13 @@ import {
 } from "./support-dashboard-data";
 
 const queues: readonly DashboardQueue[] = ["all", "ai", "human"];
+const fallbackActivityPath =
+  "M4 53 C38 52 45 30 78 36 S120 60 154 32 S198 16 236 20";
+const activityPaths: Readonly<Record<string, string>> = {
+  "conv-billing": fallbackActivityPath,
+  "conv-setup": "M4 28 C34 26 48 54 78 48 S118 14 154 24 S202 52 236 18",
+  "conv-refund": "M4 58 C32 56 48 38 78 44 S118 26 154 40 S198 16 236 26",
+};
 
 function getInitialConversation() {
   const initialConversation = dashboardConversations[0];
@@ -49,6 +56,9 @@ export function SupportDashboard() {
   if (selectedConversation === undefined) {
     return null;
   }
+
+  const activityPath =
+    activityPaths[selectedConversation.id] ?? fallbackActivityPath;
 
   return (
     <section
@@ -156,7 +166,7 @@ export function SupportDashboard() {
               <span>{copy.dashboard.detail.activityLabel}</span>
             </div>
             <svg aria-hidden="true" viewBox="0 0 240 72">
-              <path d="M4 53 C38 52 45 30 78 36 S120 60 154 32 S198 16 236 20" />
+              <path d={activityPath} />
               <circle cx="4" cy="53" r="4" />
               <circle cx="78" cy="36" r="4" />
               <circle cx="154" cy="32" r="4" />
