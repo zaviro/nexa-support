@@ -3816,6 +3816,17 @@
       "norm_label": "installcommand"
     },
     {
+      "label": "buildCommand",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "vercel_buildcommand",
+      "community": 78,
+      "community_name": "vercel.json",
+      "norm_label": "buildcommand"
+    },
+    {
       "label": "vitest.config.ts",
       "file_type": "code",
       "source_file": "vitest.config.ts",
@@ -8123,8 +8134,8 @@
       "source_location": "L1366",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_client_side_data_fetching",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 64,
+      "community_name": "Nexa Support",
       "norm_label": "4. client-side data fetching"
     },
     {
@@ -8134,8 +8145,8 @@
       "source_location": "L1372",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_1_deduplicate_global_event_listeners",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 64,
+      "community_name": "Nexa Support",
       "norm_label": "4.1 deduplicate global event listeners"
     },
     {
@@ -8145,8 +8156,8 @@
       "source_location": "L1442",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_2_use_passive_event_listeners_for_scrolling_performance",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 64,
+      "community_name": "Nexa Support",
       "norm_label": "4.2 use passive event listeners for scrolling performance"
     },
     {
@@ -8156,8 +8167,8 @@
       "source_location": "L1486",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_3_use_swr_for_automatic_deduplication",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 64,
+      "community_name": "Nexa Support",
       "norm_label": "4.3 use swr for automatic deduplication"
     },
     {
@@ -8167,8 +8178,8 @@
       "source_location": "L1538",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_4_version_and_minimize_localstorage_data",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 64,
+      "community_name": "Nexa Support",
       "norm_label": "4.4 version and minimize localstorage data"
     },
     {
@@ -13876,8 +13887,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 64,
-      "community_name": "Nexa Support",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "readme.md"
     },
     {
@@ -13887,8 +13898,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme_nexa_support",
-      "community": 64,
-      "community_name": "Nexa Support",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "nexa support"
     },
     {
@@ -13898,42 +13909,64 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "readme_demo_security",
-      "community": 64,
-      "community_name": "Nexa Support",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "demo security"
     },
     {
-      "label": "\u73af\u5883",
+      "label": "Architecture",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "readme_\u73af\u5883",
-      "community": 64,
-      "community_name": "Nexa Support",
-      "norm_label": "\u73af\u5883"
+      "id": "readme_architecture",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
+      "norm_label": "architecture"
     },
     {
-      "label": "\u8d28\u91cf\u547d\u4ee4",
+      "label": "\u73af\u5883\u4e0e\u542f\u52a8",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L17",
       "_origin": "ast",
-      "id": "readme_\u8d28\u91cf\u547d\u4ee4",
-      "community": 64,
-      "community_name": "Nexa Support",
-      "norm_label": "\u8d28\u91cf\u547d\u4ee4"
+      "id": "readme_\u73af\u5883\u4e0e\u542f\u52a8",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
+      "norm_label": "\u73af\u5883\u4e0e\u542f\u52a8"
     },
     {
-      "label": "Agent \u6280\u80fd",
+      "label": "\u8d28\u91cf\u4e0e\u6d4b\u8bd5",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L39",
       "_origin": "ast",
-      "id": "readme_agent_\u6280\u80fd",
-      "community": 64,
-      "community_name": "Nexa Support",
-      "norm_label": "agent \u6280\u80fd"
+      "id": "readme_\u8d28\u91cf\u4e0e\u6d4b\u8bd5",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
+      "norm_label": "\u8d28\u91cf\u4e0e\u6d4b\u8bd5"
+    },
+    {
+      "label": "Hooks\u3001CI \u4e0e Agent \u6280\u80fd",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "readme_hooks_ci_\u4e0e_agent_\u6280\u80fd",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
+      "norm_label": "hooks\u3001ci \u4e0e agent \u6280\u80fd"
+    },
+    {
+      "label": "Vercel \u90e8\u7f72",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "readme_vercel_\u90e8\u7f72",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
+      "norm_label": "vercel \u90e8\u7f72"
     },
     {
       "label": "development-workflow.md",
@@ -13942,8 +13975,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_agents_development_workflow",
-      "community": 52,
-      "community_name": "Development workflow",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "development-workflow.md"
     },
     {
@@ -13953,8 +13986,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_agents_development_workflow_development_workflow",
-      "community": 52,
-      "community_name": "Development workflow",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "development workflow"
     },
     {
@@ -13964,8 +13997,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "docs_agents_development_workflow_start_here",
-      "community": 52,
-      "community_name": "Development workflow",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "start here"
     },
     {
@@ -13975,8 +14008,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "docs_agents_development_workflow_superpowers_sequence",
-      "community": 52,
-      "community_name": "Development workflow",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "superpowers sequence"
     },
     {
@@ -13986,8 +14019,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "docs_agents_development_workflow_environment_and_quality",
-      "community": 52,
-      "community_name": "Development workflow",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "environment and quality"
     },
     {
@@ -13997,8 +14030,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "docs_agents_development_workflow_enforcement_boundary",
-      "community": 52,
-      "community_name": "Development workflow",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
       "norm_label": "enforcement boundary"
     },
     {
@@ -14154,6 +14187,28 @@
       "community": 41,
       "community_name": "Issue tracker: GitHub",
       "norm_label": "ticket relationships"
+    },
+    {
+      "label": "implementation-obstacles.md",
+      "file_type": "document",
+      "source_file": "docs/implementation-obstacles.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_implementation_obstacles",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
+      "norm_label": "implementation-obstacles.md"
+    },
+    {
+      "label": "\u5b9e\u65bd\u4e0e\u90e8\u7f72\u969c\u788d\u62a5\u544a",
+      "file_type": "document",
+      "source_file": "docs/implementation-obstacles.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_implementation_obstacles_\u5b9e\u65bd\u4e0e\u90e8\u7f72\u969c\u788d\u62a5\u544a",
+      "community": 168,
+      "community_name": "Nexa Support \u5de5\u7a0b\u4ea4\u63a5",
+      "norm_label": "\u5b9e\u65bd\u4e0e\u90e8\u7f72\u969c\u788d\u62a5\u544a"
     },
     {
       "label": "2026-07-26-accessibility-hardening.md",
@@ -14494,6 +14549,94 @@
       "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_plan_self_review",
       "community": 179,
       "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "plan self-review"
+    },
+    {
+      "label": "2026-07-26-document-and-deploy.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_document_and_deploy",
+      "community": 52,
+      "community_name": "Development workflow",
+      "norm_label": "2026-07-26-document-and-deploy.md"
+    },
+    {
+      "label": "Document and Deploy the Validated Portfolio Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_document_and_deploy_document_and_deploy_the_validated_portfolio_implementation_plan",
+      "community": 52,
+      "community_name": "Development workflow",
+      "norm_label": "document and deploy the validated portfolio implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_document_and_deploy_global_constraints",
+      "community": 52,
+      "community_name": "Development workflow",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "File Structure",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_document_and_deploy_file_structure",
+      "community": 52,
+      "community_name": "Development workflow",
+      "norm_label": "file structure"
+    },
+    {
+      "label": "Task 1: Publish the reproducibility documentation and factual obstacle report",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_document_and_deploy_task_1_publish_the_reproducibility_documentation_and_factual_obstacle_report",
+      "community": 52,
+      "community_name": "Development workflow",
+      "norm_label": "task 1: publish the reproducibility documentation and factual obstacle report"
+    },
+    {
+      "label": "Independent Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L125",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_document_and_deploy_independent_review",
+      "community": 52,
+      "community_name": "Development workflow",
+      "norm_label": "independent review"
+    },
+    {
+      "label": "Final Verification and Deployment Evidence",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_document_and_deploy_final_verification_and_deployment_evidence",
+      "community": 52,
+      "community_name": "Development workflow",
+      "norm_label": "final verification and deployment evidence"
+    },
+    {
+      "label": "Plan Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L210",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_document_and_deploy_plan_self_review",
+      "community": 52,
+      "community_name": "Development workflow",
       "norm_label": "plan self-review"
     },
     {
@@ -20482,6 +20625,17 @@
       "_origin": "ast",
       "source": "tsconfig_exclude",
       "target": "ref_node_modules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "vercel_json_vercel",
+      "target": "vercel_buildcommand",
       "confidence_score": 1.0
     },
     {
@@ -29043,6 +29197,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "handoff",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "HANDOFF.md",
@@ -29219,6 +29384,28 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_agents_development_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_implementation_obstacles",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
@@ -29233,11 +29420,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_nexa_support",
-      "target": "readme_agent_\u6280\u80fd",
+      "target": "readme_architecture",
       "confidence_score": 1.0
     },
     {
@@ -29255,22 +29442,44 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L11",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_nexa_support",
-      "target": "readme_\u73af\u5883",
+      "target": "readme_hooks_ci_\u4e0e_agent_\u6280\u80fd",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_nexa_support",
-      "target": "readme_\u8d28\u91cf\u547d\u4ee4",
+      "target": "readme_vercel_\u90e8\u7f72",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_nexa_support",
+      "target": "readme_\u73af\u5883\u4e0e\u542f\u52a8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_nexa_support",
+      "target": "readme_\u8d28\u91cf\u4e0e\u6d4b\u8bd5",
       "confidence_score": 1.0
     },
     {
@@ -29458,6 +29667,17 @@
       "_origin": "ast",
       "source": "docs_agents_issue_tracker_issue_tracker_github",
       "target": "docs_agents_issue_tracker_when_a_skill_says_publish_to_the_issue_tracker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/implementation-obstacles.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_implementation_obstacles",
+      "target": "docs_implementation_obstacles_\u5b9e\u65bd\u4e0e\u90e8\u7f72\u969c\u788d\u62a5\u544a",
       "confidence_score": 1.0
     },
     {
@@ -29755,6 +29975,83 @@
       "_origin": "ast",
       "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_file_structure",
       "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_task_1_deliver_and_verify_the_local_deterministic_chat_journey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_document_and_deploy",
+      "target": "docs_superpowers_plans_2026_07_26_document_and_deploy_document_and_deploy_the_validated_portfolio_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_document_and_deploy_document_and_deploy_the_validated_portfolio_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_document_and_deploy_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_document_and_deploy_document_and_deploy_the_validated_portfolio_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_document_and_deploy_final_verification_and_deployment_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_document_and_deploy_document_and_deploy_the_validated_portfolio_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_document_and_deploy_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_document_and_deploy_document_and_deploy_the_validated_portfolio_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_document_and_deploy_independent_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L210",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_document_and_deploy_document_and_deploy_the_validated_portfolio_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_document_and_deploy_plan_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-document-and-deploy.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_document_and_deploy_file_structure",
+      "target": "docs_superpowers_plans_2026_07_26_document_and_deploy_task_1_publish_the_reproducibility_documentation_and_factual_obstacle_report",
       "confidence_score": 1.0
     },
     {
@@ -30155,5 +30452,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "685ad82ddc40db54c8cc36179ccaf7c8467f45b7"
+  "built_at_commit": "96972f120c40468e6cefa17ebc649aff5ff016ec"
 }

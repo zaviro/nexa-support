@@ -1,16 +1,16 @@
-# Graph Report - issue-10-hardening  (2026-07-26)
+# Graph Report - issue-11-deploy  (2026-07-27)
 
 ## Corpus Check
-- 208 files · ~132,875 words
+- 210 files · ~135,701 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1354 nodes · 1359 edges · 191 communities (111 shown, 80 thin omitted)
+- 1367 nodes · 1373 edges · 191 communities (111 shown, 80 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `685ad82d`
+- Built from commit: `96972f12`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -433,8 +433,8 @@ Cohesion: 0.33
 Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
 
 ### Community 52 - "Development workflow"
-Cohesion: 0.33
-Nodes (5): Development workflow, Enforcement boundary, Environment and quality, Start here, Superpowers sequence
+Cohesion: 0.25
+Nodes (7): Document and Deploy the Validated Portfolio Implementation Plan, File Structure, Final Verification and Deployment Evidence, Global Constraints, Independent Review, Plan Self-Review, Task 1: Publish the reproducibility documentation and factual obstacle report
 
 ### Community 53 - "Domain Docs"
 Cohesion: 0.33
@@ -453,8 +453,8 @@ Cohesion: 0.40
 Nodes (4): Choose A, B, or C, Pressure Test 3: Authority + Social Pressure, Scenario, Your Options
 
 ### Community 57 - "React Best Practices"
-Cohesion: 0.20
-Nodes (9): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching, Abstract, React Best Practices, References (+1 more)
+Cohesion: 0.40
+Nodes (4): Abstract, React Best Practices, References, Table of Contents
 
 ### Community 58 - "Skill structure"
 Cohesion: 0.20
@@ -481,8 +481,8 @@ Cohesion: 0.40
 Nodes (5): GREEN: Write Minimal Skill, Micro-Test Wording Before Full Scenarios, RED-GREEN-REFACTOR for Skills, RED: Write Failing Test (Baseline), REFACTOR: Close Loopholes
 
 ### Community 64 - "Nexa Support"
-Cohesion: 0.33
-Nodes (5): Agent 技能, Demo security, Nexa Support, 环境, 质量命令
+Cohesion: 0.40
+Nodes (5): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching
 
 ### Community 66 - "Pi Tool Mapping"
 Cohesion: 0.50
@@ -521,8 +521,8 @@ Cohesion: 0.33
 Nodes (5): Global Constraints, Interactive Support Dashboard Implementation Plan, Task 1: Dashboard fixture and selection model, Task 2: Interactive bilingual dashboard, Task 3: Browser behavior and responsive evidence
 
 ### Community 78 - "vercel.json"
-Cohesion: 0.50
-Nodes (3): framework, installCommand, $schema
+Cohesion: 0.40
+Nodes (4): buildCommand, framework, installCommand, $schema
 
 ### Community 158 - "Deterministic Support Chat Implementation Plan"
 Cohesion: 0.22
@@ -533,8 +533,8 @@ Cohesion: 0.27
 Nodes (10): createLocaleStore(), getServerSnapshot(), LocaleContext, LocaleContextValue, LocaleProvider(), UNINITIALIZED_SNAPSHOT, DEFAULT_LOCALE, parseLocale() (+2 more)
 
 ### Community 168 - "Nexa Support 工程交接"
-Cohesion: 0.11
-Nodes (17): 10. 下一位 Superpowers Agent, 1. 本轮边界, 2. 最终产品范围, 3. 已完成的工程脚手架, 4. 项目内 Agent 技能, 5. 新环境复现, 6. 验证证据, 7. Git 与 GitHub 状态 (+9 more)
+Cohesion: 0.06
+Nodes (30): Development workflow, Enforcement boundary, Environment and quality, Start here, Superpowers sequence, 实施与部署障碍报告, 10. 下一位 Superpowers Agent, 1. 本轮边界 (+22 more)
 
 ### Community 169 - "File Structure"
 Cohesion: 0.22
@@ -621,7 +621,7 @@ Cohesion: 0.22
 Nodes (4): expectTabSequence(), expectVisibleFocus(), locales, viewports
 
 ## Knowledge Gaps
-- **852 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+847 more)
+- **861 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+856 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **80 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -634,14 +634,14 @@ Nodes (4): expectTabSequence(), expectVisibleFocus(), locales, viewports
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `5. Re-render Optimization`, `7. JavaScript Performance`, `useLocale`, `6. Rendering Performance`, `3. Server-Side Performance`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `Writing Skills` connect `Writing Skills` to `Testing Skills With Subagents`, `File Organization`, `Skill Types`, `Skill Discovery Optimization (SDO)`, `Bulletproofing Skills Against Rationalization`, `Anti-Patterns`, `Testing All Skill Types`, `RED-GREEN-REFACTOR for Skills`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `React Best Practices` connect `React Best Practices` to `Nexa Support`, `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `5. Re-render Optimization`, `7. JavaScript Performance`, `useLocale`, `6. Rendering Performance`, `3. Server-Side Performance`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `Writing Skills` connect `Writing Skills` to `Testing Skills With Subagents`, `File Organization`, `Skill Types`, `Skill Discovery Optimization (SDO)`, `Bulletproofing Skills Against Rationalization`, `Anti-Patterns`, `Testing All Skill Types`, `RED-GREEN-REFACTOR for Skills`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `crypto`, `http`, `fs` to the rest of the system?**
-  _852 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _861 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
 - **Should `Testing Skills With Subagents` be split into smaller, more focused modules?**
