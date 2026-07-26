@@ -1,3 +1,5 @@
+import type { ChatIntent } from "~/components/chat-state";
+
 export const SUPPORTED_LOCALES = ["en", "zh-CN"] as const;
 
 export type Locale = "en" | "zh-CN";
@@ -84,8 +86,16 @@ export type SiteCopy = {
   };
   chatShell: {
     title: string;
-    status: string;
-    description: string;
+    launcherOpen: string;
+    launcherClose: string;
+    welcome: string;
+    inputLabel: string;
+    inputPlaceholder: string;
+    send: string;
+    typing: string;
+    pending: string;
+    quickActions: Record<"pricing" | "refunds" | "features" | "human", string>;
+    replies: Record<ChatIntent, string>;
   };
   login: {
     title: string;
@@ -232,8 +242,33 @@ export const catalog: Record<Locale, SiteCopy> = {
     },
     chatShell: {
       title: "Nexa Support",
-      status: "Support online",
-      description: "Ask a question and see how your support flow can begin.",
+      launcherOpen: "Open support chat",
+      launcherClose: "Close support chat",
+      welcome:
+        "Hi — choose a topic or type a question. This demo replies locally.",
+      inputLabel: "Your question",
+      inputPlaceholder: "Type your question",
+      send: "Send",
+      typing: "Nexa Support is typing…",
+      pending: "Demo human handoff pending. No contact details are collected.",
+      quickActions: {
+        pricing: "Pricing",
+        refunds: "Refunds",
+        features: "Product features",
+        human: "Contact a human",
+      },
+      replies: {
+        pricing:
+          "Starter is ¥99/month and Pro is ¥299/month in this local demo.",
+        refunds:
+          "Refund requests are reviewed by a teammate; this demo does not collect account details.",
+        features:
+          "Nexa Support demonstrates AI answers, human handoff, and support analytics.",
+        human:
+          "You are in the demo handoff queue. No contact details are collected.",
+        fallback:
+          "I can help with pricing, refunds, product features, or a human handoff in this demo.",
+      },
     },
     login: {
       title: "Welcome to the Nexa Support demo",
@@ -370,8 +405,27 @@ export const catalog: Record<Locale, SiteCopy> = {
     },
     chatShell: {
       title: "Nexa Support",
-      status: "支持在线",
-      description: "提出问题，看看你的客服流程如何开始。",
+      launcherOpen: "打开客服聊天",
+      launcherClose: "关闭客服聊天",
+      welcome: "您好——请选择一个主题或输入问题。本演示将在本地回复。",
+      inputLabel: "您的问题",
+      inputPlaceholder: "输入您的问题",
+      send: "发送",
+      typing: "Nexa Support 正在输入…",
+      pending: "演示人工接管正在等待中。我们不会收集联系信息。",
+      quickActions: {
+        pricing: "价格",
+        refunds: "退款",
+        features: "产品功能",
+        human: "联系人工",
+      },
+      replies: {
+        pricing: "本地演示中，入门版为 ¥99/月，专业版为 ¥299/月。",
+        refunds: "退款申请将由团队成员审核；本演示不会收集账户详情。",
+        features: "Nexa Support 展示 AI 回答、人工接管和客服数据分析。",
+        human: "您已进入演示接管队列。我们不会收集联系信息。",
+        fallback: "本演示可以帮助您了解价格、退款、产品功能或人工接管。",
+      },
     },
     login: {
       title: "欢迎体验 Nexa Support 演示",

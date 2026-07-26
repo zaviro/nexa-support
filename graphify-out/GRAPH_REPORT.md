@@ -73,6 +73,7 @@
 - Pressure Test 2: Sunk Cost + Exhaustion
 - Pressure Test 3: Authority + Social Pressure
 - React Best Practices
+- Skill structure
 - 8. Advanced Patterns
 - Web Interface Guidelines
 - Anti-Patterns
@@ -169,6 +170,7 @@
 - _template.md
 - plan-document-reviewer-prompt.md
 - extraction-spec.md
+- Deterministic Support Chat Implementation Plan
 - scaffold.spec.ts
 - Nexa Support 工程交接
 - File Structure
@@ -192,16 +194,16 @@
 10. `Visual Companion Guide` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `ChatShell()` --indirect_call--> `transitionChat()`  [INFERRED]
+  src/components/chat-shell.tsx → src/components/chat-state.ts
 - `LocaleProbe()` --calls--> `useLocale()`  [EXTRACTED]
   src/i18n/locale-provider.test.tsx → src/i18n/locale-provider.tsx
+- `ChatShell()` --calls--> `useLocale()`  [EXTRACTED]
+  src/components/chat-shell.tsx → src/i18n/locale-provider.tsx
 - `LanguageSwitcher()` --calls--> `useLocale()`  [EXTRACTED]
   src/components/language-switcher.tsx → src/i18n/locale-provider.tsx
 - `SupportDashboard()` --calls--> `filterDashboardConversations()`  [EXTRACTED]
   src/components/support-dashboard.tsx → src/components/support-dashboard-data.ts
-- `SupportDashboard()` --calls--> `useLocale()`  [EXTRACTED]
-  src/components/support-dashboard.tsx → src/i18n/locale-provider.tsx
-- `createLocaleStore()` --calls--> `readStoredLocale()`  [EXTRACTED]
-  src/i18n/locale-provider.tsx → src/i18n/locale-storage.ts
 
 ## Import Cycles
 - None detected.
@@ -213,8 +215,8 @@ Cohesion: 0.06
 Nodes (55): bootstrapPage(), brandMarkup(), broadcast(), browserLauncherForPlatform(), chmodOwnerOnly(), clients, companionUrl(), computeAcceptKey() (+47 more)
 
 ### Community 1 - "[Analysis Title]"
-Cohesion: 0.05
-Nodes (43): Advanced: Skills with executable code, [Analysis Title], [Analysis Title], Anti-patterns to avoid, Avoid deeply nested references, Avoid offering too many options, Avoid time-sensitive information, Avoid Windows-style paths (+35 more)
+Cohesion: 0.17
+Nodes (12): Advanced: Skills with executable code, [Analysis Title], Anti-patterns to avoid, Avoid offering too many options, Avoid Windows-style paths, Conditional workflow pattern, Examples pattern, Executive summary (+4 more)
 
 ### Community 2 - "Testing Skills With Subagents"
 Cohesion: 0.05
@@ -297,8 +299,8 @@ Cohesion: 0.13
 Nodes (14): 1. Eliminating Waterfalls (CRITICAL), 2. Bundle Size Optimization (CRITICAL), 3. Server-Side Performance (HIGH), 4. Client-Side Data Fetching (MEDIUM-HIGH), 5. Re-render Optimization (MEDIUM), 6. Rendering Performance (MEDIUM), 7. JavaScript Performance (LOW-MEDIUM), 8. Advanced Patterns (LOW) (+6 more)
 
 ### Community 22 - "Returns: "OK" or lists conflicts"
-Cohesion: 0.13
-Nodes (15): Avoid assuming tools are installed, Checklist for effective Skills, Code and scripts, Core quality, Create verifiable intermediate outputs, MCP tool references, Next steps, Package dependencies (+7 more)
+Cohesion: 0.18
+Nodes (11): Avoid assuming tools are installed, Create verifiable intermediate outputs, MCP tool references, Next steps, Package dependencies, Returns: "OK" or lists conflicts, Runtime environment, Technical notes (+3 more)
 
 ### Community 23 - "Writing Skills"
 Cohesion: 0.13
@@ -441,8 +443,8 @@ Cohesion: 0.40
 Nodes (4): Abstract, React Best Practices, References, Table of Contents
 
 ### Community 59 - "8. Advanced Patterns"
-Cohesion: 0.40
-Nodes (5): 8.1 Do Not Put Effect Events in Dependency Arrays, 8.2 Initialize App Once, Not Per Mount, 8.3 Store Event Handlers in Refs, 8.4 useEffectEvent for Stable Callback Refs, 8. Advanced Patterns
+Cohesion: 0.22
+Nodes (9): Avoid time-sensitive information, Common patterns, Content guidelines, Implement feedback loops, Skill authoring best practices, Template pattern, Use consistent terminology, Use workflows for complex tasks (+1 more)
 
 ### Community 60 - "Web Interface Guidelines"
 Cohesion: 0.40
@@ -504,6 +506,10 @@ Nodes (5): Global Constraints, Interactive Support Dashboard Implementation Plan
 Cohesion: 0.50
 Nodes (3): framework, installCommand, $schema
 
+### Community 158 - "Deterministic Support Chat Implementation Plan"
+Cohesion: 0.33
+Nodes (5): Deterministic Support Chat Implementation Plan, File Structure, Global Constraints, Plan Self-Review, Task 1: Deliver and verify the local deterministic chat journey
+
 ### Community 165 - "scaffold.spec.ts"
 Cohesion: 0.07
 Nodes (37): geist, metadata, ChatShell(), DecisionPath(), LanguageSwitcher(), MarketingHome(), SiteHeader(), ActivityVisualization (+29 more)
@@ -560,7 +566,7 @@ _Questions this graph is uniquely positioned to answer:_
   _817 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
-- **Should `[Analysis Title]` be split into smaller, more focused modules?**
-  _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `Testing Skills With Subagents` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
+- **Should `scripts` be split into smaller, more focused modules?**
+  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._

@@ -320,6 +320,29 @@ test("persists Simplified Chinese across routes and reloads", async ({
   await expect
     .poll(() => page.evaluate(() => localStorage.getItem("nexa-language:v1")))
     .toBe("zh-CN");
+  await expect(
+    page.getByRole("button", { name: "打开客服聊天", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Open support chat", exact: true }),
+  ).toHaveCount(0);
+  await page.getByRole("button", { name: "打开客服聊天", exact: true }).click();
+  const chat = page.getByRole("dialog", { name: "Nexa Support" });
+  await chat
+    .getByRole("textbox", { name: "您的问题" })
+    .fill("导出端点在哪里？");
+  await chat.getByRole("button", { name: "发送", exact: true }).click();
+  await expect(
+    chat.getByText("本演示可以帮助您了解价格、退款、产品功能或人工接管。", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    chat.getByText(
+      "I can help with pricing, refunds, product features, or a human handoff in this demo.",
+      { exact: true },
+    ),
+  ).toHaveCount(0);
 
   await expectEveryLinkToNavigate(page, "登录", "/login");
   await expectEveryLinkToNavigate(page, "免费试用", "/login");
@@ -488,7 +511,24 @@ test("keeps the signal color at normal-text AA contrast", async ({ page }) => {
 test("has no automated WCAG violations in either locale", async ({ page }) => {
   await page.goto("/");
 
-  for (const languageButtonName of ["简体中文", "English"]) {
+  for (const locale of [
+    {
+      launcherClose: "Close support chat",
+      launcherOpen: "Open support chat",
+      languageButton: "简体中文",
+    },
+    {
+      launcherClose: "关闭客服聊天",
+      launcherOpen: "打开客服聊天",
+      languageButton: "English",
+    },
+  ]) {
+    await page
+      .getByRole("button", { exact: true, name: locale.launcherOpen })
+      .click();
+    await expect(
+      page.getByRole("dialog", { exact: true, name: "Nexa Support" }),
+    ).toBeVisible();
     const violations = (
       await new AxeBuilder({ page }).analyze()
     ).violations.map((violation) => ({
@@ -498,7 +538,10 @@ test("has no automated WCAG violations in either locale", async ({ page }) => {
     expect(violations).toEqual([]);
 
     await page
-      .getByRole("button", { exact: true, name: languageButtonName })
+      .getByRole("button", { exact: true, name: locale.launcherClose })
+      .click();
+    await page
+      .getByRole("button", { exact: true, name: locale.languageButton })
       .click();
   }
 });
@@ -758,39 +801,90 @@ test("gives dashboard controls hover feedback without weakening selected, focus,
     .toBe(true);
 });
 
-test("keeps the tablet chat preview clear of the support route", async ({
+test("completes local recognized and fallback chat journeys without persistence", async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 768, height: 900 });
+  await page.goto("/");
+  const storageBefore = await page.evaluate(() => ({ ...localStorage }));
+  await page.getByRole("button", { name: "Open support chat" }).click();
+  const chat = page.getByRole("dialog", { name: "Nexa Support" });
+
+  await chat.getByRole("button", { name: "Pricing" }).click();
+  await expect(chat.getByRole("status")).toHaveText(/typing/i);
+  await expect(
+    chat.getByText(
+      "Starter is ¥99/month and Pro is ¥299/month in this local demo.",
+    ),
+  ).toBeVisible();
+
+  await chat
+    .getByRole("textbox", { name: "Your question" })
+    .fill("Where is the export endpoint?");
+  await chat.getByRole("button", { name: "Send" }).click();
+  await expect(
+    chat.getByText(
+      "I can help with pricing, refunds, product features, or a human handoff in this demo.",
+    ),
+  ).toBeVisible();
+  expect(await page.evaluate(() => ({ ...localStorage }))).toEqual(
+    storageBefore,
+  );
+
+  await page.reload();
+  await page.getByRole("button", { name: "Open support chat" }).click();
+  await expect(chat.getByText("Where is the export endpoint?")).toHaveCount(0);
+  expect(await page.evaluate(() => ({ ...localStorage }))).toEqual(
+    storageBefore,
+  );
+});
+
+test("keeps the mobile chat inside the viewport through pending handoff", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 900 });
   await page.goto("/");
 
-  const overlapsRouteCard = await page.evaluate(() => {
-    const chat = document.querySelector(".chat-shell");
-    const routeCards = [...document.querySelectorAll(".route-card")];
+  const launcher = page.locator(".chat-shell__launcher");
+  await page.getByRole("button", { name: "Open support chat" }).click();
+  const chat = page.getByRole("dialog", { name: "Nexa Support" });
+  const [launcherBounds, chatBounds] = await Promise.all([
+    launcher.boundingBox(),
+    chat.boundingBox(),
+  ]);
 
-    if (!(chat instanceof HTMLElement)) {
-      throw new Error("Expected the chat preview");
+  expect(launcherBounds).not.toBeNull();
+  expect(chatBounds).not.toBeNull();
+  for (const bounds of [launcherBounds, chatBounds]) {
+    if (bounds === null) {
+      throw new Error(
+        "Chat controls must be visible to verify viewport bounds.",
+      );
     }
 
-    const chatRect = chat.getBoundingClientRect();
-    return routeCards.some((routeCard) => {
-      const routeRect = routeCard.getBoundingClientRect();
-      return !(
-        chatRect.right <= routeRect.left ||
-        chatRect.left >= routeRect.right ||
-        chatRect.bottom <= routeRect.top ||
-        chatRect.top >= routeRect.bottom
-      );
-    });
-  });
+    expect(bounds.x).toBeGreaterThanOrEqual(0);
+    expect(bounds.y).toBeGreaterThanOrEqual(0);
+    expect(bounds.width).toBeGreaterThan(0);
+    expect(bounds.height).toBeGreaterThan(0);
+    expect(bounds.x + bounds.width).toBeLessThanOrEqual(375);
+    expect(bounds.y + bounds.height).toBeLessThanOrEqual(900);
+  }
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    ),
+  ).toBe(true);
 
-  expect(overlapsRouteCard).toBe(false);
+  await chat.getByRole("button", { name: "Contact a human" }).click();
+  await expect(chat.getByRole("status")).toHaveText(
+    "Demo human handoff pending. No contact details are collected.",
+  );
 });
 
 test("protects Nexa brand names from automatic translation", async ({
   page,
 }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: "Open support chat" }).click();
 
   for (const selector of [
     ".site-header__brand",
