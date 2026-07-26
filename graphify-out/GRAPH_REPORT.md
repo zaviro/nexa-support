@@ -1,16 +1,16 @@
 # Graph Report - issue-10-hardening  (2026-07-26)
 
 ## Corpus Check
-- 208 files · ~132,559 words
+- 208 files · ~132,875 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1351 nodes · 1356 edges · 191 communities (111 shown, 80 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.57)
+- 1354 nodes · 1359 edges · 191 communities (111 shown, 80 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1394b533`
+- Built from commit: `685ad82d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -208,8 +208,6 @@
 10. `Visual Companion Guide` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `createLocaleStore()` --indirect_call--> `setLocale()`  [INFERRED]
-  src/i18n/locale-provider.tsx → tests/e2e/accessibility-hardening.spec.ts
 - `ChatShell()` --indirect_call--> `transitionChat()`  [INFERRED]
   src/components/chat-shell.tsx → src/components/chat-state.ts
 - `ChatShell()` --calls--> `useLocale()`  [EXTRACTED]
@@ -218,6 +216,8 @@
   src/components/language-switcher.tsx → src/i18n/locale-provider.tsx
 - `SupportDashboard()` --calls--> `useLocale()`  [EXTRACTED]
   src/components/support-dashboard.tsx → src/i18n/locale-provider.tsx
+- `LocaleProbe()` --calls--> `useLocale()`  [EXTRACTED]
+  src/i18n/locale-provider.test.tsx → src/i18n/locale-provider.tsx
 
 ## Import Cycles
 - None detected.
@@ -617,8 +617,8 @@ Cohesion: 0.40
 Nodes (4): FeatureStoryCopy, SiteCopy, SUPPORTED_LOCALES, WorkflowStepCopy
 
 ### Community 190 - "accessibility-hardening.spec.ts"
-Cohesion: 0.29
-Nodes (3): locales, setLocale(), viewports
+Cohesion: 0.22
+Nodes (4): expectTabSequence(), expectVisibleFocus(), locales, viewports
 
 ## Knowledge Gaps
 - **852 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+847 more)
@@ -636,9 +636,9 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `5. Re-render Optimization`, `7. JavaScript Performance`, `useLocale`, `6. Rendering Performance`, `3. Server-Side Performance`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `devDependencies` to `scripts`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `Writing Skills` connect `Writing Skills` to `Testing Skills With Subagents`, `File Organization`, `Skill Types`, `Skill Discovery Optimization (SDO)`, `Bulletproofing Skills Against Rationalization`, `Anti-Patterns`, `Testing All Skill Types`, `RED-GREEN-REFACTOR for Skills`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `devDependencies` connect `devDependencies` to `scripts`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `crypto`, `http`, `fs` to the rest of the system?**
   _852 weakly-connected nodes found - possible documentation gaps or missing edges._

@@ -10,6 +10,7 @@ const locales = [
     settings: "Open chat settings",
     email: "Email address",
     password: "Password",
+    remember: "Remember me",
     submit: "Continue to demo",
   },
   {
@@ -19,15 +20,26 @@ const locales = [
     settings: "打开聊天设置",
     email: "邮箱地址",
     password: "密码",
+    remember: "记住我",
     submit: "继续体验演示",
   },
 ] as const;
 
-async function setLocale(page: Page, locale: "en" | "zh-CN") {
-  await page.addInitScript(
-    ({ key, value }) => localStorage.setItem(key, value),
+async function openWithLocale(
+  page: Page,
+  path: "/" | "/login",
+  locale: "en" | "zh-CN",
+) {
+  await page.goto("/");
+  await page.evaluate(
+    ({ key, value }) => {
+      localStorage.clear();
+      localStorage.setItem(key, value);
+    },
     { key: "nexa-language:v1", value: locale },
   );
+  await page.goto(path);
+  await expect(page.locator("html")).toHaveAttribute("data-locale", locale);
 }
 
 async function expectVisibleFocus(locator: Locator) {
@@ -41,6 +53,23 @@ async function expectVisibleFocus(locator: Locator) {
   });
   expect(style.outlineStyle).not.toBe("none");
   expect(style.outlineWidth).toBeGreaterThanOrEqual(2);
+}
+
+async function expectMinimumTargetSize(locator: Locator) {
+  const bounds = await locator.boundingBox();
+  expect(bounds).not.toBeNull();
+  if (bounds === null) {
+    throw new Error("Expected a visible control for target-size evidence.");
+  }
+  expect(bounds.width).toBeGreaterThanOrEqual(44);
+  expect(bounds.height).toBeGreaterThanOrEqual(44);
+}
+
+async function expectTabSequence(page: Page, controls: readonly Locator[]) {
+  for (const control of controls) {
+    await page.keyboard.press("Tab");
+    await expectVisibleFocus(control);
+  }
 }
 
 async function expectAxeClean(page: Page) {
@@ -64,6 +93,95 @@ async function expectInsideViewport(page: Page, locator: Locator) {
   expect(bounds.x + bounds.width).toBeLessThanOrEqual(
     await page.evaluate(() => window.innerWidth),
   );
+}
+
+function getEnglishHomeControls(page: Page) {
+  const header = page.locator(".site-header");
+  const hero = page.locator(".hero-section");
+  const dashboard = page.getByRole("region", {
+    name: "Nexa Support dashboard",
+    exact: true,
+  });
+  const pricing = page.locator(".pricing-section");
+  const faq = page.locator(".faq-section");
+  const footer = page.locator(".site-footer");
+
+  return {
+    beforeDashboard: [
+      page.getByRole("link", {
+        name: "Skip to main content",
+        exact: true,
+      }),
+      header.getByRole("link", { name: "Nexa Support", exact: true }),
+      header.getByRole("link", { name: "Product", exact: true }),
+      header.getByRole("link", { name: "Pricing", exact: true }),
+      header.getByRole("button", { name: "简体中文", exact: true }),
+      header.getByRole("link", { name: "Log in", exact: true }),
+      header.getByRole("link", { name: "Start free", exact: true }),
+      hero.getByRole("link", { name: "Start free", exact: true }),
+      hero.getByRole("link", { name: "Explore product", exact: true }),
+    ],
+    allQueue: dashboard.getByRole("button", {
+      name: "All conversations",
+      exact: true,
+    }),
+    aiQueue: dashboard.getByRole("button", {
+      name: "AI resolving",
+      exact: true,
+    }),
+    humanQueue: dashboard.getByRole("button", {
+      name: "Human handoff",
+      exact: true,
+    }),
+    mayaConversation: dashboard.getByRole("button", {
+      name: "Open Maya Chen conversation",
+      exact: true,
+    }),
+    liamConversation: dashboard.getByRole("button", {
+      name: "Open Liam Foster conversation",
+      exact: true,
+    }),
+    sofiaConversation: dashboard.getByRole("button", {
+      name: "Open Sofia Ramirez conversation",
+      exact: true,
+    }),
+    pricingLinks: [
+      pricing.getByRole("link", { name: "Start free", exact: true }).nth(0),
+      pricing.getByRole("link", { name: "Start free", exact: true }).nth(1),
+    ],
+    faqButtons: [
+      faq.getByRole("button", {
+        name: "How does Nexa answer questions?",
+        exact: true,
+      }),
+      faq.getByRole("button", {
+        name: "How does human takeover work?",
+        exact: true,
+      }),
+      faq.getByRole("button", {
+        name: "How is Nexa deployed?",
+        exact: true,
+      }),
+      faq.getByRole("button", {
+        name: "What is the refund policy?",
+        exact: true,
+      }),
+      faq.getByRole("button", {
+        name: "What happens to customer data?",
+        exact: true,
+      }),
+    ],
+    footerControls: [
+      footer.getByRole("link", { name: "Nexa Support", exact: true }),
+      footer.getByRole("link", { name: "Product", exact: true }),
+      footer.getByRole("link", { name: "Pricing", exact: true }),
+      footer.getByRole("link", { name: "Log in", exact: true }),
+    ],
+    launcher: page.getByRole("button", {
+      name: "Open support chat",
+      exact: true,
+    }),
+  };
 }
 
 test("exposes atomic status and dialog description semantics", async ({
@@ -118,21 +236,30 @@ test("does not mask horizontal overflow at the page boundary", async ({
   await expect(page.locator("body")).not.toHaveCSS("overflow-x", "clip");
 });
 
-test("keeps the complete keyboard path logical and visibly focused", async ({
+test("activates a visible skip link on the homepage and login route", async ({
   page,
 }) => {
-  const tabTo = async (locator: Locator) => {
-    for (let index = 0; index < 80; index += 1) {
-      await page.keyboard.press("Tab");
-      if (
-        await locator.evaluate((element) => element === document.activeElement)
-      ) {
-        return;
-      }
-    }
-    throw new Error("Expected keyboard traversal to reach the target control.");
-  };
+  for (const path of ["/", "/login"] as const) {
+    await page.goto(path);
+    const skipLink = page.getByRole("link", {
+      name: "Skip to main content",
+      exact: true,
+    });
+    await page.keyboard.press("Tab");
+    await expectVisibleFocus(skipLink);
+    await expect(skipLink).toBeInViewport();
+    await expectMinimumTargetSize(skipLink);
+    await page.keyboard.press("Enter");
+    await expect(page).toHaveURL(
+      path === "/" ? /\/#main-content$/ : /\/login#main-content$/,
+    );
+    await expect(page.locator("#main-content")).toBeFocused();
+  }
+});
 
+test("keeps the login keyboard sequence exact and focuses invalid fields", async ({
+  page,
+}) => {
   await page.goto("/login");
   const loginOrder = [
     page.getByRole("link", { name: "Skip to main content", exact: true }),
@@ -145,10 +272,7 @@ test("keeps the complete keyboard path logical and visibly focused", async ({
     page.getByRole("link", { name: "Back to homepage", exact: true }),
   ];
 
-  for (const control of loginOrder) {
-    await page.keyboard.press("Tab");
-    await expectVisibleFocus(control);
-  }
+  await expectTabSequence(page, loginOrder);
 
   await page.keyboard.press("Shift+Tab");
   const submit = page.getByRole("button", {
@@ -168,100 +292,86 @@ test("keeps the complete keyboard path logical and visibly focused", async ({
     "aria-describedby",
     "login-password-error",
   );
+});
+
+test("activates every dashboard control from an exact keyboard position", async ({
+  page,
+}) => {
+  await page.goto("/");
+  let controls = getEnglishHomeControls(page);
+  await expectTabSequence(page, [
+    ...controls.beforeDashboard,
+    controls.allQueue,
+  ]);
+  await page.keyboard.press("Enter");
+  await expect(controls.allQueue).toHaveAttribute("aria-pressed", "true");
+  await expectTabSequence(page, [controls.aiQueue]);
+  await page.keyboard.press("Space");
+  await expect(controls.aiQueue).toHaveAttribute("aria-pressed", "true");
+  await expectTabSequence(page, [
+    controls.humanQueue,
+    controls.mayaConversation,
+  ]);
+  await page.keyboard.press("Enter");
+  await expect(controls.mayaConversation).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await expectTabSequence(page, [controls.liamConversation]);
+  await page.keyboard.press("Space");
+  await expect(controls.liamConversation).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
 
   await page.goto("/");
-  const headerOrder = [
-    page.getByRole("link", { name: "Skip to main content", exact: true }),
-    page
-      .locator(".site-header")
-      .getByRole("link", { name: "Nexa Support", exact: true }),
-    page
-      .locator(".site-header")
-      .getByRole("link", { name: "Product", exact: true }),
-    page
-      .locator(".site-header")
-      .getByRole("link", { name: "Pricing", exact: true }),
-    page
-      .locator(".site-header")
-      .getByRole("button", { name: "简体中文", exact: true }),
-    page
-      .locator(".site-header")
-      .getByRole("link", { name: "Log in", exact: true }),
-    page
-      .locator(".site-header")
-      .getByRole("link", { name: "Start free", exact: true }),
-  ];
+  controls = getEnglishHomeControls(page);
+  await expectTabSequence(page, [
+    ...controls.beforeDashboard,
+    controls.allQueue,
+    controls.aiQueue,
+    controls.humanQueue,
+  ]);
+  await page.keyboard.press("Enter");
+  await expect(controls.humanQueue).toHaveAttribute("aria-pressed", "true");
+  await expectTabSequence(page, [controls.sofiaConversation]);
+  await page.keyboard.press("Space");
+  await expect(controls.sofiaConversation).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+});
 
-  for (const control of headerOrder) {
-    await page.keyboard.press("Tab");
-    await expectVisibleFocus(control);
+test("keeps navigation, FAQ, and chat in one exact keyboard sequence", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const controls = getEnglishHomeControls(page);
+  const [firstFaq, ...remainingFaqs] = controls.faqButtons;
+  if (firstFaq === undefined) {
+    throw new Error("The exact keyboard sequence requires the first FAQ.");
   }
-
-  const dashboard = page.getByRole("region", {
-    name: "Nexa Support dashboard",
-    exact: true,
-  });
-  const allQueue = dashboard.getByRole("button", {
-    name: "All conversations",
-    exact: true,
-  });
-  const aiQueue = dashboard.getByRole("button", {
-    name: "AI resolving",
-    exact: true,
-  });
-  const humanQueue = dashboard.getByRole("button", {
-    name: "Human handoff",
-    exact: true,
-  });
-  const mayaConversation = dashboard.getByRole("button", {
-    name: "Open Maya Chen conversation",
-    exact: true,
-  });
-  const liamConversation = dashboard.getByRole("button", {
-    name: "Open Liam Foster conversation",
-    exact: true,
-  });
-  const sofiaConversation = dashboard.getByRole("button", {
-    name: "Open Sofia Ramirez conversation",
-    exact: true,
-  });
-
-  await tabTo(allQueue);
-  await expectVisibleFocus(allQueue);
-  await page.keyboard.press("Enter");
-  await tabTo(aiQueue);
-  await expectVisibleFocus(aiQueue);
-  await page.keyboard.press("Space");
-  await tabTo(mayaConversation);
-  await expectVisibleFocus(mayaConversation);
-  await page.keyboard.press("Enter");
-  await tabTo(liamConversation);
-  await expectVisibleFocus(liamConversation);
-  await page.keyboard.press("Space");
-  await tabTo(humanQueue);
-  await expectVisibleFocus(humanQueue);
-  await page.keyboard.press("Enter");
-  await tabTo(sofiaConversation);
-  await expectVisibleFocus(sofiaConversation);
-  await page.keyboard.press("Space");
-
-  const firstFaq = page.getByRole("button", {
-    name: "How does Nexa answer questions?",
-    exact: true,
-  });
-  await tabTo(firstFaq);
-  await expectVisibleFocus(firstFaq);
+  await expectTabSequence(page, [
+    ...controls.beforeDashboard,
+    controls.allQueue,
+    controls.aiQueue,
+    controls.humanQueue,
+    controls.mayaConversation,
+    controls.liamConversation,
+    controls.sofiaConversation,
+    ...controls.pricingLinks,
+    firstFaq,
+  ]);
   await page.keyboard.press("Enter");
   await expect(firstFaq).toHaveAttribute("aria-expanded", "true");
   await page.keyboard.press("Space");
   await expect(firstFaq).toHaveAttribute("aria-expanded", "false");
 
-  const launcher = page.getByRole("button", {
-    name: "Open support chat",
-    exact: true,
-  });
-  await tabTo(launcher);
-  await expectVisibleFocus(launcher);
+  await expectTabSequence(page, [
+    ...remainingFaqs,
+    ...controls.footerControls,
+    controls.launcher,
+  ]);
   await page.keyboard.press("Enter");
 
   const chat = page.getByRole("dialog", { name: "Nexa Support" });
@@ -271,30 +381,16 @@ test("keeps the complete keyboard path logical and visibly focused", async ({
   });
   await expectVisibleFocus(chatTitle);
   const settingsToggle = chat.locator(".chat-shell__settings-toggle");
-  await page.keyboard.press("Tab");
-  await expectVisibleFocus(settingsToggle);
+  await expectTabSequence(page, [settingsToggle]);
   await page.keyboard.press("Enter");
-  await page.keyboard.press("Tab");
-  await expectVisibleFocus(chat.locator("#chat-api-key"));
-  for (const action of [
-    "Pricing",
-    "Refunds",
-    "Product features",
-    "Contact a human",
-  ]) {
-    await page.keyboard.press("Tab");
-    await expectVisibleFocus(
-      chat.getByRole("button", { name: action, exact: true }),
-    );
-  }
-  await page.keyboard.press("Tab");
-  await expectVisibleFocus(
+  await expectTabSequence(page, [
+    chat.locator("#chat-api-key"),
+    ...["Pricing", "Refunds", "Product features", "Contact a human"].map(
+      (action) => chat.getByRole("button", { name: action, exact: true }),
+    ),
     chat.getByRole("textbox", { name: "Your question", exact: true }),
-  );
-  await page.keyboard.press("Tab");
-  await expectVisibleFocus(
     chat.getByRole("button", { name: "Send", exact: true }),
-  );
+  ]);
   await page.keyboard.press("Escape");
   await expectVisibleFocus(
     page.getByRole("button", {
@@ -308,8 +404,7 @@ test("has no automated WCAG violations across both localized journeys", async ({
   page,
 }) => {
   for (const locale of locales) {
-    await setLocale(page, locale.storageValue);
-    await page.goto("/");
+    await openWithLocale(page, "/", locale.storageValue);
     await page.getByRole("button", { name: locale.faq }).click();
     await page.getByRole("button", { name: locale.launcher }).click();
     await page.getByRole("button", { name: locale.settings }).click();
@@ -362,8 +457,7 @@ for (const width of viewports) {
       page,
     }, testInfo) => {
       await page.setViewportSize({ width, height: 900 });
-      await setLocale(page, locale.storageValue);
-      await page.goto("/");
+      await openWithLocale(page, "/", locale.storageValue);
       await page.getByRole("button", { name: locale.faq }).click();
       await page.getByRole("button", { name: locale.launcher }).click();
       await page.getByRole("button", { name: locale.settings }).click();
@@ -394,7 +488,20 @@ for (const width of viewports) {
       );
 
       await page.goto("/login");
-      await page.getByRole("button", { name: locale.submit }).click();
+      const email = page.getByRole("textbox", {
+        name: locale.email,
+        exact: true,
+      });
+      const password = page.getByLabel(locale.password, { exact: true });
+      const remember = page.getByRole("checkbox", {
+        name: locale.remember,
+        exact: true,
+      });
+      const submit = page.getByRole("button", {
+        name: locale.submit,
+        exact: true,
+      });
+      await submit.click();
       expect(
         await page.evaluate(
           () =>
@@ -404,6 +511,9 @@ for (const width of viewports) {
       ).toBe(true);
       await expectInsideViewport(page, page.locator(".login-card"));
       await expectInsideViewport(page, page.locator(".login-form"));
+      for (const control of [email, password, remember, submit]) {
+        await expectMinimumTargetSize(control);
+      }
       await testInfo.attach(
         `${testInfo.project.name}-${locale.storageValue}-${width}-login.png`,
         {

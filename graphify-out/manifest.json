@@ -1085,8 +1085,8 @@
     "semantic_hash": ""
   },
   "tests/e2e/accessibility-hardening.spec.ts": {
-    "mtime": 1785079984.5054772,
-    "ast_hash": "9ebde94bb98b8bc8d83aa237d9c4950d",
+    "mtime": 1785081115.9921336,
+    "ast_hash": "614a35d1df5e2cd4a3c9439f0aedc17c",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-26-accessibility-hardening.md": {

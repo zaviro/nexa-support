@@ -3255,21 +3255,21 @@
       "norm_label": "locales"
     },
     {
-      "label": "setLocale()",
+      "label": "openWithLocale()",
       "file_type": "code",
       "source_file": "tests/e2e/accessibility-hardening.spec.ts",
-      "source_location": "L26",
+      "source_location": "L28",
       "_origin": "ast",
-      "id": "tests_e2e_accessibility_hardening_spec_setlocale",
+      "id": "tests_e2e_accessibility_hardening_spec_openwithlocale",
       "community": 190,
       "community_name": "accessibility-hardening.spec.ts",
-      "norm_label": "setlocale()"
+      "norm_label": "openwithlocale()"
     },
     {
       "label": "expectVisibleFocus()",
       "file_type": "code",
       "source_file": "tests/e2e/accessibility-hardening.spec.ts",
-      "source_location": "L33",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "tests_e2e_accessibility_hardening_spec_expectvisiblefocus",
       "community": 190,
@@ -3277,10 +3277,32 @@
       "norm_label": "expectvisiblefocus()"
     },
     {
+      "label": "expectMinimumTargetSize()",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_expectminimumtargetsize",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "expectminimumtargetsize()"
+    },
+    {
+      "label": "expectTabSequence()",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_expecttabsequence",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "expecttabsequence()"
+    },
+    {
       "label": "expectAxeClean()",
       "file_type": "code",
       "source_file": "tests/e2e/accessibility-hardening.spec.ts",
-      "source_location": "L46",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "tests_e2e_accessibility_hardening_spec_expectaxeclean",
       "community": 190,
@@ -3291,12 +3313,23 @@
       "label": "expectInsideViewport()",
       "file_type": "code",
       "source_file": "tests/e2e/accessibility-hardening.spec.ts",
-      "source_location": "L57",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "tests_e2e_accessibility_hardening_spec_expectinsideviewport",
       "community": 190,
       "community_name": "accessibility-hardening.spec.ts",
       "norm_label": "expectinsideviewport()"
+    },
+    {
+      "label": "getEnglishHomeControls()",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_getenglishhomecontrols",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "getenglishhomecontrols()"
     },
     {
       "label": "marketing-journey.spec.ts",
@@ -19762,18 +19795,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "indirect_call",
-      "context": "collection",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/i18n/locale-provider.tsx",
-      "source_location": "L104",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_i18n_locale_provider_createlocalestore",
-      "target": "tests_e2e_accessibility_hardening_spec_setlocale"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -19938,7 +19959,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/accessibility-hardening.spec.ts",
-      "source_location": "L46",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_accessibility_hardening_spec",
@@ -19949,7 +19970,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/accessibility-hardening.spec.ts",
-      "source_location": "L57",
+      "source_location": "L86",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_accessibility_hardening_spec",
@@ -19960,11 +19981,44 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/accessibility-hardening.spec.ts",
-      "source_location": "L33",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_expectminimumtargetsize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_expecttabsequence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_accessibility_hardening_spec",
       "target": "tests_e2e_accessibility_hardening_spec_expectvisiblefocus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_getenglishhomecontrols",
       "confidence_score": 1.0
     },
     {
@@ -19982,11 +20036,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/accessibility-hardening.spec.ts",
-      "source_location": "L26",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_accessibility_hardening_spec",
-      "target": "tests_e2e_accessibility_hardening_spec_setlocale",
+      "target": "tests_e2e_accessibility_hardening_spec_openwithlocale",
       "confidence_score": 1.0
     },
     {
@@ -19998,6 +20052,18 @@
       "_origin": "ast",
       "source": "tests_e2e_accessibility_hardening_spec",
       "target": "tests_e2e_accessibility_hardening_spec_viewports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec_expecttabsequence",
+      "target": "tests_e2e_accessibility_hardening_spec_expectvisiblefocus",
       "confidence_score": 1.0
     },
     {
@@ -30089,5 +30155,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1394b5333acfc012366303a5245eca2b4990e394"
+  "built_at_commit": "685ad82ddc40db54c8cc36179ccaf7c8467f45b7"
 }

@@ -10,8 +10,8 @@
 - Preserved the no-service boundary: login and chat remain local state only;
   no fetch, server action, authentication, session, database, analytics,
   contact collection, or additional persistence was introduced.
-- The controller still owns the single independent implementation review and
-  the one post-review `devenv test --no-tui` run.
+- The single independent implementation review is complete. The controller
+  still owns the one post-review `devenv test --no-tui` run.
 
 ## Commit
 
@@ -115,9 +115,51 @@
 
 ## Concerns and handoff
 
-- Exactly one independent implementation review remains for the controller.
+- The single independent implementation review is complete; no second review
+  is requested for its focused evidence fixes.
 - The controller must run the single canonical post-review
   `devenv test --no-tui`; it was intentionally deferred here.
 - Playwright/Next repeatedly emitted the existing `NO_COLOR` versus
   `FORCE_COLOR` warning; it did not affect results.
 - No unresolved product or acceptance concern remains in Task 1.
+
+## Independent review fix round
+
+- The independent review found four evidence-quality gaps: skip links were
+  traversed but not activated, login target sizes were left to axe rather than
+  explicit measurements, later keyboard paths allowed eventual wraparound,
+  and repeated locale init scripts could conflict within one page fixture.
+- The fix is test-only. The stricter contracts passed against the unchanged
+  product, so no new product behavior or service boundary change was needed.
+- Homepage and login skip-link coverage now proves one-Tab visible focus, a
+  visible target of at least 44 × 44 CSS pixels, `#main-content` fragment
+  navigation, and focus transfer to the route's main element.
+- Every exact-width/locale matrix case now measures email, password,
+  remember-me, and submit controls at 44 × 44 CSS pixels or larger. This runs
+  unchanged under both browser projects and retains both screenshot
+  attachments per case.
+- The permissive `tabTo` loop was removed. Literal one-Tab sequences now cover
+  login, header/hero navigation, every dashboard queue and conversation,
+  pricing links, every FAQ, footer navigation, launcher, settings, quick
+  actions, question input, and submit. Dashboard activation is split across
+  fresh navigations so filtered controls are exercised without intentional
+  unrelated wraparound.
+- Localized runs now navigate to the origin, clear storage, set exactly one
+  locale value, navigate to the requested route, and assert the document
+  locale. No `addInitScript` calls remain in the hardening suite.
+- Focused desktop:
+  `bun run test:e2e -- tests/e2e/accessibility-hardening.spec.ts --project=desktop-chromium`
+  - Exit 0; 15/15 passed.
+- Final focused both projects:
+  `PLAYWRIGHT_HTML_OPEN=never bun run test:e2e -- tests/e2e/accessibility-hardening.spec.ts --reporter=html`
+  - Exit 0; 30/30 passed.
+  - The refreshed HTML report contains exactly 24 PNG attachments.
+- Focused static verification:
+  `bun run test:unit && bun run check && bun run typecheck`
+  - Exit 0; 9 files and 44 tests passed, Biome checked 41 files, and
+    TypeScript completed without errors.
+- `graphify update .`
+  - Exit 0; refreshed graph outputs to 1,354 nodes, 1,359 edges, and 191
+    communities.
+- Per controller instruction, this round did not run `devenv test --no-tui`
+  and did not request a second independent review.
