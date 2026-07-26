@@ -750,7 +750,11 @@ test("keeps the mobile chat inside the viewport through pending handoff", async 
     }
 
     expect(bounds.x).toBeGreaterThanOrEqual(0);
+    expect(bounds.y).toBeGreaterThanOrEqual(0);
+    expect(bounds.width).toBeGreaterThan(0);
+    expect(bounds.height).toBeGreaterThan(0);
     expect(bounds.x + bounds.width).toBeLessThanOrEqual(375);
+    expect(bounds.y + bounds.height).toBeLessThanOrEqual(900);
   }
   expect(
     await page.evaluate(

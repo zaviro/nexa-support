@@ -20,6 +20,7 @@ export function ChatShell() {
   const { copy } = useLocale();
   const [state, dispatch] = useReducer(transitionChat, initialChatState);
   const launcherRef = useRef<HTMLButtonElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
   const controlsDisabled =
     state.phase === "typing" || state.phase === "pending";
   const lastAssistantMessage = [...state.messages]
@@ -52,6 +53,12 @@ export function ChatShell() {
 
     return () => window.clearTimeout(timer);
   }, [state.phase]);
+
+  useEffect(() => {
+    if (state.isOpen) {
+      titleRef.current?.focus();
+    }
+  }, [state.isOpen]);
 
   useEffect(() => {
     if (!state.isOpen) {
@@ -100,7 +107,12 @@ export function ChatShell() {
             <span aria-hidden="true" className="chat-shell__mark">
               N
             </span>
-            <h2 id="chat-shell-title" translate="no">
+            <h2
+              id="chat-shell-title"
+              ref={titleRef}
+              tabIndex={-1}
+              translate="no"
+            >
               {copy.chatShell.title}
             </h2>
           </div>

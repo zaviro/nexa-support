@@ -920,8 +920,8 @@
     "semantic_hash": ""
   },
   "tests/e2e/marketing-journey.spec.ts": {
-    "mtime": 1785073978.524057,
-    "ast_hash": "e8767a808db4a7d13557a9190b0b09cc",
+    "mtime": 1785074562.643288,
+    "ast_hash": "62faccfc6c5d3353990a70e7847bdef9",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-26-bilingual-marketing-journey.md": {
@@ -985,8 +985,8 @@
     "semantic_hash": ""
   },
   "src/components/chat-shell.tsx": {
-    "mtime": 1785073962.7890368,
-    "ast_hash": "38427be8b0bab2686636235f4137f687",
+    "mtime": 1785074586.7556293,
+    "ast_hash": "e76d253d898e5d96d24599188e00c02f",
     "semantic_hash": ""
   },
   "src/components/marketing-home.tsx": {
@@ -1020,8 +1020,8 @@
     "semantic_hash": ""
   },
   "src/components/chat-shell.test.tsx": {
-    "mtime": 1785073531.1750848,
-    "ast_hash": "58e2439c500fd10eed8c2319ba18cb0c",
+    "mtime": 1785074586.7546294,
+    "ast_hash": "aad2e409989458d1bd975986527adfe5",
     "semantic_hash": ""
   },
   "src/components/chat-state.test.ts": {

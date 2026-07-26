@@ -197,3 +197,29 @@ green at 375 px, 768 px, and 1440 px for both locales.
   and stopped it before the fresh successful browser runs.
 - Playwright/Next emitted repeated `NO_COLOR` versus `FORCE_COLOR` warnings;
   they did not affect test results.
+
+## Independent review fix round
+
+- The independent review identified that opening the non-modal dialog left focus
+  on the launcher and that the mobile evidence asserted only horizontal bounds.
+- RED: the new keyboard regression test failed because the opened dialog title
+  did not have focus; the launcher remained focused.
+- GREEN: the dialog title is now programmatically focusable and receives focus
+  when the launcher opens the dialog. Escape still closes the dialog and returns
+  focus to the launcher without adding a focus trap.
+- The regression test covers keyboard Enter open, title focus, `aria-expanded`,
+  `aria-modal="false"`, polite/atomic live status attributes, Escape closure,
+  and restored launcher focus.
+- The 375 px mobile test now asserts each launcher and dialog has positive
+  width/height, non-negative x/y, and right/bottom edges within the 375 × 900
+  viewport before completing the human-handoff pending journey.
+- Fresh verification after the fix:
+  - `bun run test:unit && bun run check && bun run typecheck`: exit 0;
+    7 files and 36 tests passed, Biome clean, TypeScript clean.
+  - `bun run test:e2e -- --grep "mobile chat"`: exit 0; desktop and
+    `mobile-chromium` cases passed.
+  - `bun run test:e2e`: exit 0; 42/42 cases passed.
+  - `graphify update .`: exit 0; no code-graph topology changes, with the
+    existing three zero-node metadata/config warnings retained.
+- The independent review was not re-requested, and `devenv test --no-tui`
+  remains intentionally deferred to the controller's single post-review gate.
