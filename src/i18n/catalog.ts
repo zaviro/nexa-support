@@ -121,6 +121,13 @@ export type SiteCopy = {
     send: string;
     typing: string;
     pending: string;
+    settingsOpen: string;
+    settingsClose: string;
+    settingsLabel: string;
+    apiKeyLabel: string;
+    apiKeyPlaceholder: string;
+    apiKeyWarning: string;
+    apiKeyDoNotUseRealSecret: string;
     quickActions: Record<"pricing" | "refunds" | "features" | "human", string>;
     replies: Record<ChatIntent, string>;
   };
@@ -325,7 +332,15 @@ export const catalog: Record<Locale, SiteCopy> = {
       inputPlaceholder: "Type your question",
       send: "Send",
       typing: "Nexa Support is typing…",
-      pending: "Demo human handoff pending. No contact details are collected.",
+      pending:
+        "Demo handoff queue: position 3, expected response in about 2 minutes. No contact details are collected.",
+      settingsOpen: "Open chat settings",
+      settingsClose: "Close chat settings",
+      settingsLabel: "Demo integration settings",
+      apiKeyLabel: "OpenAI API key — demo only",
+      apiKeyPlaceholder: "sk-…",
+      apiKeyWarning: "Demo / not connected",
+      apiKeyDoNotUseRealSecret: "Do not enter a real secret.",
       quickActions: {
         pricing: "Pricing",
         refunds: "Refunds",
@@ -340,7 +355,7 @@ export const catalog: Record<Locale, SiteCopy> = {
         features:
           "Nexa Support demonstrates AI answers, human handoff, and support analytics.",
         human:
-          "You are in the demo handoff queue. No contact details are collected.",
+          "You are in fictional demo queue position 3. A teammate would respond in about 2 minutes; no contact details are collected.",
         fallback:
           "I can help with pricing, refunds, product features, or a human handoff in this demo.",
       },
@@ -528,7 +543,15 @@ export const catalog: Record<Locale, SiteCopy> = {
       inputPlaceholder: "输入您的问题",
       send: "发送",
       typing: "Nexa Support 正在输入…",
-      pending: "演示人工接管正在等待中。我们不会收集联系信息。",
+      pending:
+        "演示转人工队列：当前位置 3，预计约 2 分钟内响应。不会收集任何联系信息。",
+      settingsOpen: "打开聊天设置",
+      settingsClose: "关闭聊天设置",
+      settingsLabel: "演示集成设置",
+      apiKeyLabel: "OpenAI API Key — 仅用于演示",
+      apiKeyPlaceholder: "sk-…",
+      apiKeyWarning: "演示 / 未连接",
+      apiKeyDoNotUseRealSecret: "请勿输入真实密钥。",
       quickActions: {
         pricing: "价格",
         refunds: "退款",
@@ -539,7 +562,8 @@ export const catalog: Record<Locale, SiteCopy> = {
         pricing: "本地演示中，入门版为 ¥99/月，专业版为 ¥299/月。",
         refunds: "退款申请将由团队成员审核；本演示不会收集账户详情。",
         features: "Nexa Support 展示 AI 回答、人工接管和客服数据分析。",
-        human: "您已进入演示接管队列。我们不会收集联系信息。",
+        human:
+          "您位于虚构的演示队列第 3 位。团队成员将在约 2 分钟内响应；不会收集任何联系信息。",
         fallback: "本演示可以帮助您了解价格、退款、产品功能或人工接管。",
       },
     },

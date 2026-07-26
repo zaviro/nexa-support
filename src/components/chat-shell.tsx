@@ -1,6 +1,13 @@
 "use client";
 
-import { type FormEvent, useEffect, useReducer, useRef } from "react";
+import {
+  type FormEvent,
+  useCallback,
+  useEffect,
+  useReducer,
+  useRef,
+  useState,
+} from "react";
 import { useLocale } from "~/i18n/locale-provider";
 import {
   type ChatIntent,
@@ -19,6 +26,8 @@ const QUICK_ACTIONS: readonly Exclude<ChatIntent, "fallback">[] = [
 export function ChatShell() {
   const { copy } = useLocale();
   const [state, dispatch] = useReducer(transitionChat, initialChatState);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [apiKeyDraft, setApiKeyDraft] = useState("");
   const launcherRef = useRef<HTMLButtonElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const controlsDisabled =
@@ -41,6 +50,12 @@ export function ChatShell() {
         : lastAssistantMessage === undefined
           ? ""
           : copy.chatShell.replies[lastAssistantMessage.intent];
+
+  const closeChat = useCallback(() => {
+    dispatch({ type: "close" });
+    setApiKeyDraft("");
+    setIsSettingsOpen(false);
+  }, []);
 
   useEffect(() => {
     if (state.phase !== "typing") {
@@ -70,17 +85,17 @@ export function ChatShell() {
         return;
       }
 
-      dispatch({ type: "close" });
+      closeChat();
       launcherRef.current?.focus();
     };
 
     window.addEventListener("keydown", closeOnEscape);
     return () => window.removeEventListener("keydown", closeOnEscape);
-  }, [state.isOpen]);
+  }, [closeChat, state.isOpen]);
 
   const toggleChat = () => {
     if (state.isOpen) {
-      dispatch({ type: "close" });
+      closeChat();
       launcherRef.current?.focus();
       return;
     }
@@ -104,17 +119,59 @@ export function ChatShell() {
           role="dialog"
         >
           <div className="chat-shell__header">
-            <span aria-hidden="true" className="chat-shell__mark">
-              N
-            </span>
-            <h2
-              id="chat-shell-title"
-              ref={titleRef}
-              tabIndex={-1}
-              translate="no"
+            <div className="chat-shell__identity">
+              <span aria-hidden="true" className="chat-shell__mark">
+                N
+              </span>
+              <h2
+                id="chat-shell-title"
+                ref={titleRef}
+                tabIndex={-1}
+                translate="no"
+              >
+                {copy.chatShell.title}
+              </h2>
+            </div>
+            <button
+              aria-controls="chat-demo-settings"
+              aria-expanded={isSettingsOpen}
+              className="chat-shell__settings-toggle"
+              onClick={() => setIsSettingsOpen((isOpen) => !isOpen)}
+              type="button"
             >
-              {copy.chatShell.title}
-            </h2>
+              {isSettingsOpen
+                ? copy.chatShell.settingsClose
+                : copy.chatShell.settingsOpen}
+            </button>
+            {isSettingsOpen ? (
+              <section
+                aria-label={copy.chatShell.settingsLabel}
+                className="chat-shell__settings"
+                id="chat-demo-settings"
+              >
+                <label htmlFor="chat-api-key">
+                  {copy.chatShell.apiKeyLabel}
+                </label>
+                <input
+                  autoComplete="off"
+                  id="chat-api-key"
+                  inputMode="text"
+                  onChange={(event) =>
+                    setApiKeyDraft(event.currentTarget.value)
+                  }
+                  placeholder={copy.chatShell.apiKeyPlaceholder}
+                  spellCheck={false}
+                  type="password"
+                  value={apiKeyDraft}
+                />
+                <p className="chat-shell__settings-status">
+                  {copy.chatShell.apiKeyWarning}
+                </p>
+                <p className="chat-shell__settings-warning">
+                  {copy.chatShell.apiKeyDoNotUseRealSecret}
+                </p>
+              </section>
+            ) : null}
           </div>
 
           <div className="chat-shell__messages">

@@ -1543,6 +1543,15 @@ html[data-locale="zh-CN"] .login-card h1 {
 
 .chat-shell__header {
   display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.chat-shell__identity {
+  display: flex;
+  min-width: 0;
   align-items: center;
   gap: 0.75rem;
 }
@@ -1561,10 +1570,86 @@ html[data-locale="zh-CN"] .login-card h1 {
 }
 
 .chat-shell h2 {
+  min-width: 0;
   margin: 0;
   font-size: 0.88rem;
   font-weight: 730;
   letter-spacing: -0.02em;
+}
+
+.chat-shell__settings-toggle {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  margin-left: auto;
+  padding: 0.6rem 0.75rem;
+  touch-action: manipulation;
+  border: 1px solid var(--evergreen);
+  border-radius: 0.45rem;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.68rem;
+  font-weight: 670;
+}
+
+.chat-shell__settings-toggle:hover,
+.chat-shell__settings-toggle:active {
+  background: var(--paper);
+}
+
+.chat-shell__settings {
+  display: grid;
+  min-width: 0;
+  flex: 1 0 100%;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  background: var(--paper);
+}
+
+.chat-shell__settings label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.7rem;
+  font-weight: 720;
+}
+
+.chat-shell__settings input {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.75rem;
+  touch-action: manipulation;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.75rem;
+}
+
+.chat-shell__settings-status,
+.chat-shell__settings-warning {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.68rem;
+  font-weight: 670;
+  line-height: 1.45;
+}
+
+.chat-shell__settings-status {
+  width: fit-content;
+  padding: 0.18rem 0.38rem;
+  border: 1px solid var(--evergreen);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--evergreen);
+}
+
+.chat-shell__settings-warning {
+  color: var(--ink);
 }
 
 .chat-shell__messages {

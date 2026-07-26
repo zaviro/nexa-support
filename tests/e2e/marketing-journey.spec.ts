@@ -380,6 +380,17 @@ test("persists Simplified Chinese across routes and reloads", async ({
   ).toHaveCount(0);
   await page.getByRole("button", { name: "打开客服聊天", exact: true }).click();
   const chat = page.getByRole("dialog", { name: "Nexa Support" });
+  await chat.getByRole("button", { name: "打开聊天设置", exact: true }).click();
+  await expect(
+    chat.getByLabel("OpenAI API Key — 仅用于演示", { exact: true }),
+  ).toHaveAttribute("type", "password");
+  await expect(chat.getByText("演示 / 未连接", { exact: true })).toBeVisible();
+  await expect(
+    chat.getByText("请勿输入真实密钥。", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    chat.getByText("Demo / not connected", { exact: true }),
+  ).toHaveCount(0);
   await chat
     .getByRole("textbox", { name: "您的问题" })
     .fill("导出端点在哪里？");
@@ -395,6 +406,17 @@ test("persists Simplified Chinese across routes and reloads", async ({
       { exact: true },
     ),
   ).toHaveCount(0);
+  await chat.getByRole("button", { name: "联系人工", exact: true }).click();
+  await expect(chat.getByRole("status")).toHaveText(
+    "演示转人工队列：当前位置 3，预计约 2 分钟内响应。不会收集任何联系信息。",
+  );
+  await expect(
+    chat.getByText(
+      "Demo handoff queue: position 3, expected response in about 2 minutes. No contact details are collected.",
+      { exact: true },
+    ),
+  ).toHaveCount(0);
+  await page.getByRole("button", { name: "关闭客服聊天", exact: true }).click();
 
   await expectEveryLinkToNavigate(page, "登录", "/login");
   await expectEveryLinkToNavigate(page, "免费试用", "/login");
@@ -594,6 +616,15 @@ test("has no automated WCAG violations in either locale", async ({ page }) => {
     await expect(
       page.getByRole("dialog", { exact: true, name: "Nexa Support" }),
     ).toBeVisible();
+    await page
+      .getByRole("button", {
+        exact: true,
+        name:
+          locale.launcherOpen === "Open support chat"
+            ? "Open chat settings"
+            : "打开聊天设置",
+      })
+      .click();
     const violations = (
       await new AxeBuilder({ page }).analyze()
     ).violations.map((violation) => ({
@@ -724,6 +755,39 @@ test("keeps visible Chinese controls at least 44px in both dimensions", async ({
       () => document.documentElement.scrollWidth <= window.innerWidth,
     ),
   ).toBe(true);
+
+  await page.getByRole("button", { name: "打开客服聊天", exact: true }).click();
+  await page.getByRole("button", { name: "打开聊天设置", exact: true }).click();
+  const undersizedChatControls = await page
+    .locator(".chat-shell button, .chat-shell input")
+    .evaluateAll((controls) =>
+      controls.flatMap((control) => {
+        const rect = control.getBoundingClientRect();
+        const styles = getComputedStyle(control);
+        const isVisible =
+          styles.display !== "none" &&
+          styles.visibility !== "hidden" &&
+          rect.width > 0 &&
+          rect.height > 0;
+
+        if (!isVisible || (rect.width >= 44 && rect.height >= 44)) {
+          return [];
+        }
+
+        return [
+          {
+            height: Math.round(rect.height),
+            name:
+              control.getAttribute("aria-label") ??
+              control.getAttribute("name") ??
+              control.textContent,
+            width: Math.round(rect.width),
+          },
+        ];
+      }),
+    );
+
+  expect(undersizedChatControls).toEqual([]);
 });
 
 test("keeps dashboard controls at least 44px in both locales", async ({
@@ -903,7 +967,57 @@ test("completes local recognized and fallback chat journeys without persistence"
   );
 });
 
-test("keeps the mobile chat inside the viewport through pending handoff", async ({
+test("keeps demo key local and announces a fictional human queue", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.waitForLoadState("networkidle");
+  const applicationRequests: string[] = [];
+  const applicationOrigin = new URL(page.url()).origin;
+  page.on("request", (request) => {
+    const requestUrl = new URL(request.url());
+    if (
+      requestUrl.origin === applicationOrigin &&
+      requestUrl.pathname !== "/_next/webpack-hmr"
+    ) {
+      applicationRequests.push(`${request.method()} ${requestUrl.pathname}`);
+    }
+  });
+
+  await page.getByRole("button", { name: "Open support chat" }).click();
+  let chat = page.getByRole("dialog", { name: "Nexa Support" });
+  await chat.getByRole("button", { name: "Open chat settings" }).click();
+  const keyInput = chat.getByLabel("OpenAI API key — demo only");
+
+  await expect(keyInput).toHaveAttribute("type", "password");
+  await expect(chat.getByText("Demo / not connected")).toBeVisible();
+  await expect(chat.getByText("Do not enter a real secret.")).toBeVisible();
+  await keyInput.fill("sk-not-a-real-key");
+  await page.waitForTimeout(250);
+  expect(applicationRequests).toEqual([]);
+
+  await page.getByRole("button", { name: "Close support chat" }).click();
+  await page.getByRole("button", { name: "Open support chat" }).click();
+  chat = page.getByRole("dialog", { name: "Nexa Support" });
+  await chat.getByRole("button", { name: "Open chat settings" }).click();
+  await expect(chat.getByLabel("OpenAI API key — demo only")).toHaveValue("");
+
+  await page.reload();
+  await page.getByRole("button", { name: "Open support chat" }).click();
+  chat = page.getByRole("dialog", { name: "Nexa Support" });
+  await chat.getByRole("button", { name: "Open chat settings" }).click();
+  await expect(chat.getByLabel("OpenAI API key — demo only")).toHaveValue("");
+
+  await chat.getByRole("button", { name: "Contact a human" }).click();
+  await expect(chat.getByRole("status")).toHaveText(
+    "Demo handoff queue: position 3, expected response in about 2 minutes. No contact details are collected.",
+  );
+  await expect(
+    chat.getByRole("textbox", { name: /email|phone|contact/i }),
+  ).toHaveCount(0);
+});
+
+test("mobile chat settings and handoff stay in the 375px viewport", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 375, height: 900 });
@@ -912,14 +1026,33 @@ test("keeps the mobile chat inside the viewport through pending handoff", async 
   const launcher = page.locator(".chat-shell__launcher");
   await page.getByRole("button", { name: "Open support chat" }).click();
   const chat = page.getByRole("dialog", { name: "Nexa Support" });
-  const [launcherBounds, chatBounds] = await Promise.all([
-    launcher.boundingBox(),
-    chat.boundingBox(),
-  ]);
+  await chat.getByRole("button", { name: "Open chat settings" }).click();
+  const settings = chat.getByRole("region", {
+    name: "Demo integration settings",
+  });
+  const keyInput = settings.getByLabel("OpenAI API key — demo only");
+  const warning = settings.getByText("Do not enter a real secret.");
+  const [launcherBounds, chatBounds, settingsBounds, keyBounds, warningBounds] =
+    await Promise.all([
+      launcher.boundingBox(),
+      chat.boundingBox(),
+      settings.boundingBox(),
+      keyInput.boundingBox(),
+      warning.boundingBox(),
+    ]);
 
   expect(launcherBounds).not.toBeNull();
   expect(chatBounds).not.toBeNull();
-  for (const bounds of [launcherBounds, chatBounds]) {
+  expect(settingsBounds).not.toBeNull();
+  expect(keyBounds).not.toBeNull();
+  expect(warningBounds).not.toBeNull();
+  for (const bounds of [
+    launcherBounds,
+    chatBounds,
+    settingsBounds,
+    keyBounds,
+    warningBounds,
+  ]) {
     if (bounds === null) {
       throw new Error(
         "Chat controls must be visible to verify viewport bounds.",
@@ -941,7 +1074,7 @@ test("keeps the mobile chat inside the viewport through pending handoff", async 
 
   await chat.getByRole("button", { name: "Contact a human" }).click();
   await expect(chat.getByRole("status")).toHaveText(
-    "Demo human handoff pending. No contact details are collected.",
+    "Demo handoff queue: position 3, expected response in about 2 minutes. No contact details are collected.",
   );
 });
 
