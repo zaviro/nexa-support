@@ -481,6 +481,19 @@ test("exposes stored Chinese in the first frame and remains hydration-safe", asy
     }),
   ).toHaveCount(0);
   await expect(
+    page.getByRole("region", {
+      exact: true,
+      name: "让支持跟随每一个问题",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", {
+      exact: true,
+      level: 3,
+      name: "Answer with context",
+    }),
+  ).toHaveCount(0);
+  await expect(
     page.getByRole("navigation", {
       exact: true,
       name: "Primary navigation",

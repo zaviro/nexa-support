@@ -1,16 +1,16 @@
-# Graph Report - selfwebsite  (2026-07-26)
+# Graph Report - issue-5-feature-workflow  (2026-07-26)
 
 ## Corpus Check
-- 201 files · ~120,326 words
+- 202 files · ~121,090 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1309 nodes · 1293 edges · 183 communities (102 shown, 81 thin omitted)
+- 1314 nodes · 1307 edges · 187 communities (106 shown, 81 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bf0d6bf8`
+- Built from commit: `1bb449d1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -187,6 +187,10 @@
 - 8. Advanced Patterns
 - anthropic-best-practices.md
 - Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?
+- chat-shell.tsx
+- layout.tsx
+- useLocale
+- catalog.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -203,19 +207,19 @@
 ## Surprising Connections (you probably didn't know these)
 - `ChatShell()` --indirect_call--> `transitionChat()`  [INFERRED]
   src/components/chat-shell.tsx → src/components/chat-state.ts
-- `LocaleProbe()` --calls--> `useLocale()`  [EXTRACTED]
-  src/i18n/locale-provider.test.tsx → src/i18n/locale-provider.tsx
 - `ChatShell()` --calls--> `useLocale()`  [EXTRACTED]
   src/components/chat-shell.tsx → src/i18n/locale-provider.tsx
+- `SupportDashboard()` --calls--> `useLocale()`  [EXTRACTED]
+  src/components/support-dashboard.tsx → src/i18n/locale-provider.tsx
+- `LocaleProbe()` --calls--> `useLocale()`  [EXTRACTED]
+  src/i18n/locale-provider.test.tsx → src/i18n/locale-provider.tsx
 - `LanguageSwitcher()` --calls--> `useLocale()`  [EXTRACTED]
   src/components/language-switcher.tsx → src/i18n/locale-provider.tsx
-- `SupportDashboard()` --calls--> `filterDashboardConversations()`  [EXTRACTED]
-  src/components/support-dashboard.tsx → src/components/support-dashboard-data.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (183 total, 81 thin omitted)
+## Communities (187 total, 81 thin omitted)
 
 ### Community 0 - "server.cjs"
 Cohesion: 0.06
@@ -446,8 +450,8 @@ Cohesion: 0.40
 Nodes (4): Choose A, B, or C, Pressure Test 3: Authority + Social Pressure, Scenario, Your Options
 
 ### Community 57 - "React Best Practices"
-Cohesion: 0.40
-Nodes (4): Abstract, React Best Practices, References, Table of Contents
+Cohesion: 0.20
+Nodes (9): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching, Abstract, React Best Practices, References (+1 more)
 
 ### Community 58 - "Skill structure"
 Cohesion: 0.20
@@ -522,8 +526,8 @@ Cohesion: 0.22
 Nodes (8): Execution Handoff, Feature Stories and Support Workflow Implementation Plan, File Structure, Final Verification, Global Constraints, Independent Review Gate, Plan Self-Review, Task 1: Ship localized feature stories and the support workflow
 
 ### Community 165 - "scaffold.spec.ts"
-Cohesion: 0.06
-Nodes (45): geist, metadata, ChatShell(), QUICK_ACTIONS, ChatEvent, ChatIntent, ChatMessage, ChatPhase (+37 more)
+Cohesion: 0.22
+Nodes (10): createLocaleStore(), getServerSnapshot(), LocaleContext, LocaleContextValue, LocaleProvider(), UNINITIALIZED_SNAPSHOT, DEFAULT_LOCALE, parseLocale() (+2 more)
 
 ### Community 168 - "Nexa Support 工程交接"
 Cohesion: 0.11
@@ -550,8 +554,8 @@ Cohesion: 0.29
 Nodes (6): Decision Path Implementation Plan, Execution Handoff, File Structure, Global Constraints, Self-Review, Task 1: Ship the localized trust, pricing, and FAQ decision path
 
 ### Community 175 - "4. Client-Side Data Fetching"
-Cohesion: 0.40
-Nodes (5): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching
+Cohesion: 0.19
+Nodes (8): DecisionPath(), FeatureWorkflowSection(), stories, MarketingHome(), SiteHeader(), catalog, LocalizedText(), LocalizedTextProps
 
 ### Community 176 - "Evaluation and iteration"
 Cohesion: 0.50
@@ -578,8 +582,24 @@ Cohesion: 0.40
 Nodes (4): [Analysis Title], Executive summary, Key findings, Recommendations
 
 ### Community 182 - "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?"
+Cohesion: 0.17
+Nodes (12): ActivityVisualization, activityVisualizations, DashboardConversation, dashboardConversations, DashboardQueue, filterDashboardConversations(), LocalizedDashboardText, fallbackActivityVisualization (+4 more)
+
+### Community 183 - "chat-shell.tsx"
+Cohesion: 0.26
+Nodes (9): ChatShell(), QUICK_ACTIONS, ChatEvent, ChatIntent, ChatMessage, ChatPhase, ChatState, initialChatState (+1 more)
+
+### Community 184 - "layout.tsx"
+Cohesion: 0.31
+Nodes (3): geist, metadata, LocaleScript()
+
+### Community 185 - "useLocale"
+Cohesion: 0.38
+Nodes (3): LanguageSwitcher(), LocaleProbe(), useLocale()
+
+### Community 186 - "catalog.ts"
 Cohesion: 0.40
-Nodes (4): Answer, Outcome, Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?, Source Nodes
+Nodes (4): FeatureStoryCopy, SiteCopy, SUPPORTED_LOCALES, WorkflowStepCopy
 
 ## Knowledge Gaps
 - **834 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+829 more)
@@ -589,14 +609,13 @@ Nodes (4): Answer, Outcome, Q: How should devenv, Bun, Codex agent skills, globa
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `quality` (3× useful, score=2.998611433)
-- `scaffold.spec.ts` (3× useful, score=2.998611433) _(code changed — re-verify)_
-- `devenv` (2× useful, score=1.99915422)
+- `quality` (2× useful, score=1.999788438)
+- `scaffold.spec.ts` (2× useful, score=1.999788438) _(code changed — re-verify)_
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `4. Client-Side Data Fetching`, `5. Re-render Optimization`, `7. JavaScript Performance`, `8. Advanced Patterns`, `6. Rendering Performance`, `3. Server-Side Performance`?**
+- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `5. Re-render Optimization`, `7. JavaScript Performance`, `8. Advanced Patterns`, `6. Rendering Performance`, `3. Server-Side Performance`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._

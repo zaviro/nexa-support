@@ -181,5 +181,9 @@
   "179": "Deterministic Support Chat Implementation Plan",
   "180": "8. Advanced Patterns",
   "181": "anthropic-best-practices.md",
-  "182": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?"
+  "182": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
+  "183": "chat-shell.tsx",
+  "184": "layout.tsx",
+  "185": "useLocale",
+  "186": "catalog.ts"
 }

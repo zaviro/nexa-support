@@ -2172,8 +2172,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_layout",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "layout.tsx"
     },
     {
@@ -2183,8 +2183,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_app_layout_metadata",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "metadata"
     },
     {
@@ -2194,8 +2194,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_app_layout_geist",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "geist"
     },
     {
@@ -2205,8 +2205,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_app_layout_rootlayout",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "rootlayout()"
     },
     {
@@ -2216,8 +2216,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_login_page",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "login/page.tsx"
     },
     {
@@ -2227,8 +2227,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_app_login_page_brandedlogintitle",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "brandedlogintitle()"
     },
     {
@@ -2238,8 +2238,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_app_login_page_loginpage",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "loginpage()"
     },
     {
@@ -2249,8 +2249,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_page",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "app/page.tsx"
     },
     {
@@ -2260,8 +2260,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_app_page_homepage",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "homepage()"
     },
     {
@@ -2271,8 +2271,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_chat_shell_test",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chat-shell.test.tsx"
     },
     {
@@ -2282,8 +2282,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_chat_shell",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chat-shell.tsx"
     },
     {
@@ -2293,8 +2293,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_chat_shell_quick_actions",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "quick_actions"
     },
     {
@@ -2304,8 +2304,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_chat_shell_chatshell",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chatshell()"
     },
     {
@@ -2315,8 +2315,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_chat_state_test",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chat-state.test.ts"
     },
     {
@@ -2326,8 +2326,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_chat_state",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chat-state.ts"
     },
     {
@@ -2337,8 +2337,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_chat_state_chatintent",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chatintent"
     },
     {
@@ -2348,8 +2348,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_chat_state_chatphase",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chatphase"
     },
     {
@@ -2359,8 +2359,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_chat_state_chatmessage",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chatmessage"
     },
     {
@@ -2370,8 +2370,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_chat_state_chatevent",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chatevent"
     },
     {
@@ -2381,8 +2381,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_components_chat_state_chatstate",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "chatstate"
     },
     {
@@ -2392,8 +2392,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_components_chat_state_initialchatstate",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "initialchatstate"
     },
     {
@@ -2403,8 +2403,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_components_chat_state_transitionchat",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 183,
+      "community_name": "chat-shell.tsx",
       "norm_label": "transitionchat()"
     },
     {
@@ -2414,8 +2414,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_decision_path",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "decision-path.tsx"
     },
     {
@@ -2425,9 +2425,97 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_decision_path_decisionpath",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "decisionpath()"
+    },
+    {
+      "label": "feature-workflow.test.tsx",
+      "file_type": "code",
+      "source_file": "src/components/feature-workflow.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_feature_workflow_test",
+      "community": 184,
+      "community_name": "layout.tsx",
+      "norm_label": "feature-workflow.test.tsx"
+    },
+    {
+      "label": "renderFeatureWorkflow()",
+      "file_type": "code",
+      "source_file": "src/components/feature-workflow.test.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_components_feature_workflow_test_renderfeatureworkflow",
+      "community": 184,
+      "community_name": "layout.tsx",
+      "norm_label": "renderfeatureworkflow()"
+    },
+    {
+      "label": "feature-workflow.tsx",
+      "file_type": "code",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_feature_workflow",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "feature-workflow.tsx"
+    },
+    {
+      "label": "AnswerVisual()",
+      "file_type": "code",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "src_components_feature_workflow_answervisual",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "answervisual()"
+    },
+    {
+      "label": "HandoffVisual()",
+      "file_type": "code",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "src_components_feature_workflow_handoffvisual",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "handoffvisual()"
+    },
+    {
+      "label": "AnalyticsVisual()",
+      "file_type": "code",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "src_components_feature_workflow_analyticsvisual",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "analyticsvisual()"
+    },
+    {
+      "label": "stories",
+      "file_type": "code",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "src_components_feature_workflow_stories",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "stories"
+    },
+    {
+      "label": "FeatureWorkflowSection()",
+      "file_type": "code",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "src_components_feature_workflow_featureworkflowsection",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "featureworkflowsection()"
     },
     {
       "label": "language-switcher.tsx",
@@ -2436,8 +2524,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_language_switcher",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "language-switcher.tsx"
     },
     {
@@ -2447,8 +2535,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_language_switcher_languageswitcher",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "languageswitcher()"
     },
     {
@@ -2458,30 +2546,30 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_marketing_home",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "marketing-home.tsx"
     },
     {
       "label": "RouteMap()",
       "file_type": "code",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_marketing_home_routemap",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "routemap()"
     },
     {
       "label": "MarketingHome()",
       "file_type": "code",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L91",
+      "source_location": "L92",
       "_origin": "ast",
       "id": "src_components_marketing_home_marketinghome",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "marketinghome()"
     },
     {
@@ -2491,8 +2579,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_site_header_test",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "site-header.test.tsx"
     },
     {
@@ -2502,8 +2590,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_site_header",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "site-header.tsx"
     },
     {
@@ -2513,8 +2601,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_site_header_siteheader",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "siteheader()"
     },
     {
@@ -2524,8 +2612,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_support_dashboard_data_test",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "support-dashboard-data.test.ts"
     },
     {
@@ -2535,8 +2623,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_support_dashboard_data",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "support-dashboard-data.ts"
     },
     {
@@ -2546,8 +2634,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_components_support_dashboard_data_dashboardqueue",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "dashboardqueue"
     },
     {
@@ -2557,8 +2645,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_support_dashboard_data_localizeddashboardtext",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "localizeddashboardtext"
     },
     {
@@ -2568,8 +2656,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_support_dashboard_data_dashboardconversation",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "dashboardconversation"
     },
     {
@@ -2579,8 +2667,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_components_support_dashboard_data_dashboardconversations",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "dashboardconversations"
     },
     {
@@ -2590,8 +2678,8 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "src_components_support_dashboard_data_filterdashboardconversations",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "filterdashboardconversations()"
     },
     {
@@ -2612,8 +2700,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_support_dashboard",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "support-dashboard.tsx"
     },
     {
@@ -2623,8 +2711,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_support_dashboard_queues",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "queues"
     },
     {
@@ -2634,8 +2722,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_support_dashboard_activityvisualization",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "activityvisualization"
     },
     {
@@ -2645,8 +2733,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_components_support_dashboard_fallbackactivityvisualization",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "fallbackactivityvisualization"
     },
     {
@@ -2656,8 +2744,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_components_support_dashboard_activityvisualizations",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "activityvisualizations"
     },
     {
@@ -2667,8 +2755,8 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_components_support_dashboard_getinitialconversation",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "getinitialconversation()"
     },
     {
@@ -2678,8 +2766,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_components_support_dashboard_initialconversation",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "initialconversation"
     },
     {
@@ -2689,8 +2777,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "src_components_support_dashboard_supportdashboard",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "supportdashboard()"
     },
     {
@@ -2722,8 +2810,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_i18n_catalog",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 186,
+      "community_name": "catalog.ts",
       "norm_label": "catalog.ts"
     },
     {
@@ -2733,8 +2821,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_i18n_catalog_supported_locales",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 186,
+      "community_name": "catalog.ts",
       "norm_label": "supported_locales"
     },
     {
@@ -2744,30 +2832,52 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_i18n_catalog_locale",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 182,
+      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
       "norm_label": "locale"
+    },
+    {
+      "label": "FeatureStoryCopy",
+      "file_type": "code",
+      "source_file": "src/i18n/catalog.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_i18n_catalog_featurestorycopy",
+      "community": 186,
+      "community_name": "catalog.ts",
+      "norm_label": "featurestorycopy"
+    },
+    {
+      "label": "WorkflowStepCopy",
+      "file_type": "code",
+      "source_file": "src/i18n/catalog.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_i18n_catalog_workflowstepcopy",
+      "community": 186,
+      "community_name": "catalog.ts",
+      "norm_label": "workflowstepcopy"
     },
     {
       "label": "SiteCopy",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L7",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "src_i18n_catalog_sitecopy",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 186,
+      "community_name": "catalog.ts",
       "norm_label": "sitecopy"
     },
     {
       "label": "catalog",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L110",
+      "source_location": "L137",
       "_origin": "ast",
       "id": "src_i18n_catalog_catalog",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "catalog"
     },
     {
@@ -2788,8 +2898,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_test_localeprobe",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "localeprobe()"
     },
     {
@@ -2909,8 +3019,8 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "src_i18n_locale_provider_uselocale",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 185,
+      "community_name": "useLocale",
       "norm_label": "uselocale()"
     },
     {
@@ -2920,8 +3030,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_i18n_locale_script",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "locale-script.tsx"
     },
     {
@@ -2931,8 +3041,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_i18n_locale_script_localescript",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 184,
+      "community_name": "layout.tsx",
       "norm_label": "localescript()"
     },
     {
@@ -3008,8 +3118,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_i18n_localized_text",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "localized-text.tsx"
     },
     {
@@ -3019,8 +3129,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_i18n_localized_text_localizedtextprops",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "localizedtextprops"
     },
     {
@@ -3030,8 +3140,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_i18n_localized_text_localizedtext",
-      "community": 165,
-      "community_name": "scaffold.spec.ts",
+      "community": 175,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "localizedtext()"
     },
     {
@@ -7826,8 +7936,8 @@
       "source_location": "L1366",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_client_side_data_fetching",
-      "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4. client-side data fetching"
     },
     {
@@ -7837,8 +7947,8 @@
       "source_location": "L1372",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_1_deduplicate_global_event_listeners",
-      "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.1 deduplicate global event listeners"
     },
     {
@@ -7848,8 +7958,8 @@
       "source_location": "L1442",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_2_use_passive_event_listeners_for_scrolling_performance",
-      "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.2 use passive event listeners for scrolling performance"
     },
     {
@@ -7859,8 +7969,8 @@
       "source_location": "L1486",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_3_use_swr_for_automatic_deduplication",
-      "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.3 use swr for automatic deduplication"
     },
     {
@@ -7870,8 +7980,8 @@
       "source_location": "L1538",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_4_version_and_minimize_localstorage_data",
-      "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.4 version and minimize localstorage data"
     },
     {
@@ -14418,61 +14528,6 @@
       "community": 172,
       "community_name": "Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?",
       "norm_label": "source nodes"
-    },
-    {
-      "label": "query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "file_type": "document",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global",
-      "community": 182,
-      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
-      "norm_label": "query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md"
-    },
-    {
-      "label": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
-      "file_type": "document",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
-      "community": 182,
-      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
-      "norm_label": "q: how should devenv, bun, codex agent skills, global tools, secrets, and vercel be owned, isolated, reproduced, and upgraded in this scaffold?"
-    },
-    {
-      "label": "Answer",
-      "file_type": "document",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_answer",
-      "community": 182,
-      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
-      "norm_label": "answer"
-    },
-    {
-      "label": "Outcome",
-      "file_type": "document",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_outcome",
-      "community": 182,
-      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
-      "norm_label": "outcome"
-    },
-    {
-      "label": "Source Nodes",
-      "file_type": "document",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_source_nodes",
-      "community": 182,
-      "community_name": "Q: How should devenv, Bun, Codex agent skills, global tools, secrets, and Vercel be owned, isolated, reproduced, and upgraded in this scaffold?",
-      "norm_label": "source nodes"
     }
   ],
   "links": [
@@ -17737,6 +17792,192 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow_test",
+      "target": "src_components_feature_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow_test",
+      "target": "src_components_feature_workflow_featureworkflowsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.test.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow_test",
+      "target": "src_components_feature_workflow_test_renderfeatureworkflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow_test",
+      "target": "src_i18n_locale_script",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.test.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow_test",
+      "target": "src_i18n_locale_script_localescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_components_feature_workflow_analyticsvisual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_components_feature_workflow_answervisual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_components_feature_workflow_featureworkflowsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_components_feature_workflow_handoffvisual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_components_feature_workflow_stories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_i18n_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_i18n_catalog_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_i18n_localized_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/feature-workflow.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_feature_workflow",
+      "target": "src_i18n_localized_text_localizedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/marketing-home.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_marketing_home",
+      "target": "src_components_feature_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/marketing-home.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_marketing_home",
+      "target": "src_components_feature_workflow_featureworkflowsection",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/language-switcher.tsx",
@@ -17835,7 +18076,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L91",
+      "source_location": "L92",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17846,7 +18087,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17858,7 +18099,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17870,7 +18111,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17882,7 +18123,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -17894,7 +18135,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/marketing-home.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_marketing_home",
@@ -18443,11 +18684,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L110",
+      "source_location": "L137",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
       "target": "src_i18n_catalog_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/catalog.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_catalog",
+      "target": "src_i18n_catalog_featurestorycopy",
       "confidence_score": 1.0
     },
     {
@@ -18465,7 +18717,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L7",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -18481,6 +18733,17 @@
       "_origin": "ast",
       "source": "src_i18n_catalog",
       "target": "src_i18n_catalog_supported_locales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/catalog.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_catalog",
+      "target": "src_i18n_catalog_workflowstepcopy",
       "confidence_score": 1.0
     },
     {
@@ -28859,52 +29122,8 @@
       "source": "graphify_out_memory_query_20260726_090524_where_are_issue_2_scaffolding_quality_gates_and_q_where_are_issue_2_scaffolding_quality_gates_and_the_next_implementation_entry_point",
       "target": "graphify_out_memory_query_20260726_090524_where_are_issue_2_scaffolding_quality_gates_and_source_nodes",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global",
-      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
-      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_answer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
-      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_outcome",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260726_093246_how_should_devenv__bun__codex_agent_skills__global.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_q_how_should_devenv_bun_codex_agent_skills_global_tools_secrets_and_vercel_be_owned_isolated_reproduced_and_upgraded_in_this_scaffold",
-      "target": "graphify_out_memory_query_20260726_093246_how_should_devenv_bun_codex_agent_skills_global_source_nodes",
-      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bf0d6bf8c33c56392a3cd6f206e51705a63eabcf"
+  "built_at_commit": "1bb449d167d85e94f5b7cf596e0c83888bf64191"
 }

@@ -1,16 +1,27 @@
 import { render, screen, within } from "@testing-library/react";
-import { describe, expect, test, vi } from "vitest";
-import { catalog } from "~/i18n/catalog";
+import { beforeEach, describe, expect, test } from "vitest";
+import { LocaleScript } from "~/i18n/locale-script";
 import { FeatureWorkflowSection } from "./feature-workflow";
 
-const { useLocale } = vi.hoisted(() => ({ useLocale: vi.fn() }));
-
-vi.mock("~/i18n/locale-provider", () => ({ useLocale }));
+function renderFeatureWorkflow(locale: "en" | "zh-CN") {
+  document.documentElement.dataset.locale = locale;
+  document.documentElement.lang = locale;
+  render(
+    <>
+      <LocaleScript />
+      <FeatureWorkflowSection />
+    </>,
+  );
+}
 
 describe("FeatureWorkflowSection", () => {
+  beforeEach(() => {
+    document.documentElement.dataset.locale = "en";
+    document.documentElement.lang = "en";
+  });
+
   test("shows three English feature stories and the ordered workflow", () => {
-    useLocale.mockReturnValue({ locale: "en", copy: catalog.en });
-    render(<FeatureWorkflowSection />);
+    renderFeatureWorkflow("en");
 
     const section = screen.getByRole("region", {
       name: "Support that follows the question",
@@ -42,11 +53,7 @@ describe("FeatureWorkflowSection", () => {
   });
 
   test("renders only the selected Simplified Chinese feature copy", () => {
-    useLocale.mockReturnValue({
-      locale: "zh-CN",
-      copy: catalog["zh-CN"],
-    });
-    render(<FeatureWorkflowSection />);
+    renderFeatureWorkflow("zh-CN");
 
     expect(
       screen.getByRole("region", { name: "让支持跟随每一个问题" }),

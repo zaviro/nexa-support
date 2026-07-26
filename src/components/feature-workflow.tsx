@@ -1,6 +1,7 @@
 "use client";
 
-import { useLocale } from "~/i18n/locale-provider";
+import { catalog } from "~/i18n/catalog";
+import { LocalizedText } from "~/i18n/localized-text";
 
 function AnswerVisual() {
   return (
@@ -84,10 +85,10 @@ const stories = [
   { key: "analytics", visual: <AnalyticsVisual /> },
 ] as const;
 
-export function FeatureWorkflowSection() {
-  const { copy } = useLocale();
-  const featureWorkflow = copy.featureWorkflow;
+const enFeatureWorkflow = catalog.en.featureWorkflow;
+const zhCNFeatureWorkflow = catalog["zh-CN"].featureWorkflow;
 
+export function FeatureWorkflowSection() {
   return (
     <section
       aria-labelledby="features-title"
@@ -97,15 +98,29 @@ export function FeatureWorkflowSection() {
       <header className="feature-workflow__heading">
         <p className="section-kicker">
           <span aria-hidden="true">N—03</span>
-          {featureWorkflow.eyebrow}
+          <LocalizedText
+            en={enFeatureWorkflow.eyebrow}
+            zhCN={zhCNFeatureWorkflow.eyebrow}
+          />
         </p>
-        <h2 id="features-title">{featureWorkflow.title}</h2>
-        <p>{featureWorkflow.description}</p>
+        <h2 id="features-title">
+          <LocalizedText
+            en={enFeatureWorkflow.title}
+            zhCN={zhCNFeatureWorkflow.title}
+          />
+        </h2>
+        <p>
+          <LocalizedText
+            en={enFeatureWorkflow.description}
+            zhCN={zhCNFeatureWorkflow.description}
+          />
+        </p>
       </header>
 
       <div className="feature-workflow__stories">
         {stories.map(({ key, visual }, index) => {
-          const story = featureWorkflow.stories[key];
+          const enStory = enFeatureWorkflow.stories[key];
+          const zhCNStory = zhCNFeatureWorkflow.stories[key];
           const titleId = `feature-story-${index + 1}-title`;
 
           return (
@@ -118,12 +133,22 @@ export function FeatureWorkflowSection() {
                 <span aria-hidden="true" className="feature-workflow__index">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 id={titleId}>{story.title}</h3>
-                <p>{story.description}</p>
+                <h3 id={titleId}>
+                  <LocalizedText en={enStory.title} zhCN={zhCNStory.title} />
+                </h3>
+                <p>
+                  <LocalizedText
+                    en={enStory.description}
+                    zhCN={zhCNStory.description}
+                  />
+                </p>
               </div>
               <div className="feature-workflow__visual">
                 <span className="feature-workflow__visual-label">
-                  {story.visualLabel}
+                  <LocalizedText
+                    en={enStory.visualLabel}
+                    zhCN={zhCNStory.visualLabel}
+                  />
                 </span>
                 {visual}
               </div>
@@ -139,26 +164,53 @@ export function FeatureWorkflowSection() {
         <div className="feature-workflow__route-heading">
           <p className="section-kicker">
             <span aria-hidden="true">N—04</span>
-            {featureWorkflow.workflow.eyebrow}
+            <LocalizedText
+              en={enFeatureWorkflow.workflow.eyebrow}
+              zhCN={zhCNFeatureWorkflow.workflow.eyebrow}
+            />
           </p>
-          <h3 id="feature-workflow-title">{featureWorkflow.workflow.title}</h3>
-          <p>{featureWorkflow.workflow.description}</p>
+          <h3 id="feature-workflow-title">
+            <LocalizedText
+              en={enFeatureWorkflow.workflow.title}
+              zhCN={zhCNFeatureWorkflow.workflow.title}
+            />
+          </h3>
+          <p>
+            <LocalizedText
+              en={enFeatureWorkflow.workflow.description}
+              zhCN={zhCNFeatureWorkflow.workflow.description}
+            />
+          </p>
         </div>
         <ol className="feature-workflow__steps">
-          {featureWorkflow.workflow.steps.map((step, index) => (
-            <li key={step.title}>
-              <span
-                aria-hidden="true"
-                className="feature-workflow__step-number"
-              >
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h4>{step.title}</h4>
-                <p>{step.description}</p>
-              </div>
-            </li>
-          ))}
+          {enFeatureWorkflow.workflow.steps.map((enStep, index) => {
+            const zhCNStep = zhCNFeatureWorkflow.workflow.steps[index];
+
+            return (
+              <li key={enStep.title}>
+                <span
+                  aria-hidden="true"
+                  className="feature-workflow__step-number"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h4>
+                    <LocalizedText
+                      en={enStep.title}
+                      zhCN={zhCNStep?.title ?? ""}
+                    />
+                  </h4>
+                  <p>
+                    <LocalizedText
+                      en={enStep.description}
+                      zhCN={zhCNStep?.description ?? ""}
+                    />
+                  </p>
+                </div>
+              </li>
+            );
+          })}
         </ol>
       </section>
     </section>
