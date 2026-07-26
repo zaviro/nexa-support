@@ -269,15 +269,17 @@ test("exposes stored Chinese in the first frame and remains hydration-safe", asy
   expect(pageErrors).toEqual([]);
 });
 
-test("falls back to English without hydration errors for an invalid saved locale", async ({
+test("falls back to English without runtime errors for an invalid saved locale", async ({
   page,
 }) => {
-  const hydrationErrors: string[] = [];
+  const consoleErrors: string[] = [];
+  const pageErrors: string[] = [];
   page.on("console", (message) => {
-    if (message.type() === "error" && /hydration/i.test(message.text())) {
-      hydrationErrors.push(message.text());
+    if (message.type() === "error") {
+      consoleErrors.push(message.text());
     }
   });
+  page.on("pageerror", (error) => pageErrors.push(error.message));
   await page.addInitScript(() =>
     localStorage.setItem("nexa-language:v1", "fr"),
   );
@@ -288,7 +290,8 @@ test("falls back to English without hydration errors for an invalid saved locale
       level: 1,
     }),
   ).toBeVisible();
-  expect(hydrationErrors).toEqual([]);
+  expect(consoleErrors).toEqual([]);
+  expect(pageErrors).toEqual([]);
 });
 
 test("keeps the signal color at normal-text AA contrast", async ({ page }) => {
