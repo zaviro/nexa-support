@@ -920,8 +920,8 @@
     "semantic_hash": ""
   },
   "tests/e2e/marketing-journey.spec.ts": {
-    "mtime": 1785070988.785707,
-    "ast_hash": "bc6199a373854d99a13f665c05c8ac6a",
+    "mtime": 1785071449.0430188,
+    "ast_hash": "c1e2393625a9424d718e9fccbfb00d9b",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-26-bilingual-marketing-journey.md": {
@@ -995,8 +995,8 @@
     "semantic_hash": ""
   },
   "src/components/support-dashboard-data.test.ts": {
-    "mtime": 1785070794.3454473,
-    "ast_hash": "16ad1ccd7697b21fd1ec08f99c2fe761",
+    "mtime": 1785071409.122956,
+    "ast_hash": "f08719f634c8754d3efd82d1582564e0",
     "semantic_hash": ""
   },
   "src/components/support-dashboard-data.ts": {
