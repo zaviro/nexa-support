@@ -50,6 +50,38 @@ export type SiteCopy = {
     title: string;
     description: string;
   };
+  decisionPath: {
+    testimonialLabel: string;
+    testimonialsTitle: string;
+    testimonials: readonly { quote: string; attribution: string }[];
+    pricing: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      monthlySuffix: string;
+      plans: readonly {
+        name: "Starter" | "Pro";
+        audience: string;
+        description: string;
+        price: "¥99" | "¥299";
+        cta: string;
+      }[];
+    };
+    faq: {
+      eyebrow: string;
+      title: string;
+      items: readonly {
+        id:
+          | "ai-answers"
+          | "human-takeover"
+          | "deployment"
+          | "refunds"
+          | "data-privacy";
+        question: string;
+        answer: string;
+      }[];
+    };
+  };
   chatShell: {
     title: string;
     status: string;
@@ -121,6 +153,83 @@ export const catalog: Record<Locale, SiteCopy> = {
       description:
         "Start with a focused support assistant and scale when your team is ready.",
     },
+    decisionPath: {
+      testimonialLabel: "Demo testimonial",
+      testimonialsTitle: "Fictional feedback, visibly labeled",
+      testimonials: [
+        {
+          quote:
+            "“Nexa gives our demo team a clear place to start every support conversation.”",
+          attribution: "A. Rivera · Fictional product lead",
+        },
+        {
+          quote:
+            "“The handoff view makes the next step easy to explain in a walkthrough.”",
+          attribution: "M. Zhou · Fictional support manager",
+        },
+      ],
+      pricing: {
+        eyebrow: "N—03 · Pricing preview",
+        title: "Pricing",
+        description:
+          "Two fixed local-demo plans for seeing how the support path is presented.",
+        monthlySuffix: "/ month",
+        plans: [
+          {
+            name: "Starter",
+            audience: "For focused support",
+            description:
+              "A clear starting point for a growing SaaS team in this local demo.",
+            price: "¥99",
+            cta: "Start free",
+          },
+          {
+            name: "Pro",
+            audience: "For a scaling team",
+            description:
+              "More room to explore a growing support rhythm in this local demo.",
+            price: "¥299",
+            cta: "Start free",
+          },
+        ],
+      },
+      faq: {
+        eyebrow: "N—04 · Local demo FAQ",
+        title: "Frequently asked questions",
+        items: [
+          {
+            id: "ai-answers",
+            question: "How does Nexa answer questions?",
+            answer:
+              "This local demo shows a possible support path with fixed sample content; it does not connect to a live AI service.",
+          },
+          {
+            id: "human-takeover",
+            question: "How does human takeover work?",
+            answer:
+              "The demo can show a fictional handoff state, but it does not contact a support team or collect a request.",
+          },
+          {
+            id: "deployment",
+            question: "How is Nexa deployed?",
+            answer:
+              "Deployment is represented as an interface example only. This local demo does not install or configure anything.",
+          },
+          {
+            id: "refunds",
+            question: "What is the refund policy?",
+            answer:
+              "There are no purchases or refunds in this local demo, so it does not make a live refund-policy promise.",
+          },
+          {
+            id: "data-privacy",
+            question: "What happens to customer data?",
+            answer:
+              "This local demo does not send, store, or process customer data.",
+          },
+        ],
+      },
+    },
     chatShell: {
       title: "Nexa Support",
       status: "Support online",
@@ -187,6 +296,77 @@ export const catalog: Record<Locale, SiteCopy> = {
     pricing: {
       title: "为成长中的客服团队提供简单定价",
       description: "从专注的客服助手开始，在团队准备好后轻松扩展。",
+    },
+    decisionPath: {
+      testimonialLabel: "演示评价",
+      testimonialsTitle: "虚构反馈，清晰标注",
+      testimonials: [
+        {
+          quote: "“Nexa 让我们的演示团队能够清楚地开始每一次客服对话。”",
+          attribution: "A. Rivera · 虚构产品负责人",
+        },
+        {
+          quote: "“交接视图让我们能在演示中轻松说明下一步。”",
+          attribution: "M. Zhou · 虚构客服经理",
+        },
+      ],
+      pricing: {
+        eyebrow: "N—03 · 价格预览",
+        title: "价格",
+        description: "两档固定的本地演示方案，用于查看客服路径如何呈现。",
+        monthlySuffix: "/ 月",
+        plans: [
+          {
+            name: "Starter",
+            audience: "适合专注型客服",
+            description: "为成长中的 SaaS 团队提供清晰的本地演示起点。",
+            price: "¥99",
+            cta: "免费试用",
+          },
+          {
+            name: "Pro",
+            audience: "适合扩展中的团队",
+            description: "为客服节奏不断增长的团队提供更多本地演示空间。",
+            price: "¥299",
+            cta: "免费试用",
+          },
+        ],
+      },
+      faq: {
+        eyebrow: "N—04 · 本地演示 FAQ",
+        title: "常见问题",
+        items: [
+          {
+            id: "ai-answers",
+            question: "Nexa 如何回答问题？",
+            answer:
+              "此本地演示使用固定示例内容展示可能的客服路径，并未连接真实 AI 服务。",
+          },
+          {
+            id: "human-takeover",
+            question: "人工接管如何运作？",
+            answer:
+              "演示可以显示虚构的交接状态，但不会联系客服团队，也不会收集请求。",
+          },
+          {
+            id: "deployment",
+            question: "Nexa 如何部署？",
+            answer:
+              "部署仅作为界面示例展示；此本地演示不会安装或配置任何内容。",
+          },
+          {
+            id: "refunds",
+            question: "退款政策是什么？",
+            answer:
+              "此本地演示没有购买或退款，因此不会作出真实的退款政策承诺。",
+          },
+          {
+            id: "data-privacy",
+            question: "客户数据会如何处理？",
+            answer: "此本地演示不会发送、存储或处理客户数据。",
+          },
+        ],
+      },
     },
     chatShell: {
       title: "Nexa Support",
