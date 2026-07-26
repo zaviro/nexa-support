@@ -34,6 +34,9 @@ describe("SupportDashboard", () => {
     const initialActivityPath = container
       .querySelector(".support-dashboard__activity path")
       ?.getAttribute("d");
+    const initialFirstMarkerY = container
+      .querySelector(".support-dashboard__activity circle")
+      ?.getAttribute("cy");
 
     await user.click(
       screen.getByRole("button", { name: "Open Liam Foster conversation" }),
@@ -44,5 +47,10 @@ describe("SupportDashboard", () => {
         .querySelector(".support-dashboard__activity path")
         ?.getAttribute("d"),
     ).not.toBe(initialActivityPath);
+    expect(
+      container
+        .querySelector(".support-dashboard__activity circle")
+        ?.getAttribute("cy"),
+    ).not.toBe(initialFirstMarkerY);
   });
 });

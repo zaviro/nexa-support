@@ -9,13 +9,42 @@ import {
 } from "./support-dashboard-data";
 
 const queues: readonly DashboardQueue[] = ["all", "ai", "human"];
-const fallbackActivityPath =
-  "M4 53 C38 52 45 30 78 36 S120 60 154 32 S198 16 236 20";
-const activityPaths: Readonly<Record<string, string>> = {
-  "conv-billing": fallbackActivityPath,
-  "conv-setup": "M4 28 C34 26 48 54 78 48 S118 14 154 24 S202 52 236 18",
-  "conv-refund": "M4 58 C32 56 48 38 78 44 S118 26 154 40 S198 16 236 26",
+type ActivityVisualization = {
+  path: string;
+  points: readonly { cx: number; cy: number }[];
 };
+
+const fallbackActivityVisualization: ActivityVisualization = {
+  path: "M4 53 C38 52 45 30 78 36 S120 60 154 32 S198 16 236 20",
+  points: [
+    { cx: 4, cy: 53 },
+    { cx: 78, cy: 36 },
+    { cx: 154, cy: 32 },
+    { cx: 236, cy: 20 },
+  ],
+};
+const activityVisualizations: Readonly<Record<string, ActivityVisualization>> =
+  {
+    "conv-billing": fallbackActivityVisualization,
+    "conv-setup": {
+      path: "M4 28 C34 26 48 54 78 48 S118 14 154 24 S202 52 236 18",
+      points: [
+        { cx: 4, cy: 28 },
+        { cx: 78, cy: 48 },
+        { cx: 154, cy: 24 },
+        { cx: 236, cy: 18 },
+      ],
+    },
+    "conv-refund": {
+      path: "M4 58 C32 56 48 38 78 44 S118 26 154 40 S198 16 236 26",
+      points: [
+        { cx: 4, cy: 58 },
+        { cx: 78, cy: 44 },
+        { cx: 154, cy: 40 },
+        { cx: 236, cy: 26 },
+      ],
+    },
+  };
 
 function getInitialConversation() {
   const initialConversation = dashboardConversations[0];
@@ -57,8 +86,9 @@ export function SupportDashboard() {
     return null;
   }
 
-  const activityPath =
-    activityPaths[selectedConversation.id] ?? fallbackActivityPath;
+  const activityVisualization =
+    activityVisualizations[selectedConversation.id] ??
+    fallbackActivityVisualization;
 
   return (
     <section
@@ -166,11 +196,15 @@ export function SupportDashboard() {
               <span>{copy.dashboard.detail.activityLabel}</span>
             </div>
             <svg aria-hidden="true" viewBox="0 0 240 72">
-              <path d={activityPath} />
-              <circle cx="4" cy="53" r="4" />
-              <circle cx="78" cy="36" r="4" />
-              <circle cx="154" cy="32" r="4" />
-              <circle cx="236" cy="20" r="4" />
+              <path d={activityVisualization.path} />
+              {activityVisualization.points.map((point) => (
+                <circle
+                  cx={point.cx}
+                  cy={point.cy}
+                  key={`${point.cx}-${point.cy}`}
+                  r="4"
+                />
+              ))}
             </svg>
           </div>
         </article>
