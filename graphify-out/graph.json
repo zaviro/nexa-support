@@ -2250,7 +2250,7 @@
       "_origin": "ast",
       "id": "src_app_page",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "app/page.tsx"
     },
     {
@@ -2261,7 +2261,7 @@
       "_origin": "ast",
       "id": "src_app_page_homepage",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "homepage()"
     },
     {
@@ -2290,7 +2290,7 @@
       "label": "QUICK_ACTIONS",
       "file_type": "code",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L12",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_chat_shell_quick_actions",
       "community": 183,
@@ -2301,7 +2301,7 @@
       "label": "ChatShell()",
       "file_type": "code",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L19",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "src_components_chat_shell_chatshell",
       "community": 183,
@@ -2415,7 +2415,7 @@
       "_origin": "ast",
       "id": "src_components_decision_path",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "decision-path.tsx"
     },
     {
@@ -2426,7 +2426,7 @@
       "_origin": "ast",
       "id": "src_components_decision_path_decisionpath",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "decisionpath()"
     },
     {
@@ -2459,7 +2459,7 @@
       "_origin": "ast",
       "id": "src_components_feature_workflow",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "feature-workflow.tsx"
     },
     {
@@ -2470,7 +2470,7 @@
       "_origin": "ast",
       "id": "src_components_feature_workflow_answervisual",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "answervisual()"
     },
     {
@@ -2481,7 +2481,7 @@
       "_origin": "ast",
       "id": "src_components_feature_workflow_handoffvisual",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "handoffvisual()"
     },
     {
@@ -2492,7 +2492,7 @@
       "_origin": "ast",
       "id": "src_components_feature_workflow_analyticsvisual",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "analyticsvisual()"
     },
     {
@@ -2503,7 +2503,7 @@
       "_origin": "ast",
       "id": "src_components_feature_workflow_stories",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "stories"
     },
     {
@@ -2514,7 +2514,7 @@
       "_origin": "ast",
       "id": "src_components_feature_workflow_featureworkflowsection",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "featureworkflowsection()"
     },
     {
@@ -2547,7 +2547,7 @@
       "_origin": "ast",
       "id": "src_components_marketing_home",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "marketing-home.tsx"
     },
     {
@@ -2558,7 +2558,7 @@
       "_origin": "ast",
       "id": "src_components_marketing_home_routemap",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "routemap()"
     },
     {
@@ -2569,7 +2569,7 @@
       "_origin": "ast",
       "id": "src_components_marketing_home_marketinghome",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "marketinghome()"
     },
     {
@@ -2591,7 +2591,7 @@
       "_origin": "ast",
       "id": "src_components_site_header",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "site-header.tsx"
     },
     {
@@ -2602,7 +2602,7 @@
       "_origin": "ast",
       "id": "src_components_site_header_siteheader",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "siteheader()"
     },
     {
@@ -2873,11 +2873,11 @@
       "label": "catalog",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L137",
+      "source_location": "L144",
       "_origin": "ast",
       "id": "src_i18n_catalog_catalog",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "catalog"
     },
     {
@@ -3119,7 +3119,7 @@
       "_origin": "ast",
       "id": "src_i18n_localized_text",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "localized-text.tsx"
     },
     {
@@ -3130,7 +3130,7 @@
       "_origin": "ast",
       "id": "src_i18n_localized_text_localizedtextprops",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "localizedtextprops"
     },
     {
@@ -3141,7 +3141,7 @@
       "_origin": "ast",
       "id": "src_i18n_localized_text_localizedtext",
       "community": 175,
-      "community_name": "4. Client-Side Data Fetching",
+      "community_name": "marketing-home.tsx",
       "norm_label": "localizedtext()"
     },
     {
@@ -3187,6 +3187,17 @@
       "community": 173,
       "community_name": "marketing-journey.spec.ts",
       "norm_label": "expecteverylinktonavigate()"
+    },
+    {
+      "label": "expectVisibleChatControlsToMeetTargetSize()",
+      "file_type": "code",
+      "source_file": "tests/e2e/marketing-journey.spec.ts",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "tests_e2e_marketing_journey_spec_expectvisiblechatcontrolstomeettargetsize",
+      "community": 173,
+      "community_name": "marketing-journey.spec.ts",
+      "norm_label": "expectvisiblechatcontrolstomeettargetsize()"
     },
     {
       "label": "setup.ts",
@@ -7936,8 +7947,8 @@
       "source_location": "L1366",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_client_side_data_fetching",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4. client-side data fetching"
     },
     {
@@ -7947,8 +7958,8 @@
       "source_location": "L1372",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_1_deduplicate_global_event_listeners",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.1 deduplicate global event listeners"
     },
     {
@@ -7958,8 +7969,8 @@
       "source_location": "L1442",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_2_use_passive_event_listeners_for_scrolling_performance",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.2 use passive event listeners for scrolling performance"
     },
     {
@@ -7969,8 +7980,8 @@
       "source_location": "L1486",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_3_use_swr_for_automatic_deduplication",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.3 use swr for automatic deduplication"
     },
     {
@@ -7980,8 +7991,8 @@
       "source_location": "L1538",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_4_version_and_minimize_localstorage_data",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.4 version and minimize localstorage data"
     },
     {
@@ -13705,10 +13716,21 @@
       "norm_label": "nexa support"
     },
     {
-      "label": "\u73af\u5883",
+      "label": "Demo security",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L5",
+      "_origin": "ast",
+      "id": "readme_demo_security",
+      "community": 64,
+      "community_name": "Nexa Support",
+      "norm_label": "demo security"
+    },
+    {
+      "label": "\u73af\u5883",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "readme_\u73af\u5883",
       "community": 64,
@@ -13719,7 +13741,7 @@
       "label": "\u8d28\u91cf\u547d\u4ee4",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L17",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "readme_\u8d28\u91cf\u547d\u4ee4",
       "community": 64,
@@ -13730,7 +13752,7 @@
       "label": "Agent \u6280\u80fd",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L29",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "readme_agent_\u6280\u80fd",
       "community": 64,
@@ -14363,6 +14385,72 @@
       "community": 77,
       "community_name": "Global Constraints",
       "norm_label": "task 3: browser behavior and responsive evidence"
+    },
+    {
+      "label": "2026-07-26-key-handoff.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_key_handoff",
+      "community": 187,
+      "community_name": "Safe API-Key Presentation and Human Handoff Implementation Plan",
+      "norm_label": "2026-07-26-key-handoff.md"
+    },
+    {
+      "label": "Safe API-Key Presentation and Human Handoff Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_key_handoff_safe_api_key_presentation_and_human_handoff_implementation_plan",
+      "community": 187,
+      "community_name": "Safe API-Key Presentation and Human Handoff Implementation Plan",
+      "norm_label": "safe api-key presentation and human handoff implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_key_handoff_global_constraints",
+      "community": 187,
+      "community_name": "Safe API-Key Presentation and Human Handoff Implementation Plan",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "File Structure",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_key_handoff_file_structure",
+      "community": 187,
+      "community_name": "Safe API-Key Presentation and Human Handoff Implementation Plan",
+      "norm_label": "file structure"
+    },
+    {
+      "label": "Task 1: Deliver and verify safe demo-key presentation and fictional human handoff",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_key_handoff_task_1_deliver_and_verify_safe_demo_key_presentation_and_fictional_human_handoff",
+      "community": 187,
+      "community_name": "Safe API-Key Presentation and Human Handoff Implementation Plan",
+      "norm_label": "task 1: deliver and verify safe demo-key presentation and fictional human handoff"
+    },
+    {
+      "label": "Plan Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L244",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_key_handoff_plan_self_review",
+      "community": 187,
+      "community_name": "Safe API-Key Presentation and Human Handoff Implementation Plan",
+      "norm_label": "plan self-review"
     },
     {
       "label": "query_20260726_085524_\u6574\u4e2a\u884c\u52a8\u4e2d\u4f3c\u4e4e\u9047\u5230\u4e0d\u5c11\u95ee\u9898\u82b1\u4e86\u4e00\u6bb5\u65f6\u95f4_\u51fa\u4e86\u4ec0\u4e48\u95ee\u9898_\u662f\u6709\u4ec0\u4e48\u6211\u4eec\u4e4b\u524d\u7684\u8ba1\u5212\u6ca1\u6709\u5b89\u6392\u597d\u7684\u5417.md",
@@ -17421,7 +17509,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L19",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17432,7 +17520,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L12",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17444,7 +17532,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L5",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17456,7 +17544,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L5",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17468,7 +17556,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L5",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17480,7 +17568,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L5",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17492,7 +17580,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L5",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17504,7 +17592,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L4",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17516,7 +17604,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L4",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
@@ -17541,7 +17629,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L21",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell_chatshell",
@@ -17553,7 +17641,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L20",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell_chatshell",
@@ -18684,7 +18772,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L137",
+      "source_location": "L144",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -19264,6 +19352,17 @@
       "_origin": "ast",
       "source": "tests_e2e_marketing_journey_spec",
       "target": "tests_e2e_marketing_journey_spec_expecteverylinktonavigate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/marketing-journey.spec.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_marketing_journey_spec",
+      "target": "tests_e2e_marketing_journey_spec_expectvisiblechatcontrolstomeettargetsize",
       "confidence_score": 1.0
     },
     {
@@ -28423,7 +28522,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L29",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_nexa_support",
@@ -28438,6 +28537,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_nexa_support",
+      "target": "readme_demo_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_nexa_support",
       "target": "readme_\u73af\u5883",
       "confidence_score": 1.0
     },
@@ -28445,7 +28555,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L17",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_nexa_support",
@@ -28994,6 +29104,61 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_key_handoff",
+      "target": "docs_superpowers_plans_2026_07_26_key_handoff_safe_api_key_presentation_and_human_handoff_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_key_handoff_safe_api_key_presentation_and_human_handoff_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_key_handoff_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_key_handoff_safe_api_key_presentation_and_human_handoff_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_key_handoff_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L244",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_key_handoff_safe_api_key_presentation_and_human_handoff_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_key_handoff_plan_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-key-handoff.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_key_handoff_file_structure",
+      "target": "docs_superpowers_plans_2026_07_26_key_handoff_task_1_deliver_and_verify_safe_demo_key_presentation_and_fictional_human_handoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260726_085524_\u6574\u4e2a\u884c\u52a8\u4e2d\u4f3c\u4e4e\u9047\u5230\u4e0d\u5c11\u95ee\u9898\u82b1\u4e86\u4e00\u6bb5\u65f6\u95f4_\u51fa\u4e86\u4ec0\u4e48\u95ee\u9898_\u662f\u6709\u4ec0\u4e48\u6211\u4eec\u4e4b\u524d\u7684\u8ba1\u5212\u6ca1\u6709\u5b89\u6392\u597d\u7684\u5417.md",
       "source_location": "L10",
       "weight": 1.0,
@@ -29125,5 +29290,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1bb449d167d85e94f5b7cf596e0c83888bf64191"
+  "built_at_commit": "cfbd7c5e85165b33175b57e5fb37187d86570378"
 }

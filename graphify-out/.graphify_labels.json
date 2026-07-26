@@ -174,6 +174,7 @@
   "172": "Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?",
   "173": "marketing-journey.spec.ts",
   "174": "Decision Path Implementation Plan",
+  "175": "marketing-home.tsx",
   "176": "Evaluation and iteration",
   "177": "Checklist for effective Skills",
   "178": "Core principles",
@@ -184,5 +185,7 @@
   "183": "chat-shell.tsx",
   "184": "layout.tsx",
   "185": "useLocale",
-  "186": "catalog.ts"
+  "186": "catalog.ts",
+  "187": "Safe API-Key Presentation and Human Handoff Implementation Plan",
+  "188": "4. Client-Side Data Fetching"
 }

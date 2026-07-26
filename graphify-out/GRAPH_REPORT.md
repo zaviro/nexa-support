@@ -1,16 +1,16 @@
-# Graph Report - issue-5-feature-workflow  (2026-07-26)
+# Graph Report - issue-8-key-handoff  (2026-07-26)
 
 ## Corpus Check
-- 202 files · ~121,090 words
+- 203 files · ~124,822 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1314 nodes · 1307 edges · 187 communities (106 shown, 81 thin omitted)
+- 1322 nodes · 1314 edges · 189 communities (108 shown, 81 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1bb449d1`
+- Built from commit: `cfbd7c5e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -179,7 +179,7 @@
 - Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?
 - marketing-journey.spec.ts
 - Decision Path Implementation Plan
-- 4. Client-Side Data Fetching
+- marketing-home.tsx
 - Evaluation and iteration
 - Checklist for effective Skills
 - Core principles
@@ -191,6 +191,8 @@
 - layout.tsx
 - useLocale
 - catalog.ts
+- Safe API-Key Presentation and Human Handoff Implementation Plan
+- 4. Client-Side Data Fetching
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -219,7 +221,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (187 total, 81 thin omitted)
+## Communities (189 total, 81 thin omitted)
 
 ### Community 0 - "server.cjs"
 Cohesion: 0.06
@@ -450,8 +452,8 @@ Cohesion: 0.40
 Nodes (4): Choose A, B, or C, Pressure Test 3: Authority + Social Pressure, Scenario, Your Options
 
 ### Community 57 - "React Best Practices"
-Cohesion: 0.20
-Nodes (9): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching, Abstract, React Best Practices, References (+1 more)
+Cohesion: 0.40
+Nodes (4): Abstract, React Best Practices, References, Table of Contents
 
 ### Community 58 - "Skill structure"
 Cohesion: 0.20
@@ -478,8 +480,8 @@ Cohesion: 0.40
 Nodes (5): GREEN: Write Minimal Skill, Micro-Test Wording Before Full Scenarios, RED-GREEN-REFACTOR for Skills, RED: Write Failing Test (Baseline), REFACTOR: Close Loopholes
 
 ### Community 64 - "Nexa Support"
-Cohesion: 0.40
-Nodes (4): Agent 技能, Nexa Support, 环境, 质量命令
+Cohesion: 0.33
+Nodes (5): Agent 技能, Demo security, Nexa Support, 环境, 质量命令
 
 ### Community 66 - "Pi Tool Mapping"
 Cohesion: 0.50
@@ -553,7 +555,7 @@ Nodes (4): Answer, Outcome, Q: Where are Issue #2 scaffolding, quality gates, an
 Cohesion: 0.29
 Nodes (6): Decision Path Implementation Plan, Execution Handoff, File Structure, Global Constraints, Self-Review, Task 1: Ship the localized trust, pricing, and FAQ decision path
 
-### Community 175 - "4. Client-Side Data Fetching"
+### Community 175 - "marketing-home.tsx"
 Cohesion: 0.19
 Nodes (8): DecisionPath(), FeatureWorkflowSection(), stories, MarketingHome(), SiteHeader(), catalog, LocalizedText(), LocalizedTextProps
 
@@ -601,8 +603,16 @@ Nodes (3): LanguageSwitcher(), LocaleProbe(), useLocale()
 Cohesion: 0.40
 Nodes (4): FeatureStoryCopy, SiteCopy, SUPPORTED_LOCALES, WorkflowStepCopy
 
+### Community 187 - "Safe API-Key Presentation and Human Handoff Implementation Plan"
+Cohesion: 0.33
+Nodes (5): File Structure, Global Constraints, Plan Self-Review, Safe API-Key Presentation and Human Handoff Implementation Plan, Task 1: Deliver and verify safe demo-key presentation and fictional human handoff
+
+### Community 188 - "4. Client-Side Data Fetching"
+Cohesion: 0.40
+Nodes (5): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching
+
 ## Knowledge Gaps
-- **834 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+829 more)
+- **838 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+833 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **81 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -615,12 +625,12 @@ Nodes (4): FeatureStoryCopy, SiteCopy, SUPPORTED_LOCALES, WorkflowStepCopy
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `5. Re-render Optimization`, `7. JavaScript Performance`, `8. Advanced Patterns`, `6. Rendering Performance`, `3. Server-Side Performance`?**
+- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `6. Rendering Performance`, `5. Re-render Optimization`, `7. JavaScript Performance`, `8. Advanced Patterns`, `4. Client-Side Data Fetching`, `3. Server-Side Performance`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `crypto`, `http`, `fs` to the rest of the system?**
-  _834 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _838 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
 - **Should `Testing Skills With Subagents` be split into smaller, more focused modules?**
