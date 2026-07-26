@@ -58,3 +58,51 @@
   `FORCE_COLOR` warning; it did not affect the focused results.
 - Graphify repeated its existing zero-node warning for `metadata.json`,
   `hooks.json`, and `skills-lock.json`.
+
+## Review Fix Round
+
+- Addressed the actionable first-frame locale finding in `d9821a9 fix: harden
+  login locale and contrast`.
+- Static login controls now use the established paired `LocalizedText` pattern,
+  so the pre-hydration `html[data-locale]` stylesheet selects the stored
+  language for labels, checkbox text, and submit text. Validation and result
+  messages remain hydrated `useLocale()` output because they do not exist in
+  the first frame.
+- The language switcher now derives its destination from the document locale,
+  which is set before paint, rather than the hydration-safe English React
+  snapshot. A stored Chinese page therefore writes `en` when its visible
+  destination is English.
+- Corrected the login contrast failure with a 2px evergreen default border and
+  `--error: #8a5948` for invalid borders and small error text. Browser evidence
+  measures the rendered values against the actual surface: default border about
+  9.68:1, invalid border and error text about 5.83:1. The coral inset remains a
+  supplemental invalid-state cue rather than the sole indicator.
+
+### Regression Evidence
+
+- RED: the blocked-hydration browser test could not find the Chinese email
+  field on a stored-`zh-CN` direct `/login` route; the form initially rendered
+  English copy.
+- RED: the language-switcher unit test clicked visible `English` under a
+  pre-hydration Chinese document locale and observed stored `zh-CN`, not `en`.
+- RED: the rendered default login border measured 1.468:1 against the surface,
+  below the 3:1 non-text state threshold.
+- GREEN unit/static:
+  `bun run test:unit -- src/components/login-form.test.tsx src/components/site-header.test.tsx && bun run check && bun run typecheck && git diff --check`
+  - Exit 0; 7 tests passed, Biome checked 40 files, TypeScript and whitespace
+    checks passed.
+- GREEN focused desktop:
+  `PLAYWRIGHT_BROWSERS_PATH=../../.cache/ms-playwright bunx playwright test --project=desktop-chromium --grep "login placeholder|stored Chinese login|login field states|navigates the English marketing journey|persists Simplified Chinese"`
+  - Exit 0; 5/5 passed, including pre-hydration copy/destination and rendered
+    contrast measurements.
+- GREEN focused mobile:
+  `PLAYWRIGHT_BROWSERS_PATH=../../.cache/ms-playwright bunx playwright test --project=mobile-chromium --grep "login placeholder|marketing shell inside the viewport"`
+  - Exit 0; 8/8 passed.
+- `graphify update .`
+  - Exit 0; refreshed graph outputs to 1,337 nodes, 1,344 edges, and 190
+    communities.
+
+### Scope Note
+
+- Per controller instruction, this round did not run `devenv test --no-tui`
+  and did not request a second independent review.
