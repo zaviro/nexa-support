@@ -81,12 +81,13 @@ test("persists Simplified Chinese across routes and reloads", async ({
   await expect(
     page.getByText("面向成长型 SaaS 团队的 AI 客服助手。", { exact: true }),
   ).toBeVisible();
-  await expect(page.getByText("70%", { exact: true })).toBeVisible();
-  await expect(page.getByText("自动解决", { exact: true })).toBeVisible();
-  await expect(page.getByText("24/7", { exact: true })).toBeVisible();
-  await expect(page.getByText("支持在线")).toBeVisible();
-  await expect(page.getByText("30 秒", { exact: true })).toBeVisible();
-  await expect(page.getByText("完成部署", { exact: true })).toBeVisible();
+  const outcomes = page.getByRole("region", { name: "客服成效" });
+  await expect(outcomes.getByText("70%", { exact: true })).toBeVisible();
+  await expect(outcomes.getByText("自动解决", { exact: true })).toBeVisible();
+  await expect(outcomes.getByText("24/7", { exact: true })).toBeVisible();
+  await expect(outcomes.getByText("支持在线", { exact: true })).toBeVisible();
+  await expect(outcomes.getByText("30 秒", { exact: true })).toBeVisible();
+  await expect(outcomes.getByText("完成部署", { exact: true })).toBeVisible();
   await expect
     .poll(() => page.evaluate(() => localStorage.getItem("nexa-language:v1")))
     .toBe("zh-CN");
