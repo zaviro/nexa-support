@@ -112,6 +112,7 @@ export function ChatShell() {
     <>
       {state.isOpen ? (
         <section
+          aria-describedby="chat-shell-description"
           aria-labelledby="chat-shell-title"
           aria-modal="false"
           className="chat-shell"
@@ -175,7 +176,9 @@ export function ChatShell() {
           </div>
 
           <div className="chat-shell__messages">
-            <p className="chat-shell__welcome">{copy.chatShell.welcome}</p>
+            <p className="chat-shell__welcome" id="chat-shell-description">
+              {copy.chatShell.welcome}
+            </p>
             {state.messages.map((message) =>
               replyIsLive && message === lastAssistantMessage ? null : (
                 <p

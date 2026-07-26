@@ -33,7 +33,6 @@ html {
 body {
   min-width: 20rem;
   margin: 0;
-  overflow-x: clip;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
@@ -122,6 +121,44 @@ button {
   margin-inline: auto;
   padding-inline: var(--page-gutter);
   gap: 1.5rem;
+}
+
+.site-header__inner,
+.support-dashboard__workspace,
+.support-dashboard__inbox,
+.support-dashboard__detail,
+.feature-workflow__story,
+.feature-workflow__story-copy,
+.feature-workflow__visual,
+.editorial-section,
+.pricing-ledger,
+.testimonial-ledger,
+.faq-list,
+.site-footer,
+.login-card,
+.login-form,
+.chat-shell {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.site-header__inner > *,
+.support-dashboard__workspace > *,
+.support-dashboard__inbox > *,
+.support-dashboard__detail > *,
+.feature-workflow__story > *,
+.feature-workflow__story-copy > *,
+.feature-workflow__visual > *,
+.editorial-section > *,
+.pricing-ledger > *,
+.testimonial-ledger > *,
+.faq-list > *,
+.site-footer > *,
+.login-card > *,
+.login-form > *,
+.chat-shell > * {
+  max-width: 100%;
+  min-width: 0;
 }
 
 .site-header__brand,
@@ -757,6 +794,12 @@ html[data-locale="zh-CN"] .login-card h1 {
   line-height: 0.95;
 }
 
+.support-dashboard__detail-heading,
+.support-dashboard__detail h3,
+.support-dashboard__detail > p {
+  overflow-wrap: anywhere;
+}
+
 .support-dashboard__detail > p {
   max-width: 32rem;
   margin: 1.25rem 0 0;
@@ -790,6 +833,7 @@ html[data-locale="zh-CN"] .login-card h1 {
   margin: 0.35rem 0 0;
   font-size: 0.82rem;
   font-weight: 690;
+  overflow-wrap: anywhere;
 }
 
 .support-dashboard__activity {
@@ -1453,6 +1497,7 @@ html[data-locale="zh-CN"] .login-card h1 {
   color: color-mix(in srgb, var(--ink) 68%, transparent);
   font-size: 0.95rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .site-footer {
@@ -1665,6 +1710,7 @@ html[data-locale="zh-CN"] .login-card h1 {
   color: color-mix(in srgb, var(--ink) 67%, transparent);
   font-size: 0.75rem;
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .chat-shell__message {
@@ -1770,6 +1816,7 @@ html[data-locale="zh-CN"] .login-card h1 {
   font-size: 0.68rem;
   font-weight: 670;
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .login-page {
@@ -1872,6 +1919,18 @@ html[data-locale="zh-CN"] .login-card h1 {
   font-size: 0.75rem;
   font-weight: 680;
   line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.language-switcher,
+.site-header__actions a,
+.support-dashboard button,
+.faq-item button,
+.chat-shell button,
+.chat-shell label,
+.login-form label,
+.login-form button {
+  overflow-wrap: anywhere;
 }
 
 .login-form__error::before {

@@ -3222,6 +3222,83 @@
       "norm_label": "localizedtext()"
     },
     {
+      "label": "accessibility-hardening.spec.ts",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "accessibility-hardening.spec.ts"
+    },
+    {
+      "label": "viewports",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_viewports",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "viewports"
+    },
+    {
+      "label": "locales",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_locales",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "locales"
+    },
+    {
+      "label": "setLocale()",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_setlocale",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "setlocale()"
+    },
+    {
+      "label": "expectVisibleFocus()",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_expectvisiblefocus",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "expectvisiblefocus()"
+    },
+    {
+      "label": "expectAxeClean()",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_expectaxeclean",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "expectaxeclean()"
+    },
+    {
+      "label": "expectInsideViewport()",
+      "file_type": "code",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "tests_e2e_accessibility_hardening_spec_expectinsideviewport",
+      "community": 190,
+      "community_name": "accessibility-hardening.spec.ts",
+      "norm_label": "expectinsideviewport()"
+    },
+    {
       "label": "marketing-journey.spec.ts",
       "file_type": "code",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
@@ -3233,32 +3310,10 @@
       "norm_label": "marketing-journey.spec.ts"
     },
     {
-      "label": "relativeLuminance()",
-      "file_type": "code",
-      "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "tests_e2e_marketing_journey_spec_relativeluminance",
-      "community": 173,
-      "community_name": "marketing-journey.spec.ts",
-      "norm_label": "relativeluminance()"
-    },
-    {
-      "label": "contrastRatio()",
-      "file_type": "code",
-      "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "tests_e2e_marketing_journey_spec_contrastratio",
-      "community": 173,
-      "community_name": "marketing-journey.spec.ts",
-      "norm_label": "contrastratio()"
-    },
-    {
       "label": "contrastRatioFromRgb()",
       "file_type": "code",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L35",
+      "source_location": "L3",
       "_origin": "ast",
       "id": "tests_e2e_marketing_journey_spec_contrastratiofromrgb",
       "community": 173,
@@ -3269,7 +3324,7 @@
       "label": "expectEveryLinkToNavigate()",
       "file_type": "code",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L61",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "tests_e2e_marketing_journey_spec_expecteverylinktonavigate",
       "community": 173,
@@ -3280,7 +3335,7 @@
       "label": "expectVisibleChatControlsToMeetTargetSize()",
       "file_type": "code",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L78",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "tests_e2e_marketing_journey_spec_expectvisiblechatcontrolstomeettargetsize",
       "community": 173,
@@ -8035,8 +8090,8 @@
       "source_location": "L1366",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_client_side_data_fetching",
-      "community": 188,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4. client-side data fetching"
     },
     {
@@ -8046,8 +8101,8 @@
       "source_location": "L1372",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_1_deduplicate_global_event_listeners",
-      "community": 188,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.1 deduplicate global event listeners"
     },
     {
@@ -8057,8 +8112,8 @@
       "source_location": "L1442",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_2_use_passive_event_listeners_for_scrolling_performance",
-      "community": 188,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.2 use passive event listeners for scrolling performance"
     },
     {
@@ -8068,8 +8123,8 @@
       "source_location": "L1486",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_3_use_swr_for_automatic_deduplication",
-      "community": 188,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.3 use swr for automatic deduplication"
     },
     {
@@ -8079,8 +8134,8 @@
       "source_location": "L1538",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_4_version_and_minimize_localstorage_data",
-      "community": 188,
-      "community_name": "4. Client-Side Data Fetching",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "4.4 version and minimize localstorage data"
     },
     {
@@ -14068,6 +14123,105 @@
       "norm_label": "ticket relationships"
     },
     {
+      "label": "2026-07-26-accessibility-hardening.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "2026-07-26-accessibility-hardening.md"
+    },
+    {
+      "label": "Accessibility and Responsive Hardening Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening_accessibility_and_responsive_hardening_implementation_plan",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "accessibility and responsive hardening implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening_global_constraints",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "File Structure",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening_file_structure",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "file structure"
+    },
+    {
+      "label": "Task 1: Harden and prove the complete local journey",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening_task_1_harden_and_prove_the_complete_local_journey",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "task 1: harden and prove the complete local journey"
+    },
+    {
+      "label": "Task 2: Perform exactly one independent implementation and UI review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L429",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening_task_2_perform_exactly_one_independent_implementation_and_ui_review",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "task 2: perform exactly one independent implementation and ui review"
+    },
+    {
+      "label": "Task 3: Run the one final canonical quality gate",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L479",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening_task_3_run_the_one_final_canonical_quality_gate",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "task 3: run the one final canonical quality gate"
+    },
+    {
+      "label": "Plan Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L503",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening_plan_self_review",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "plan self-review"
+    },
+    {
+      "label": "Execution Handoff",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L513",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_accessibility_hardening_execution_handoff",
+      "community": 188,
+      "community_name": "4. Client-Side Data Fetching",
+      "norm_label": "execution handoff"
+    },
+    {
       "label": "2026-07-26-bilingual-marketing-journey.md",
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-07-26-bilingual-marketing-journey.md",
@@ -19608,6 +19762,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/i18n/locale-provider.tsx",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_locale_provider_createlocalestore",
+      "target": "tests_e2e_accessibility_hardening_spec_setlocale"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -19771,19 +19937,74 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L25",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "tests_e2e_marketing_journey_spec",
-      "target": "tests_e2e_marketing_journey_spec_contrastratio",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_expectaxeclean",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_expectinsideviewport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_expectvisiblefocus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_locales",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_setlocale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/accessibility-hardening.spec.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_e2e_accessibility_hardening_spec",
+      "target": "tests_e2e_accessibility_hardening_spec_viewports",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L35",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_marketing_journey_spec",
@@ -19794,7 +20015,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L61",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_marketing_journey_spec",
@@ -19805,34 +20026,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L78",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_e2e_marketing_journey_spec",
       "target": "tests_e2e_marketing_journey_spec_expectvisiblechatcontrolstomeettargetsize",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_e2e_marketing_journey_spec",
-      "target": "tests_e2e_marketing_journey_spec_relativeluminance",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/e2e/marketing-journey.spec.ts",
-      "source_location": "L26",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tests_e2e_marketing_journey_spec_contrastratio",
-      "target": "tests_e2e_marketing_journey_spec_relativeluminance",
       "confidence_score": 1.0
     },
     {
@@ -29199,6 +29397,94 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_accessibility_hardening",
+      "target": "docs_superpowers_plans_2026_07_26_accessibility_hardening_accessibility_and_responsive_hardening_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L513",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_accessibility_hardening_accessibility_and_responsive_hardening_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_accessibility_hardening_execution_handoff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_accessibility_hardening_accessibility_and_responsive_hardening_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_accessibility_hardening_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_accessibility_hardening_accessibility_and_responsive_hardening_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_accessibility_hardening_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L503",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_accessibility_hardening_accessibility_and_responsive_hardening_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_accessibility_hardening_plan_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_accessibility_hardening_file_structure",
+      "target": "docs_superpowers_plans_2026_07_26_accessibility_hardening_task_1_harden_and_prove_the_complete_local_journey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L429",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_accessibility_hardening_file_structure",
+      "target": "docs_superpowers_plans_2026_07_26_accessibility_hardening_task_2_perform_exactly_one_independent_implementation_and_ui_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-accessibility-hardening.md",
+      "source_location": "L479",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_accessibility_hardening_file_structure",
+      "target": "docs_superpowers_plans_2026_07_26_accessibility_hardening_task_3_run_the_one_final_canonical_quality_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/superpowers/plans/2026-07-26-bilingual-marketing-journey.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -29803,5 +30089,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ee26b7b305349822af121f2362dbf6052e466c5c"
+  "built_at_commit": "1394b5333acfc012366303a5245eca2b4990e394"
 }

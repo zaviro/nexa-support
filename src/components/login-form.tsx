@@ -1,6 +1,6 @@
 "use client";
 
-import { type ChangeEvent, type FormEvent, useState } from "react";
+import { type ChangeEvent, type FormEvent, useRef, useState } from "react";
 import { catalog } from "~/i18n/catalog";
 import { useLocale } from "~/i18n/locale-provider";
 import { LocalizedText } from "~/i18n/localized-text";
@@ -38,6 +38,8 @@ function validateLogin(values: LoginValues): LoginErrors {
 
 export function LoginForm() {
   const { copy } = useLocale();
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
   const [values, setValues] = useState<LoginValues>({
     email: "",
     password: "",
@@ -77,6 +79,11 @@ export function LoginForm() {
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors);
       setSubmitted(false);
+      if (nextErrors.email !== undefined) {
+        emailRef.current?.focus();
+      } else {
+        passwordRef.current?.focus();
+      }
       return;
     }
 
@@ -98,6 +105,7 @@ export function LoginForm() {
           id="login-email"
           name="email"
           onChange={onTextChange}
+          ref={emailRef}
           type="email"
           value={values.email}
         />
@@ -126,11 +134,13 @@ export function LoginForm() {
             errors.password ? "login-password-error" : undefined
           }
           aria-invalid={Boolean(errors.password)}
+          aria-label={copy.login.passwordLabel}
           autoComplete="current-password"
           className="login-form__input"
           id="login-password"
           name="password"
           onChange={onTextChange}
+          ref={passwordRef}
           type="password"
           value={values.password}
         />

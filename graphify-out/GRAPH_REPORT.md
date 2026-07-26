@@ -1,16 +1,16 @@
-# Graph Report - issue-9-login  (2026-07-26)
+# Graph Report - issue-10-hardening  (2026-07-26)
 
 ## Corpus Check
-- 206 files · ~128,690 words
+- 208 files · ~132,559 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1337 nodes · 1344 edges · 190 communities (109 shown, 81 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.54)
+- 1351 nodes · 1356 edges · 191 communities (111 shown, 80 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.57)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ee26b7b3`
+- Built from commit: `1394b533`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -177,7 +177,6 @@
 - Q: 整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？
 - Q: 这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？
 - Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?
-- marketing-journey.spec.ts
 - Decision Path Implementation Plan
 - marketing-home.tsx
 - Evaluation and iteration
@@ -194,6 +193,7 @@
 - Safe API-Key Presentation and Human Handoff Implementation Plan
 - 4. Client-Side Data Fetching
 - catalog.ts
+- accessibility-hardening.spec.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -208,6 +208,8 @@
 10. `Visual Companion Guide` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `createLocaleStore()` --indirect_call--> `setLocale()`  [INFERRED]
+  src/i18n/locale-provider.tsx → tests/e2e/accessibility-hardening.spec.ts
 - `ChatShell()` --indirect_call--> `transitionChat()`  [INFERRED]
   src/components/chat-shell.tsx → src/components/chat-state.ts
 - `ChatShell()` --calls--> `useLocale()`  [EXTRACTED]
@@ -216,13 +218,11 @@
   src/components/language-switcher.tsx → src/i18n/locale-provider.tsx
 - `SupportDashboard()` --calls--> `useLocale()`  [EXTRACTED]
   src/components/support-dashboard.tsx → src/i18n/locale-provider.tsx
-- `LocaleProbe()` --calls--> `useLocale()`  [EXTRACTED]
-  src/i18n/locale-provider.test.tsx → src/i18n/locale-provider.tsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (190 total, 81 thin omitted)
+## Communities (191 total, 80 thin omitted)
 
 ### Community 0 - "server.cjs"
 Cohesion: 0.06
@@ -453,8 +453,8 @@ Cohesion: 0.40
 Nodes (4): Choose A, B, or C, Pressure Test 3: Authority + Social Pressure, Scenario, Your Options
 
 ### Community 57 - "React Best Practices"
-Cohesion: 0.40
-Nodes (4): Abstract, React Best Practices, References, Table of Contents
+Cohesion: 0.20
+Nodes (9): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching, Abstract, React Best Practices, References (+1 more)
 
 ### Community 58 - "Skill structure"
 Cohesion: 0.20
@@ -609,17 +609,21 @@ Cohesion: 0.33
 Nodes (5): File Structure, Global Constraints, Plan Self-Review, Safe API-Key Presentation and Human Handoff Implementation Plan, Task 1: Deliver and verify safe demo-key presentation and fictional human handoff
 
 ### Community 188 - "4. Client-Side Data Fetching"
-Cohesion: 0.40
-Nodes (5): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching
+Cohesion: 0.22
+Nodes (8): Accessibility and Responsive Hardening Implementation Plan, Execution Handoff, File Structure, Global Constraints, Plan Self-Review, Task 1: Harden and prove the complete local journey, Task 2: Perform exactly one independent implementation and UI review, Task 3: Run the one final canonical quality gate
 
 ### Community 189 - "catalog.ts"
 Cohesion: 0.40
 Nodes (4): FeatureStoryCopy, SiteCopy, SUPPORTED_LOCALES, WorkflowStepCopy
 
+### Community 190 - "accessibility-hardening.spec.ts"
+Cohesion: 0.29
+Nodes (3): locales, setLocale(), viewports
+
 ## Knowledge Gaps
-- **844 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+839 more)
+- **852 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+847 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **81 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **80 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
@@ -630,14 +634,14 @@ Nodes (4): FeatureStoryCopy, SiteCopy, SUPPORTED_LOCALES, WorkflowStepCopy
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `6. Rendering Performance`, `5. Re-render Optimization`, `7. JavaScript Performance`, `useLocale`, `4. Client-Side Data Fetching`, `3. Server-Side Performance`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `5. Re-render Optimization`, `7. JavaScript Performance`, `useLocale`, `6. Rendering Performance`, `3. Server-Side Performance`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `Writing Skills` connect `Writing Skills` to `Testing Skills With Subagents`, `File Organization`, `Skill Types`, `Skill Discovery Optimization (SDO)`, `Bulletproofing Skills Against Rationalization`, `Anti-Patterns`, `Testing All Skill Types`, `RED-GREEN-REFACTOR for Skills`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `crypto`, `http`, `fs` to the rest of the system?**
-  _844 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _852 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
 - **Should `Testing Skills With Subagents` be split into smaller, more focused modules?**

@@ -169,6 +169,7 @@ export function SupportDashboard() {
         </div>
 
         <article
+          aria-atomic="true"
           aria-label={copy.dashboard.detail.label}
           aria-live="polite"
           className="support-dashboard__detail"
