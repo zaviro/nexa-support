@@ -137,12 +137,21 @@ test("changes the visible dashboard conversation", async ({ page }) => {
   const sofiaConversation = dashboard.getByRole("button", {
     name: "Open Sofia Ramirez conversation",
   });
+  const mayaConversation = dashboard.getByRole("button", {
+    name: "Open Maya Chen conversation",
+  });
+  const detail = dashboard.locator('[aria-live="polite"]');
+
+  await expect(detail).toHaveAttribute("aria-live", "polite");
+  await expect(mayaConversation).toHaveAttribute("aria-pressed", "true");
+  await expect(sofiaConversation).toHaveAttribute("aria-pressed", "false");
+  await expect(
+    detail.getByRole("heading", { name: "Billing", level: 3 }),
+  ).toBeVisible();
+  await expect(detail.getByText("AI resolving", { exact: true })).toBeVisible();
 
   await sofiaConversation.click();
-
   await expect(sofiaConversation).toHaveAttribute("aria-pressed", "true");
-  const detail = dashboard.locator('[aria-live="polite"]');
-  await expect(detail).toHaveAttribute("aria-live", "polite");
   await expect(
     detail.getByRole("heading", { name: "Refund request", level: 3 }),
   ).toBeVisible();
