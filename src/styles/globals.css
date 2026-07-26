@@ -660,10 +660,6 @@ html[data-locale="zh-CN"] .login-card h1 {
   cursor: pointer;
   font-size: 0.7rem;
   font-weight: 680;
-  transition:
-    color 160ms ease,
-    background-color 160ms ease,
-    border-color 160ms ease;
 }
 
 .support-dashboard__filter:hover:not([aria-pressed="true"]) {
@@ -696,7 +692,6 @@ html[data-locale="zh-CN"] .login-card h1 {
   background: var(--surface);
   cursor: pointer;
   text-align: left;
-  transition: background-color 160ms ease;
 }
 
 .support-dashboard__conversation:hover:not([aria-pressed="true"]) {
