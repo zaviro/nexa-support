@@ -61,6 +61,7 @@ devenv.local.yaml
 
 # Superpowers worktrees
 /.superpowers
+/.worktrees
 
 # graphify host-local cache/interpreter
 /graphify-out/.graphify_python
