@@ -21,6 +21,27 @@ export type SiteCopy = {
     online: { value: string; label: string };
     deployment: { value: string; label: string };
   };
+  dashboard: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    regionLabel: string;
+    queueLabel: string;
+    queues: Record<"all" | "ai" | "human", string>;
+    metrics: {
+      automated: { value: string; label: string };
+      online: { value: string; label: string };
+      deployment: { value: string; label: string };
+    };
+    inboxLabel: string;
+    detail: {
+      label: string;
+      customerLabel: string;
+      statusLabel: string;
+      activityLabel: string;
+    };
+    selectionAccessibleName: string;
+  };
   features: {
     title: string;
     description: string;
@@ -63,6 +84,32 @@ export const catalog: Record<Locale, SiteCopy> = {
       automated: { value: "70%", label: "automated" },
       online: { value: "24/7", label: "online" },
       deployment: { value: "30 seconds", label: "to deploy" },
+    },
+    dashboard: {
+      eyebrow: "Support pulse",
+      title: "A live view of every support path",
+      description:
+        "See how questions move from an AI answer to the right teammate.",
+      regionLabel: "Nexa Support dashboard",
+      queueLabel: "Conversation queues",
+      queues: {
+        all: "All conversations",
+        ai: "AI resolving",
+        human: "Human handoff",
+      },
+      metrics: {
+        automated: { value: "1 inbox", label: "for every support path" },
+        online: { value: "3 queues", label: "visible at once" },
+        deployment: { value: "1 handoff", label: "when judgment matters" },
+      },
+      inboxLabel: "Customer inbox",
+      detail: {
+        label: "Conversation detail",
+        customerLabel: "Customer",
+        statusLabel: "Status",
+        activityLabel: "Activity",
+      },
+      selectionAccessibleName: "Open {customer} conversation",
     },
     features: {
       title: "Support that follows the question",
@@ -107,6 +154,31 @@ export const catalog: Record<Locale, SiteCopy> = {
       automated: { value: "70%", label: "自动解决" },
       online: { value: "24/7", label: "支持在线" },
       deployment: { value: "30 秒", label: "完成部署" },
+    },
+    dashboard: {
+      eyebrow: "客服脉络",
+      title: "清晰掌握每一条客服路径",
+      description: "查看问题如何从 AI 回答流转到合适的团队成员。",
+      regionLabel: "Nexa Support 客服看板",
+      queueLabel: "会话队列",
+      queues: {
+        all: "全部会话",
+        ai: "AI 正在处理",
+        human: "人工接管",
+      },
+      metrics: {
+        automated: { value: "1 个收件箱", label: "覆盖每一条客服路径" },
+        online: { value: "3 个队列", label: "一目了然" },
+        deployment: { value: "1 次接管", label: "需要人工判断时" },
+      },
+      inboxLabel: "客户收件箱",
+      detail: {
+        label: "会话详情",
+        customerLabel: "客户",
+        statusLabel: "状态",
+        activityLabel: "处理动态",
+      },
+      selectionAccessibleName: "打开 {customer} 的会话",
     },
     features: {
       title: "让支持跟随每一个问题",

@@ -3,6 +3,7 @@ import { catalog } from "~/i18n/catalog";
 import { LocalizedText } from "~/i18n/localized-text";
 import { ChatShell } from "./chat-shell";
 import { SiteHeader } from "./site-header";
+import { SupportDashboard } from "./support-dashboard";
 
 function RouteMap() {
   return (
@@ -180,6 +181,8 @@ export function MarketingHome() {
             </span>
           </div>
         </section>
+
+        <SupportDashboard />
 
         <section
           aria-labelledby="features-title"
