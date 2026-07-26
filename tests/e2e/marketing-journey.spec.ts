@@ -49,6 +49,40 @@ async function expectEveryLinkToNavigate(
   }
 }
 
+async function expectVisibleChatControlsToMeetTargetSize(page: Page) {
+  const undersizedControls = await page
+    .locator(".chat-shell button, .chat-shell input, .chat-shell__launcher")
+    .evaluateAll((controls) =>
+      controls.flatMap((control) => {
+        const rect = control.getBoundingClientRect();
+        const styles = getComputedStyle(control);
+        const isVisible =
+          styles.display !== "none" &&
+          styles.visibility !== "hidden" &&
+          rect.width > 0 &&
+          rect.height > 0;
+
+        if (!isVisible || (rect.width >= 44 && rect.height >= 44)) {
+          return [];
+        }
+
+        return [
+          {
+            height: Math.round(rect.height),
+            name:
+              control.getAttribute("aria-label") ??
+              control.getAttribute("name") ??
+              control.textContent?.replace(/\s+/g, " ").trim() ??
+              "",
+            width: Math.round(rect.width),
+          },
+        ];
+      }),
+    );
+
+  expect(undersizedControls).toEqual([]);
+}
+
 test("navigates the English marketing journey and login placeholder", async ({
   page,
 }) => {
@@ -758,36 +792,37 @@ test("keeps visible Chinese controls at least 44px in both dimensions", async ({
 
   await page.getByRole("button", { name: "打开客服聊天", exact: true }).click();
   await page.getByRole("button", { name: "打开聊天设置", exact: true }).click();
-  const undersizedChatControls = await page
-    .locator(".chat-shell button, .chat-shell input")
-    .evaluateAll((controls) =>
-      controls.flatMap((control) => {
-        const rect = control.getBoundingClientRect();
-        const styles = getComputedStyle(control);
-        const isVisible =
-          styles.display !== "none" &&
-          styles.visibility !== "hidden" &&
-          rect.width > 0 &&
-          rect.height > 0;
+  await expectVisibleChatControlsToMeetTargetSize(page);
+});
 
-        if (!isVisible || (rect.width >= 44 && rect.height >= 44)) {
-          return [];
-        }
+test("keeps visible chat settings controls at least 44px in both locales", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 900 });
 
-        return [
-          {
-            height: Math.round(rect.height),
-            name:
-              control.getAttribute("aria-label") ??
-              control.getAttribute("name") ??
-              control.textContent,
-            width: Math.round(rect.width),
-          },
-        ];
-      }),
+  for (const locale of [
+    {
+      launcherOpen: "Open support chat",
+      settingsOpen: "Open chat settings",
+      storageValue: "en",
+    },
+    {
+      launcherOpen: "打开客服聊天",
+      settingsOpen: "打开聊天设置",
+      storageValue: "zh-CN",
+    },
+  ] as const) {
+    await page.goto("/");
+    await page.evaluate(
+      (storageValue) => localStorage.setItem("nexa-language:v1", storageValue),
+      locale.storageValue,
     );
+    await page.reload();
+    await page.getByRole("button", { name: locale.launcherOpen }).click();
+    await page.getByRole("button", { name: locale.settingsOpen }).click();
 
-  expect(undersizedChatControls).toEqual([]);
+    await expectVisibleChatControlsToMeetTargetSize(page);
+  }
 });
 
 test("keeps dashboard controls at least 44px in both locales", async ({
@@ -972,15 +1007,11 @@ test("keeps demo key local and announces a fictional human queue", async ({
 }) => {
   await page.goto("/");
   await page.waitForLoadState("networkidle");
-  const applicationRequests: string[] = [];
-  const applicationOrigin = new URL(page.url()).origin;
+  const postKeyRequests: string[] = [];
+  const hmrUrl = new URL("/_next/webpack-hmr", page.url()).href;
   page.on("request", (request) => {
-    const requestUrl = new URL(request.url());
-    if (
-      requestUrl.origin === applicationOrigin &&
-      requestUrl.pathname !== "/_next/webpack-hmr"
-    ) {
-      applicationRequests.push(`${request.method()} ${requestUrl.pathname}`);
+    if (request.url() !== hmrUrl) {
+      postKeyRequests.push(`${request.method()} ${request.url()}`);
     }
   });
 
@@ -994,7 +1025,7 @@ test("keeps demo key local and announces a fictional human queue", async ({
   await expect(chat.getByText("Do not enter a real secret.")).toBeVisible();
   await keyInput.fill("sk-not-a-real-key");
   await page.waitForTimeout(250);
-  expect(applicationRequests).toEqual([]);
+  expect(postKeyRequests).toEqual([]);
 
   await page.getByRole("button", { name: "Close support chat" }).click();
   await page.getByRole("button", { name: "Open support chat" }).click();
