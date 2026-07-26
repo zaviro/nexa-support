@@ -60,7 +60,7 @@ function RouteMap() {
             zhCN="已找到套餐政策，并附上账户信息。"
           />
         </p>
-        <span className="route-card__source">
+        <span className="route-card__source" translate="no">
           <LocalizedText en="Nexa AI" zhCN="Nexa AI" />
         </span>
       </article>
@@ -90,7 +90,7 @@ export function MarketingHome() {
   return (
     <>
       <SiteHeader />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <section aria-labelledby="hero-title" className="hero-section" id="top">
           <div className="hero-section__copy">
             <p className="section-kicker">
@@ -358,7 +358,9 @@ export function MarketingHome() {
 
       <footer className="site-footer">
         <div className="site-footer__brand">
-          <Link href="/#top">Nexa Support</Link>
+          <Link href="/#top" translate="no">
+            Nexa Support
+          </Link>
           <p>
             <LocalizedText
               en={catalog.en.footer.promise}

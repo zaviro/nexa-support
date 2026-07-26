@@ -1,3 +1,4 @@
+import AxeBuilder from "@axe-core/playwright";
 import { expect, type Page, test } from "@playwright/test";
 
 function relativeLuminance(hex: string) {
@@ -196,6 +197,78 @@ test("persists Simplified Chinese across routes and reloads", async ({
   ).toBeVisible();
 });
 
+test("exposes stored Chinese in the first frame and remains hydration-safe", async ({
+  page,
+}) => {
+  const consoleErrors: string[] = [];
+  const pageErrors: string[] = [];
+  let releaseHydration: () => void = () => undefined;
+  const hydrationGate = new Promise<void>((resolve) => {
+    releaseHydration = resolve;
+  });
+
+  page.on("console", (message) => {
+    if (message.type() === "error") {
+      consoleErrors.push(message.text());
+    }
+  });
+  page.on("pageerror", (error) => pageErrors.push(error.message));
+  await page.route(/\/_next\/static\/chunks\/.*\.js/, async (route) => {
+    await hydrationGate;
+    await route.continue();
+  });
+  await page.addInitScript(() =>
+    localStorage.setItem("nexa-language:v1", "zh-CN"),
+  );
+
+  await page.goto("/", { waitUntil: "commit" });
+  await page.locator("body").waitFor({ state: "attached" });
+
+  await expect(
+    page.getByRole("navigation", { exact: true, name: "主导航" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", {
+      exact: true,
+      level: 1,
+      name: "立即解决客户问题",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", {
+      exact: true,
+      name: "Primary navigation",
+    }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("heading", {
+      exact: true,
+      level: 1,
+      name: "Resolve customer questions instantly",
+    }),
+  ).toHaveCount(0);
+  await expect(page.locator(".language-switcher")).toHaveCount(1);
+  await expect(
+    page.getByRole("button", { exact: true, name: "English" }),
+  ).toHaveCount(1);
+  await expect(
+    page.getByRole("button", { exact: true, name: "简体中文" }),
+  ).toHaveCount(0);
+
+  releaseHydration();
+  await page.waitForLoadState("networkidle");
+  await page.getByRole("button", { exact: true, name: "English" }).click();
+  await expect(
+    page.getByRole("heading", {
+      exact: true,
+      level: 1,
+      name: "Resolve customer questions instantly",
+    }),
+  ).toBeVisible();
+  expect(consoleErrors).toEqual([]);
+  expect(pageErrors).toEqual([]);
+});
+
 test("falls back to English without hydration errors for an invalid saved locale", async ({
   page,
 }) => {
@@ -236,6 +309,154 @@ test("keeps the signal color at normal-text AA contrast", async ({ page }) => {
   expect(contrastRatio(colors.signal, colors.surface)).toBeGreaterThanOrEqual(
     4.5,
   );
+});
+
+test("has no automated WCAG violations in either locale", async ({ page }) => {
+  await page.goto("/");
+
+  for (const languageButtonName of ["简体中文", "English"]) {
+    const violations = (
+      await new AxeBuilder({ page }).analyze()
+    ).violations.map((violation) => ({
+      id: violation.id,
+      nodes: violation.nodes.map((node) => node.target),
+    }));
+    expect(violations).toEqual([]);
+
+    await page
+      .getByRole("button", { exact: true, name: languageButtonName })
+      .click();
+  }
+});
+
+test("offers a visible keyboard skip link on every surface", async ({
+  page,
+}) => {
+  for (const path of ["/", "/login"]) {
+    await page.goto(path);
+    await page.keyboard.press("Tab");
+
+    const skipLink = page.getByRole("link", {
+      exact: true,
+      name: "Skip to main content",
+    });
+    await expect(skipLink).toBeFocused();
+    await expect(skipLink).toBeInViewport();
+    await skipLink.click();
+    await expect(page).toHaveURL(/#main-content$/);
+    await expect(page.locator("#main-content")).toBeFocused();
+  }
+});
+
+test("uses manipulation touch behavior for every product control", async ({
+  page,
+}) => {
+  for (const path of ["/", "/login"]) {
+    await page.goto(path);
+    const touchActions = await page
+      .locator("a, button.language-switcher")
+      .evaluateAll((controls) =>
+        controls.map((control) => getComputedStyle(control).touchAction),
+      );
+
+    expect(touchActions.length).toBeGreaterThan(0);
+    expect(new Set(touchActions)).toEqual(new Set(["manipulation"]));
+  }
+});
+
+test("keeps visible Chinese controls at least 44px in both dimensions", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 900 });
+  await page.addInitScript(() =>
+    localStorage.setItem("nexa-language:v1", "zh-CN"),
+  );
+
+  for (const path of ["/", "/login"]) {
+    await page.goto(path);
+    const undersizedControls = await page
+      .locator("a:not(.skip-link), button.language-switcher")
+      .evaluateAll((controls) =>
+        controls.flatMap((control) => {
+          const rect = control.getBoundingClientRect();
+          const styles = getComputedStyle(control);
+          const isVisible =
+            styles.display !== "none" &&
+            styles.visibility !== "hidden" &&
+            rect.width > 0 &&
+            rect.height > 0;
+
+          if (!isVisible || (rect.width >= 44 && rect.height >= 44)) {
+            return [];
+          }
+
+          return [
+            {
+              height: Math.round(rect.height),
+              text: control.textContent?.replace(/\s+/g, " ").trim() ?? "",
+              width: Math.round(rect.width),
+            },
+          ];
+        }),
+      );
+
+    expect(undersizedControls).toEqual([]);
+  }
+});
+
+test("keeps the tablet chat preview clear of the support route", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 768, height: 900 });
+  await page.goto("/");
+
+  const overlapsRouteCard = await page.evaluate(() => {
+    const chat = document.querySelector(".chat-shell");
+    const routeCards = [...document.querySelectorAll(".route-card")];
+
+    if (!(chat instanceof HTMLElement)) {
+      throw new Error("Expected the chat preview");
+    }
+
+    const chatRect = chat.getBoundingClientRect();
+    return routeCards.some((routeCard) => {
+      const routeRect = routeCard.getBoundingClientRect();
+      return !(
+        chatRect.right <= routeRect.left ||
+        chatRect.left >= routeRect.right ||
+        chatRect.bottom <= routeRect.top ||
+        chatRect.top >= routeRect.bottom
+      );
+    });
+  });
+
+  expect(overlapsRouteCard).toBe(false);
+});
+
+test("protects Nexa brand names from automatic translation", async ({
+  page,
+}) => {
+  await page.goto("/");
+
+  for (const selector of [
+    ".site-header__brand",
+    ".site-footer__brand > a",
+    ".chat-shell h2",
+    ".route-card--route .route-card__source",
+  ]) {
+    await expect(page.locator(selector)).toHaveAttribute("translate", "no");
+  }
+
+  await page.goto("/login");
+  await expect(page.locator(".login-page__brand")).toHaveAttribute(
+    "translate",
+    "no",
+  );
+  await expect(
+    page.locator('#login-title [translate="no"]:visible', {
+      hasText: "Nexa Support",
+    }),
+  ).toHaveCount(1);
 });
 
 for (const width of [375, 768, 1440]) {

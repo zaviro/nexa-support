@@ -3,14 +3,28 @@ import { LanguageSwitcher } from "~/components/language-switcher";
 import { catalog } from "~/i18n/catalog";
 import { LocalizedText } from "~/i18n/localized-text";
 
+const BRAND_NAME = "Nexa Support";
+
+function BrandedLoginTitle({ title }: { title: string }) {
+  const [beforeBrand, afterBrand] = title.split(BRAND_NAME);
+
+  return (
+    <>
+      {beforeBrand}
+      <span translate="no">{BRAND_NAME}</span>
+      {afterBrand}
+    </>
+  );
+}
+
 export default function LoginPage() {
   return (
-    <main className="login-page">
+    <main className="login-page" id="main-content" tabIndex={-1}>
       <nav aria-labelledby="demo-navigation-label" className="login-page__nav">
         <span className="visually-hidden" id="demo-navigation-label">
           <LocalizedText en="Demo navigation" zhCN="演示导航" />
         </span>
-        <Link className="login-page__brand" href="/#top">
+        <Link className="login-page__brand" href="/#top" translate="no">
           Nexa Support
         </Link>
         <LanguageSwitcher />
@@ -26,8 +40,8 @@ export default function LoginPage() {
         </p>
         <h1 id="login-title">
           <LocalizedText
-            en={catalog.en.login.title}
-            zhCN={catalog["zh-CN"].login.title}
+            en={<BrandedLoginTitle title={catalog.en.login.title} />}
+            zhCN={<BrandedLoginTitle title={catalog["zh-CN"].login.title} />}
           />
         </h1>
         <p className="login-card__description">

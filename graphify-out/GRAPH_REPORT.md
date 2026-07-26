@@ -1,13 +1,18 @@
-# Graph Report - selfwebsite  (2026-07-26)
+# Graph Report - issue-3-bilingual-marketing  (2026-07-26)
 
 ## Corpus Check
-- 171 files · ~101,021 words
+- 188 files · ~107,786 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1178 nodes · 1083 edges · 169 communities (88 shown, 81 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.5)
+- 1247 nodes · 1204 edges · 172 communities (91 shown, 81 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `05404d32`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - server.cjs
@@ -86,7 +91,6 @@
 - graphify reference: commit hook and native CLAUDE.md integration
 - graphify reference: incremental update and cluster-only
 - next.config.js
-- layout.tsx
 - vercel.json
 - start-server.sh
 - Antigravity CLI (`agy`) Tool Mapping
@@ -165,7 +169,13 @@
 - _template.md
 - plan-document-reviewer-prompt.md
 - extraction-spec.md
+- scaffold.spec.ts
 - Nexa Support 工程交接
+- File Structure
+- Q: 整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？
+- Q: 这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？
+- Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?
+- marketing-journey.spec.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -180,12 +190,19 @@
 10. `Visual Companion Guide` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- None detected - all connections are within the same source files.
+- `LocaleProbe()` --calls--> `useLocale()`  [EXTRACTED]
+  src/i18n/locale-provider.test.tsx → src/i18n/locale-provider.tsx
+- `LanguageSwitcher()` --calls--> `useLocale()`  [EXTRACTED]
+  src/components/language-switcher.tsx → src/i18n/locale-provider.tsx
+- `createLocaleStore()` --calls--> `readStoredLocale()`  [EXTRACTED]
+  src/i18n/locale-provider.tsx → src/i18n/locale-storage.ts
+- `createLocaleStore()` --calls--> `writeStoredLocale()`  [EXTRACTED]
+  src/i18n/locale-provider.tsx → src/i18n/locale-storage.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (169 total, 81 thin omitted)
+## Communities (172 total, 81 thin omitted)
 
 ### Community 0 - "server.cjs"
 Cohesion: 0.06
@@ -483,24 +500,50 @@ Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphif
 Cohesion: 0.50
 Nodes (3): framework, installCommand, $schema
 
+### Community 165 - "scaffold.spec.ts"
+Cohesion: 0.09
+Nodes (25): geist, metadata, ChatShell(), LanguageSwitcher(), MarketingHome(), SiteHeader(), catalog, Locale (+17 more)
+
 ### Community 168 - "Nexa Support 工程交接"
 Cohesion: 0.11
 Nodes (17): 10. 下一位 Superpowers Agent, 1. 本轮边界, 2. 最终产品范围, 3. 已完成的工程脚手架, 4. 项目内 Agent 技能, 5. 新环境复现, 6. 验证证据, 7. Git 与 GitHub 状态 (+9 more)
 
+### Community 169 - "File Structure"
+Cohesion: 0.22
+Nodes (8): Bilingual Marketing Journey Implementation Plan, File Structure, Global Constraints, Task 1: Make locale persistence a small, tested domain, Task 2: Prove the bilingual route journey before building it, Task 3: Build the locale boundary and shared bilingual shell, Task 4: Replace the scaffold with the Signal Desk marketing experience, Task 5: Review the real UI and close Issue #3 with fresh evidence
+
+### Community 170 - "Q: 整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: 整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？, Source Nodes
+
+### Community 171 - "Q: 这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: 这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？, Source Nodes
+
+### Community 172 - "Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?, Source Nodes
+
 ## Knowledge Gaps
-- **783 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+778 more)
+- **803 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+798 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **81 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+
+## Work-memory lessons
+
+**Preferred sources** — corroborated by past sessions; start here.
+- `quality` (2× useful, score=1.999788438)
+- `scaffold.spec.ts` (2× useful, score=1.999788438) _(code changed — re-verify)_
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Writing Skills` connect `Writing Skills` to `Testing Skills With Subagents`, `File Organization`, `Skill Types`, `Skill Discovery Optimization (SDO)`, `Bulletproofing Skills Against Rationalization`, `Anti-Patterns`, `Testing All Skill Types`, `RED-GREEN-REFACTOR for Skills`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `5. Re-render Optimization`, `7. JavaScript Performance`, `4. Client-Side Data Fetching`, `8. Advanced Patterns`, `6. Rendering Performance`, `3. Server-Side Performance`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `crypto`, `http`, `fs` to the rest of the system?**
-  _783 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _803 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
 - **Should `[Analysis Title]` be split into smaller, more focused modules?**

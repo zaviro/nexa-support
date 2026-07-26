@@ -12,6 +12,7 @@
 
 - Brand and all interface assets are original to Nexa Support; do not copy Intercom logos, copy, screenshots, illustrations, or proprietary UI.
 - Supported locales are exactly English (`en`) and Simplified Chinese (`zh-CN`); missing, malformed, inaccessible, or unsupported saved values fall back to English.
+- Each surface exposes exactly one destination-named language-toggle button and exactly one visible, accessibility-exposed locale at a time; bilingual interleaving is out of scope.
 - Store only the language preference in `localStorage`; do not add analytics, telemetry, authentication, AI calls, databases, payments, or secret handling.
 - Hero copy is exactly `Resolve customer questions instantly` / `立即解决客户问题` and `An AI support assistant for growing SaaS teams.` / `面向成长型 SaaS 团队的 AI 客服助手。`
 - Headline outcomes are 70% automated, 24/7 online, and 30-second deployment, with localized labels.
@@ -31,7 +32,7 @@
 - `src/i18n/locale-storage.test.ts`: unit coverage for valid, invalid, missing, and throwing storage behavior.
 - `src/i18n/locale-provider.tsx`: the only locale client state boundary and document-language synchronization.
 - `src/i18n/locale-script.tsx`: pre-hydration script that safely applies a valid saved locale before paint.
-- `src/components/language-switcher.tsx`: accessible two-button language control.
+- `src/components/language-switcher.tsx`: accessible single-button language toggle named for the destination locale.
 - `src/components/site-header.tsx`: branded navigation and CTA.
 - `src/components/marketing-home.tsx`: hero, outcomes, anchor preview sections, and footer.
 - `src/components/chat-shell.tsx`: localized, non-interactive support-status preview for the future Issue #7 launcher.
@@ -279,7 +280,7 @@ Keep this script static and local; it must not interpolate user content or make 
 
 - [ ] **Step 3: Build the accessible language and navigation controls**
 
-`LanguageSwitcher` is a labelled group with `English` and `简体中文` buttons using `aria-pressed`. `SiteHeader` exposes `Product`, `Pricing`, `Log in`, and `Start free`, with the exact anchors and `/login` targets in Global Constraints. Mobile navigation remains inline and horizontally scroll-free; do not add a menu state before it is needed.
+`LanguageSwitcher` is one toggle button named for the destination locale: `简体中文` while English is active and `English` while Simplified Chinese is active. Only the active locale is visible and accessibility-exposed. `SiteHeader` exposes `Product`, `Pricing`, `Log in`, and `Start free`, with the exact anchors and `/login` targets in Global Constraints. Mobile navigation remains inline and horizontally scroll-free; do not add a menu state before it is needed.
 
 - [ ] **Step 4: Wire the root layout**
 
@@ -400,7 +401,7 @@ Start the app with `bun run dev`, inspect 375px, 768px, and 1440px, and capture 
 
 - [ ] **Step 2: Run Web Interface Guidelines review**
 
-Review semantic landmarks, heading order, link/button roles, `aria-pressed`, language changes, 44px targets, visible focus, reduced motion, and overflow. Record and fix only concrete findings.
+Review semantic landmarks, heading order, link/button roles, the destination-named language toggle, language changes, 44px targets, visible focus, reduced motion, and overflow. Record and fix only concrete findings.
 
 - [ ] **Step 3: Run code review and address verified findings**
 
@@ -428,4 +429,3 @@ git commit -m "chore: verify bilingual marketing journey"
 - [ ] **Step 7: Finish the branch**
 
 Use `finishing-a-development-branch` and present the required merge / PR / keep-as-is choices. Do not push the feature branch or close Issue #3 until the owner selects the integration path and CI evidence is available.
-

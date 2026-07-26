@@ -9,7 +9,9 @@ export function ChatShell() {
           N
         </span>
         <div>
-          <h2 id="chat-shell-title">{catalog.en.chatShell.title}</h2>
+          <h2 id="chat-shell-title" translate="no">
+            {catalog.en.chatShell.title}
+          </h2>
           <p className="chat-shell__status">
             <span aria-hidden="true" />
             <LocalizedText

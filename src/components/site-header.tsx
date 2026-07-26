@@ -7,7 +7,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link className="site-header__brand" href="/#top">
+        <Link className="site-header__brand" href="/#top" translate="no">
           Nexa Support
         </Link>
         <nav

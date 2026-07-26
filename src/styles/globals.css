@@ -49,6 +49,7 @@ a {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 button {
@@ -80,6 +81,25 @@ button {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.35rem;
+  background: var(--evergreen);
+  color: var(--surface);
+  font-size: 0.85rem;
+  font-weight: 720;
+  transform: translateY(calc(-100% - 2rem));
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
 }
 
 .site-header {
@@ -158,8 +178,10 @@ button {
 .site-header__actions > a:not(.site-header__primary-action),
 .site-footer__nav a {
   display: inline-flex;
+  min-width: 2.75rem;
   min-height: 2.75rem;
   align-items: center;
+  justify-content: center;
   padding-inline: 0.25rem;
 }
 
@@ -342,7 +364,7 @@ html[data-locale="zh-CN"] .login-card h1 {
   max-width: 28rem;
   gap: 0.65rem;
   margin: 3.5rem 0 0;
-  color: color-mix(in srgb, var(--ink) 62%, transparent);
+  color: color-mix(in srgb, var(--ink) 65%, transparent);
   font-size: 0.77rem;
   font-weight: 570;
   letter-spacing: 0.015em;
@@ -460,7 +482,7 @@ html[data-locale="zh-CN"] .login-card h1 {
 }
 
 .route-card__source {
-  color: color-mix(in srgb, var(--ink) 57%, transparent);
+  color: color-mix(in srgb, var(--ink) 65%, transparent);
   font-size: 0.69rem;
   font-weight: 620;
 }
@@ -672,7 +694,7 @@ html[data-locale="zh-CN"] .login-card h1 {
 .site-footer__brand p,
 .site-footer__note {
   margin: 1rem 0 0;
-  color: color-mix(in srgb, var(--ink) 58%, transparent);
+  color: color-mix(in srgb, var(--ink) 65%, transparent);
   font-size: 0.72rem;
   line-height: 1.5;
 }
@@ -959,6 +981,15 @@ html[data-locale="zh-CN"] .login-card h1 {
   .site-footer {
     align-items: start;
   }
+
+  .chat-shell {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    z-index: auto;
+    width: calc(100% - 2rem);
+    margin: 0 1rem 3rem;
+  }
 }
 
 @media (max-width: 34rem) {
@@ -1060,15 +1091,6 @@ html[data-locale="zh-CN"] .login-card h1 {
 
   .site-footer__note {
     grid-column: auto;
-  }
-
-  .chat-shell {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    z-index: auto;
-    width: calc(100% - 2rem);
-    margin: 0 1rem 3rem;
   }
 
   .login-page {

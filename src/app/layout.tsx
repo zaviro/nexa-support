@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { LocaleProvider } from "~/i18n/locale-provider";
 import { LocaleScript } from "~/i18n/locale-script";
+import { LocalizedText } from "~/i18n/localized-text";
 
 export const metadata: Metadata = {
   title: "Nexa Support",
@@ -30,6 +31,9 @@ export default function RootLayout({
         <LocaleScript />
       </head>
       <body>
+        <a className="skip-link" href="#main-content">
+          <LocalizedText en="Skip to main content" zhCN="跳至主要内容" />
+        </a>
         <LocaleProvider>{children}</LocaleProvider>
       </body>
     </html>
