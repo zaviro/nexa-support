@@ -134,6 +134,14 @@ export type SiteCopy = {
   login: {
     title: string;
     description: string;
+    emailLabel: string;
+    emailRequired: string;
+    emailInvalid: string;
+    passwordLabel: string;
+    passwordRequired: string;
+    rememberMe: string;
+    submit: string;
+    demoOutcome: string;
     backToHome: string;
   };
   footer: {
@@ -364,6 +372,14 @@ export const catalog: Record<Locale, SiteCopy> = {
       title: "Welcome to the Nexa Support demo",
       description:
         "This localized demo is for exploration only. Authentication is not connected.",
+      emailLabel: "Email address",
+      emailRequired: "Enter your email address.",
+      emailInvalid: "Enter a valid email address.",
+      passwordLabel: "Password",
+      passwordRequired: "Enter your password.",
+      rememberMe: "Remember me",
+      submit: "Continue to demo",
+      demoOutcome: "Demo only—authentication is not connected.",
       backToHome: "Back to homepage",
     },
     footer: {
@@ -570,6 +586,14 @@ export const catalog: Record<Locale, SiteCopy> = {
     login: {
       title: "欢迎体验 Nexa Support 演示",
       description: "这是用于体验的本地化演示，认证功能尚未连接。",
+      emailLabel: "邮箱地址",
+      emailRequired: "请输入邮箱地址。",
+      emailInvalid: "请输入有效的邮箱地址。",
+      passwordLabel: "密码",
+      passwordRequired: "请输入密码。",
+      rememberMe: "记住我",
+      submit: "继续体验演示",
+      demoOutcome: "仅供演示——认证功能尚未连接。",
       backToHome: "返回首页",
     },
     footer: {

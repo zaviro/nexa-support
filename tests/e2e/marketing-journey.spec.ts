@@ -163,6 +163,64 @@ test("navigates the English marketing journey and login placeholder", async ({
   ).toHaveCount(0);
 });
 
+test("validates the local login placeholder without authentication", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const startFree = page.getByRole("link", {
+    name: "Start free",
+    exact: true,
+  });
+  await expect(startFree).toHaveCount(4);
+  await expect(
+    page.getByRole("link", { name: "Log in", exact: true }),
+  ).toHaveCount(2);
+  await expect(
+    page
+      .locator("#pricing")
+      .getByRole("link", { name: "Start free", exact: true }),
+  ).toHaveCount(2);
+  await expectEveryLinkToNavigate(page, "Log in", "/login");
+  await expectEveryLinkToNavigate(page, "Start free", "/login");
+
+  await startFree.first().click();
+  await expect(page).toHaveURL("/login");
+
+  await page
+    .getByRole("button", { name: "Continue to demo", exact: true })
+    .click();
+  await expect(
+    page.getByText("Enter your email address.", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("Enter your password.", { exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("textbox", { name: "Email address", exact: true })
+    .fill("nexa@invalid");
+  await page.getByLabel("Password", { exact: true }).fill("local-only");
+  await page
+    .getByRole("button", { name: "Continue to demo", exact: true })
+    .click();
+  await expect(
+    page.getByText("Enter a valid email address.", { exact: true }),
+  ).toBeVisible();
+
+  await page
+    .getByRole("textbox", { name: "Email address", exact: true })
+    .fill("person@example.com");
+  await page
+    .getByRole("checkbox", { name: "Remember me", exact: true })
+    .check();
+  await page
+    .getByRole("button", { name: "Continue to demo", exact: true })
+    .click();
+  await expect(page.getByRole("status")).toHaveText(
+    "Demo only—authentication is not connected.",
+  );
+  expect(await page.evaluate(() => ({ ...localStorage }))).toEqual({});
+});
+
 test("shows truthful localized decision information and an observable FAQ accordion", async ({
   page,
 }) => {
@@ -475,6 +533,47 @@ test("persists Simplified Chinese across routes and reloads", async ({
   await expect(
     page.getByRole("heading", {
       name: "欢迎体验 Nexa Support 演示",
+      level: 1,
+    }),
+  ).toBeVisible();
+
+  await page.addInitScript(() =>
+    localStorage.setItem("nexa-language:v1", "zh-CN"),
+  );
+  await page.goto("/login");
+  await expect(
+    page.getByRole("textbox", { name: "邮箱地址", exact: true }),
+  ).toBeVisible();
+  await expect(page.getByLabel("密码", { exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("checkbox", { name: "记住我", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "继续体验演示", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "English", exact: true }),
+  ).toHaveCount(1);
+  await expect(
+    page.getByRole("textbox", { name: "Email address", exact: true }),
+  ).toHaveCount(0);
+
+  await page.getByRole("button", { name: "继续体验演示", exact: true }).click();
+  await expect(
+    page.getByText("请输入邮箱地址。", { exact: true }),
+  ).toBeVisible();
+  await expect(page.getByText("请输入密码。", { exact: true })).toBeVisible();
+
+  await page.getByRole("button", { name: "English", exact: true }).click();
+  await expect(
+    page.getByRole("textbox", { name: "Email address", exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("link", { name: "Back to homepage", exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", {
+      name: "Resolve customer questions instantly",
       level: 1,
     }),
   ).toBeVisible();
@@ -1206,6 +1305,51 @@ for (const width of [375, 768, 1440]) {
 
       expect(featureBounds.x).toBeGreaterThanOrEqual(0);
       expect(featureBounds.x + featureBounds.width).toBeLessThanOrEqual(width);
+
+      if (width === 375 && locale.storageValue === "en") {
+        await page.goto("/login");
+        const email = page.getByRole("textbox", {
+          name: "Email address",
+          exact: true,
+        });
+        const password = page.getByLabel("Password", { exact: true });
+        const remember = page.getByRole("checkbox", {
+          name: "Remember me",
+          exact: true,
+        });
+        const submit = page.getByRole("button", {
+          name: "Continue to demo",
+          exact: true,
+        });
+        const languageToggle = page.getByRole("button", {
+          name: "简体中文",
+          exact: true,
+        });
+
+        await email.fill("person@example.com");
+        await password.fill("local-only");
+        await submit.click();
+        await expect(page.getByRole("status")).toBeVisible();
+
+        for (const control of [
+          email,
+          password,
+          remember,
+          submit,
+          languageToggle,
+        ]) {
+          const controlBounds = await control.boundingBox();
+          expect(controlBounds).not.toBeNull();
+          expect(controlBounds?.width).toBeGreaterThanOrEqual(44);
+          expect(controlBounds?.height).toBeGreaterThanOrEqual(44);
+        }
+
+        expect(
+          await page.evaluate(
+            () => document.documentElement.scrollWidth <= window.innerWidth,
+          ),
+        ).toBe(true);
+      }
     });
   }
 }

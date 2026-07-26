@@ -1827,6 +1827,105 @@ html[data-locale="zh-CN"] .login-card h1 {
   line-height: 1.58;
 }
 
+.login-form {
+  display: grid;
+  max-width: 32rem;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.login-form__field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.login-form__label {
+  color: var(--evergreen);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.login-form__input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.login-form__input[aria-invalid="true"] {
+  border-color: var(--coral);
+  box-shadow: inset 0.22rem 0 0 var(--coral);
+}
+
+.login-form__error-slot {
+  min-height: 1.25rem;
+}
+
+.login-form__error {
+  margin: 0;
+  color: color-mix(in srgb, var(--coral) 72%, var(--ink));
+  font-size: 0.75rem;
+  font-weight: 680;
+  line-height: 1.45;
+}
+
+.login-form__error::before {
+  margin-right: 0.4rem;
+  content: "!";
+}
+
+.login-form__remember {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 620;
+}
+
+.login-form__remember input {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 2.75rem;
+  margin: 0;
+  accent-color: var(--signal);
+}
+
+.login-form__submit {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--evergreen);
+  border-radius: 0.35rem;
+  background: var(--evergreen);
+  color: var(--surface);
+  cursor: pointer;
+  font-weight: 720;
+}
+
+.login-form__submit:hover {
+  border-color: var(--signal);
+  background: var(--signal);
+}
+
+.login-form__outcome {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-left: 0.25rem solid var(--signal);
+  background: var(--paper);
+  color: var(--evergreen);
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
 .login-card__notice {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -2170,8 +2269,13 @@ html[data-locale="zh-CN"] .login-card h1 {
   }
 
   .login-card {
+    width: min(100%, calc(100vw - 2 * var(--page-gutter)));
     margin-block: 3rem;
     box-shadow: 0.45rem 0.45rem 0 var(--route);
+  }
+
+  .login-form__remember {
+    display: flex;
   }
 }
 

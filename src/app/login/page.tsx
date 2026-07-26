@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LanguageSwitcher } from "~/components/language-switcher";
+import { LoginForm } from "~/components/login-form";
 import { catalog } from "~/i18n/catalog";
 import { LocalizedText } from "~/i18n/localized-text";
 
@@ -50,6 +51,7 @@ export default function LoginPage() {
             zhCN={catalog["zh-CN"].login.description}
           />
         </p>
+        <LoginForm />
         <div className="login-card__notice">
           <span aria-hidden="true">↳</span>
           <p>
@@ -59,7 +61,7 @@ export default function LoginPage() {
             />
           </p>
         </div>
-        <Link className="button button--signal" href="/#top">
+        <Link className="button button--quiet" href="/#top">
           <span aria-hidden="true">←</span>
           <LocalizedText
             en={catalog.en.login.backToHome}
