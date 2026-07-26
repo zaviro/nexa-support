@@ -57,6 +57,7 @@
   "55": "Pressure Test 2: Sunk Cost + Exhaustion",
   "56": "Pressure Test 3: Authority + Social Pressure",
   "57": "React Best Practices",
+  "58": "Skill structure",
   "59": "8. Advanced Patterns",
   "60": "Web Interface Guidelines",
   "61": "Anti-Patterns",
@@ -156,6 +157,7 @@
   "155": "console_logging.py",
   "156": "plan-document-reviewer-prompt.md",
   "157": "extraction-spec.md",
+  "158": "Deterministic Support Chat Implementation Plan",
   "159": "grill-me/SKILL.md",
   "160": "grilling/SKILL.md",
   "161": "element_discovery.py",
@@ -170,5 +172,10 @@
   "170": "Q: 整个行动中似乎遇到不少问题花了一段时间，出了什么问题？是有什么我们之前的计划没有安排好的吗？",
   "171": "Q: 这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？",
   "172": "Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?",
-  "173": "marketing-journey.spec.ts"
+  "173": "marketing-journey.spec.ts",
+  "174": "4. Client-Side Data Fetching",
+  "175": "anthropic-best-practices.md",
+  "176": "Evaluation and iteration",
+  "177": "Checklist for effective Skills",
+  "178": "Core principles"
 }

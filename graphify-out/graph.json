@@ -2265,6 +2265,17 @@
       "norm_label": "homepage()"
     },
     {
+      "label": "chat-shell.test.tsx",
+      "file_type": "code",
+      "source_file": "src/components/chat-shell.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_chat_shell_test",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chat-shell.test.tsx"
+    },
+    {
       "label": "chat-shell.tsx",
       "file_type": "code",
       "source_file": "src/components/chat-shell.tsx",
@@ -2276,15 +2287,125 @@
       "norm_label": "chat-shell.tsx"
     },
     {
+      "label": "QUICK_ACTIONS",
+      "file_type": "code",
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "src_components_chat_shell_quick_actions",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "quick_actions"
+    },
+    {
       "label": "ChatShell()",
       "file_type": "code",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L4",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_chat_shell_chatshell",
       "community": 165,
       "community_name": "scaffold.spec.ts",
       "norm_label": "chatshell()"
+    },
+    {
+      "label": "chat-state.test.ts",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_chat_state_test",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chat-state.test.ts"
+    },
+    {
+      "label": "chat-state.ts",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_chat_state",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chat-state.ts"
+    },
+    {
+      "label": "ChatIntent",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatintent",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatintent"
+    },
+    {
+      "label": "ChatPhase",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatphase",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatphase"
+    },
+    {
+      "label": "ChatMessage",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatmessage",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatmessage"
+    },
+    {
+      "label": "ChatEvent",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatevent",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatevent"
+    },
+    {
+      "label": "ChatState",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "src_components_chat_state_chatstate",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "chatstate"
+    },
+    {
+      "label": "initialChatState",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "src_components_chat_state_initialchatstate",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "initialchatstate"
+    },
+    {
+      "label": "transitionChat()",
+      "file_type": "code",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "src_components_chat_state_transitionchat",
+      "community": 165,
+      "community_name": "scaffold.spec.ts",
+      "norm_label": "transitionchat()"
     },
     {
       "label": "language-switcher.tsx",
@@ -2587,7 +2708,7 @@
       "label": "SUPPORTED_LOCALES",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L1",
+      "source_location": "L3",
       "_origin": "ast",
       "id": "src_i18n_catalog_supported_locales",
       "community": 165,
@@ -2598,7 +2719,7 @@
       "label": "Locale",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L3",
+      "source_location": "L5",
       "_origin": "ast",
       "id": "src_i18n_catalog_locale",
       "community": 165,
@@ -2609,7 +2730,7 @@
       "label": "SiteCopy",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L5",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "src_i18n_catalog_sitecopy",
       "community": 165,
@@ -2620,7 +2741,7 @@
       "label": "catalog",
       "file_type": "code",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L68",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "src_i18n_catalog_catalog",
       "community": 165,
@@ -7683,8 +7804,8 @@
       "source_location": "L1366",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_client_side_data_fetching",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 174,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4. client-side data fetching"
     },
     {
@@ -7694,8 +7815,8 @@
       "source_location": "L1372",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_1_deduplicate_global_event_listeners",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 174,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.1 deduplicate global event listeners"
     },
     {
@@ -7705,8 +7826,8 @@
       "source_location": "L1442",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_2_use_passive_event_listeners_for_scrolling_performance",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 174,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.2 use passive event listeners for scrolling performance"
     },
     {
@@ -7716,8 +7837,8 @@
       "source_location": "L1486",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_3_use_swr_for_automatic_deduplication",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 174,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.3 use swr for automatic deduplication"
     },
     {
@@ -7727,8 +7848,8 @@
       "source_location": "L1538",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_4_4_version_and_minimize_localstorage_data",
-      "community": 57,
-      "community_name": "React Best Practices",
+      "community": 174,
+      "community_name": "4. Client-Side Data Fetching",
       "norm_label": "4.4 version and minimize localstorage data"
     },
     {
@@ -8211,8 +8332,8 @@
       "source_location": "L3633",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_advanced_patterns",
-      "community": 59,
-      "community_name": "8. Advanced Patterns",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "8. advanced patterns"
     },
     {
@@ -8222,8 +8343,8 @@
       "source_location": "L3639",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_1_do_not_put_effect_events_in_dependency_arrays",
-      "community": 59,
-      "community_name": "8. Advanced Patterns",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "8.1 do not put effect events in dependency arrays"
     },
     {
@@ -8233,8 +8354,8 @@
       "source_location": "L3691",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_2_initialize_app_once_not_per_mount",
-      "community": 59,
-      "community_name": "8. Advanced Patterns",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "8.2 initialize app once, not per mount"
     },
     {
@@ -8244,8 +8365,8 @@
       "source_location": "L3729",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_3_store_event_handlers_in_refs",
-      "community": 59,
-      "community_name": "8. Advanced Patterns",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "8.3 store event handlers in refs"
     },
     {
@@ -8255,8 +8376,8 @@
       "source_location": "L3765",
       "_origin": "ast",
       "id": "agents_skills_vercel_react_best_practices_agents_8_4_useeffectevent_for_stable_callback_refs",
-      "community": 59,
-      "community_name": "8. Advanced Patterns",
+      "community": 57,
+      "community_name": "React Best Practices",
       "norm_label": "8.4 useeffectevent for stable callback refs"
     },
     {
@@ -11170,8 +11291,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "anthropic-best-practices.md"
     },
     {
@@ -11181,8 +11302,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_skill_authoring_best_practices",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "skill authoring best practices"
     },
     {
@@ -11192,8 +11313,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_core_principles",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "core principles"
     },
     {
@@ -11203,8 +11324,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_concise_is_key",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "concise is key"
     },
     {
@@ -11214,8 +11335,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_set_appropriate_degrees_of_freedom",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "set appropriate degrees of freedom"
     },
     {
@@ -11225,8 +11346,8 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_test_with_all_models_you_plan_to_use",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 178,
+      "community_name": "Core principles",
       "norm_label": "test with all models you plan to use"
     },
     {
@@ -11236,8 +11357,8 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_skill_structure",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "skill structure"
     },
     {
@@ -11247,8 +11368,8 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_naming_conventions",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "naming conventions"
     },
     {
@@ -11258,8 +11379,8 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_writing_effective_descriptions",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "writing effective descriptions"
     },
     {
@@ -11269,8 +11390,8 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_progressive_disclosure_patterns",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "progressive disclosure patterns"
     },
     {
@@ -11280,8 +11401,8 @@
       "source_location": "L245",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_visual_overview_from_simple_to_complex",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "visual overview: from simple to complex"
     },
     {
@@ -11291,8 +11412,8 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_1_high_level_guide_with_references",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "pattern 1: high-level guide with references"
     },
     {
@@ -11302,8 +11423,8 @@
       "source_location": "L297",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_2_domain_specific_organization",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "pattern 2: domain-specific organization"
     },
     {
@@ -11313,8 +11434,8 @@
       "source_location": "L332",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_pattern_3_conditional_details",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "pattern 3: conditional details"
     },
     {
@@ -11324,8 +11445,8 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_deeply_nested_references",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "avoid deeply nested references"
     },
     {
@@ -11335,8 +11456,8 @@
       "source_location": "L383",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_structure_longer_reference_files_with_table_of_contents",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 58,
+      "community_name": "Skill structure",
       "norm_label": "structure longer reference files with table of contents"
     },
     {
@@ -11346,8 +11467,8 @@
       "source_location": "L410",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_workflows_and_feedback_loops",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "workflows and feedback loops"
     },
     {
@@ -11357,8 +11478,8 @@
       "source_location": "L412",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_use_workflows_for_complex_tasks",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "use workflows for complex tasks"
     },
     {
@@ -11368,8 +11489,8 @@
       "source_location": "L503",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_implement_feedback_loops",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "implement feedback loops"
     },
     {
@@ -11379,8 +11500,8 @@
       "source_location": "L547",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_content_guidelines",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "content guidelines"
     },
     {
@@ -11390,8 +11511,8 @@
       "source_location": "L549",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_avoid_time_sensitive_information",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "avoid time-sensitive information"
     },
     {
@@ -11401,8 +11522,8 @@
       "source_location": "L580",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_use_consistent_terminology",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "use consistent terminology"
     },
     {
@@ -11412,8 +11533,8 @@
       "source_location": "L598",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_common_patterns",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "common patterns"
     },
     {
@@ -11423,8 +11544,8 @@
       "source_location": "L600",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_template_pattern",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 59,
+      "community_name": "8. Advanced Patterns",
       "norm_label": "template pattern"
     },
     {
@@ -11434,8 +11555,8 @@
       "source_location": "L612",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_analysis_title",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "[analysis title]"
     },
     {
@@ -11445,8 +11566,8 @@
       "source_location": "L614",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_executive_summary",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "executive summary"
     },
     {
@@ -11456,8 +11577,8 @@
       "source_location": "L617",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_key_findings",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "key findings"
     },
     {
@@ -11467,8 +11588,8 @@
       "source_location": "L622",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_recommendations",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 175,
+      "community_name": "anthropic-best-practices.md",
       "norm_label": "recommendations"
     },
     {
@@ -11544,8 +11665,8 @@
       "source_location": "L721",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_evaluation_and_iteration",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "evaluation and iteration"
     },
     {
@@ -11555,8 +11676,8 @@
       "source_location": "L723",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_build_evaluations_first",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "build evaluations first"
     },
     {
@@ -11566,8 +11687,8 @@
       "source_location": "L756",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_develop_skills_iteratively_with_the_agent",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "develop skills iteratively with the agent"
     },
     {
@@ -11577,8 +11698,8 @@
       "source_location": "L812",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_observe_how_agents_navigate_skills",
-      "community": 1,
-      "community_name": "[Analysis Title]",
+      "community": 176,
+      "community_name": "Evaluation and iteration",
       "norm_label": "observe how agents navigate skills"
     },
     {
@@ -11764,8 +11885,8 @@
       "source_location": "L1101",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_checklist_for_effective_skills",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "checklist for effective skills"
     },
     {
@@ -11775,8 +11896,8 @@
       "source_location": "L1105",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_core_quality",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "core quality"
     },
     {
@@ -11786,8 +11907,8 @@
       "source_location": "L1118",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_code_and_scripts",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "code and scripts"
     },
     {
@@ -11797,8 +11918,8 @@
       "source_location": "L1129",
       "_origin": "ast",
       "id": "agents_skills_writing_skills_anthropic_best_practices_testing",
-      "community": 22,
-      "community_name": "Returns: \"OK\" or lists conflicts",
+      "community": 177,
+      "community_name": "Checklist for effective Skills",
       "norm_label": "testing"
     },
     {
@@ -13802,6 +13923,72 @@
       "community": 169,
       "community_name": "File Structure",
       "norm_label": "task 5: review the real ui and close issue #3 with fresh evidence"
+    },
+    {
+      "label": "2026-07-26-deterministic-chat.md",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "2026-07-26-deterministic-chat.md"
+    },
+    {
+      "label": "Deterministic Support Chat Implementation Plan",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "deterministic support chat implementation plan"
+    },
+    {
+      "label": "Global Constraints",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_global_constraints",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "global constraints"
+    },
+    {
+      "label": "File Structure",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_file_structure",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "file structure"
+    },
+    {
+      "label": "Task 1: Deliver and verify the local deterministic chat journey",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_task_1_deliver_and_verify_the_local_deterministic_chat_journey",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "task 1: deliver and verify the local deterministic chat journey"
+    },
+    {
+      "label": "Plan Self-Review",
+      "file_type": "document",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L334",
+      "_origin": "ast",
+      "id": "docs_superpowers_plans_2026_07_26_deterministic_chat_plan_self_review",
+      "community": 158,
+      "community_name": "Deterministic Support Chat Implementation Plan",
+      "norm_label": "plan self-review"
     },
     {
       "label": "2026-07-26-interactive-support-dashboard.md",
@@ -16875,13 +17062,26 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L4",
+      "source_file": "src/components/chat-shell.test.tsx",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_chat_shell",
+      "source": "src_components_chat_shell_test",
+      "target": "src_components_chat_shell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-shell.test.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell_test",
       "target": "src_components_chat_shell_chatshell",
       "confidence_score": 1.0
     },
@@ -16889,24 +17089,46 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L1",
+      "source_file": "src/components/chat-shell.test.tsx",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_chat_shell",
-      "target": "src_i18n_catalog",
+      "source": "src_components_chat_shell_test",
+      "target": "src_i18n_locale_provider",
       "confidence_score": 1.0
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-shell.test.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell_test",
+      "target": "src_i18n_locale_provider_localeprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L1",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
-      "target": "src_i18n_catalog_catalog",
+      "target": "src_components_chat_shell_chatshell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell",
+      "target": "src_components_chat_shell_quick_actions",
       "confidence_score": 1.0
     },
     {
@@ -16914,11 +17136,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L2",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
-      "target": "src_i18n_localized_text",
+      "target": "src_components_chat_state",
       "confidence_score": 1.0
     },
     {
@@ -16926,11 +17148,71 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/chat-shell.tsx",
-      "source_location": "L2",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_chat_shell",
-      "target": "src_i18n_localized_text_localizedtext",
+      "target": "src_components_chat_state_chatintent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell",
+      "target": "src_components_chat_state_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell",
+      "target": "src_components_chat_state_initialchatstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell",
+      "target": "src_components_chat_state_transitionchat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell",
+      "target": "src_i18n_locale_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell",
+      "target": "src_i18n_locale_provider_uselocale",
       "confidence_score": 1.0
     },
     {
@@ -16946,6 +17228,30 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell_chatshell",
+      "target": "src_components_chat_state_transitionchat"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/chat-shell.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_shell_chatshell",
+      "target": "src_i18n_locale_provider_uselocale"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -16955,6 +17261,143 @@
       "_origin": "ast",
       "source": "src_components_marketing_home",
       "target": "src_components_chat_shell_chatshell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state_test",
+      "target": "src_components_chat_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state_test",
+      "target": "src_components_chat_state_initialchatstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.test.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state_test",
+      "target": "src_components_chat_state_transitionchat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state",
+      "target": "src_components_chat_state_chatevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state",
+      "target": "src_components_chat_state_chatintent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state",
+      "target": "src_components_chat_state_chatmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state",
+      "target": "src_components_chat_state_chatphase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state",
+      "target": "src_components_chat_state_chatstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state",
+      "target": "src_components_chat_state_initialchatstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/chat-state.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_chat_state",
+      "target": "src_components_chat_state_transitionchat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/catalog.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_catalog",
+      "target": "src_components_chat_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/i18n/catalog.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_i18n_catalog",
+      "target": "src_components_chat_state_chatintent",
       "confidence_score": 1.0
     },
     {
@@ -17664,7 +18107,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L68",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -17675,7 +18118,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -17686,7 +18129,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -17697,7 +18140,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/i18n/catalog.ts",
-      "source_location": "L1",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_i18n_catalog",
@@ -27688,6 +28131,61 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_global_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L334",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_deterministic_support_chat_implementation_plan",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_plan_self_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/superpowers/plans/2026-07-26-deterministic-chat.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_superpowers_plans_2026_07_26_deterministic_chat_file_structure",
+      "target": "docs_superpowers_plans_2026_07_26_deterministic_chat_task_1_deliver_and_verify_the_local_deterministic_chat_journey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/superpowers/plans/2026-07-26-interactive-support-dashboard.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -27874,5 +28372,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "5bbb1d9f0759729a69886f64b7b256e030834021"
+  "built_at_commit": "881980c6b75f674e60ffc7af5f4f7c8142ed1d0f"
 }

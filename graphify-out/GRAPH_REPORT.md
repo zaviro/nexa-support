@@ -1,16 +1,16 @@
-# Graph Report - issue-4-dashboard  (2026-07-26)
+# Graph Report - issue-7-chat  (2026-07-26)
 
 ## Corpus Check
-- 193 files · ~110,925 words
+- 197 files · ~115,255 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1269 nodes · 1241 edges · 172 communities (91 shown, 81 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.5)
+- 1286 nodes · 1268 edges · 179 communities (98 shown, 81 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5bbb1d9f`
+- Built from commit: `881980c6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -73,6 +73,7 @@
 - Pressure Test 2: Sunk Cost + Exhaustion
 - Pressure Test 3: Authority + Social Pressure
 - React Best Practices
+- Skill structure
 - 8. Advanced Patterns
 - Web Interface Guidelines
 - Anti-Patterns
@@ -169,6 +170,7 @@
 - _template.md
 - plan-document-reviewer-prompt.md
 - extraction-spec.md
+- Deterministic Support Chat Implementation Plan
 - scaffold.spec.ts
 - Nexa Support 工程交接
 - File Structure
@@ -176,6 +178,11 @@
 - Q: 这次的经验是否让你对devenv有了什么新的理解？此外，你对脚手架有什么看法？如果下次我希望构建一个类似的脚手架，或在此基础上进行一些更改，应该怎么做会比较好？有哪些东西是我们这次初始化用到的？
 - Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?
 - marketing-journey.spec.ts
+- 4. Client-Side Data Fetching
+- anthropic-best-practices.md
+- Evaluation and iteration
+- Checklist for effective Skills
+- Core principles
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -190,29 +197,29 @@
 10. `Visual Companion Guide` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `ChatShell()` --indirect_call--> `transitionChat()`  [INFERRED]
+  src/components/chat-shell.tsx → src/components/chat-state.ts
 - `LocaleProbe()` --calls--> `useLocale()`  [EXTRACTED]
   src/i18n/locale-provider.test.tsx → src/i18n/locale-provider.tsx
+- `ChatShell()` --calls--> `useLocale()`  [EXTRACTED]
+  src/components/chat-shell.tsx → src/i18n/locale-provider.tsx
 - `LanguageSwitcher()` --calls--> `useLocale()`  [EXTRACTED]
   src/components/language-switcher.tsx → src/i18n/locale-provider.tsx
 - `SupportDashboard()` --calls--> `filterDashboardConversations()`  [EXTRACTED]
   src/components/support-dashboard.tsx → src/components/support-dashboard-data.ts
-- `SupportDashboard()` --calls--> `useLocale()`  [EXTRACTED]
-  src/components/support-dashboard.tsx → src/i18n/locale-provider.tsx
-- `createLocaleStore()` --calls--> `readStoredLocale()`  [EXTRACTED]
-  src/i18n/locale-provider.tsx → src/i18n/locale-storage.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (172 total, 81 thin omitted)
+## Communities (179 total, 81 thin omitted)
 
 ### Community 0 - "server.cjs"
 Cohesion: 0.06
 Nodes (55): bootstrapPage(), brandMarkup(), broadcast(), browserLauncherForPlatform(), chmodOwnerOnly(), clients, companionUrl(), computeAcceptKey() (+47 more)
 
 ### Community 1 - "[Analysis Title]"
-Cohesion: 0.05
-Nodes (43): Advanced: Skills with executable code, [Analysis Title], [Analysis Title], Anti-patterns to avoid, Avoid deeply nested references, Avoid offering too many options, Avoid time-sensitive information, Avoid Windows-style paths (+35 more)
+Cohesion: 0.17
+Nodes (12): Advanced: Skills with executable code, [Analysis Title], Anti-patterns to avoid, Avoid offering too many options, Avoid Windows-style paths, Conditional workflow pattern, Examples pattern, Executive summary (+4 more)
 
 ### Community 2 - "Testing Skills With Subagents"
 Cohesion: 0.05
@@ -295,8 +302,8 @@ Cohesion: 0.13
 Nodes (14): 1. Eliminating Waterfalls (CRITICAL), 2. Bundle Size Optimization (CRITICAL), 3. Server-Side Performance (HIGH), 4. Client-Side Data Fetching (MEDIUM-HIGH), 5. Re-render Optimization (MEDIUM), 6. Rendering Performance (MEDIUM), 7. JavaScript Performance (LOW-MEDIUM), 8. Advanced Patterns (LOW) (+6 more)
 
 ### Community 22 - "Returns: "OK" or lists conflicts"
-Cohesion: 0.13
-Nodes (15): Avoid assuming tools are installed, Checklist for effective Skills, Code and scripts, Core quality, Create verifiable intermediate outputs, MCP tool references, Next steps, Package dependencies (+7 more)
+Cohesion: 0.18
+Nodes (11): Avoid assuming tools are installed, Create verifiable intermediate outputs, MCP tool references, Next steps, Package dependencies, Returns: "OK" or lists conflicts, Runtime environment, Technical notes (+3 more)
 
 ### Community 23 - "Writing Skills"
 Cohesion: 0.13
@@ -436,11 +443,15 @@ Nodes (4): Choose A, B, or C, Pressure Test 3: Authority + Social Pressure, Scen
 
 ### Community 57 - "React Best Practices"
 Cohesion: 0.20
-Nodes (9): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching, Abstract, React Best Practices, References (+1 more)
+Nodes (9): 8.1 Do Not Put Effect Events in Dependency Arrays, 8.2 Initialize App Once, Not Per Mount, 8.3 Store Event Handlers in Refs, 8.4 useEffectEvent for Stable Callback Refs, 8. Advanced Patterns, Abstract, React Best Practices, References (+1 more)
+
+### Community 58 - "Skill structure"
+Cohesion: 0.20
+Nodes (10): Avoid deeply nested references, Naming conventions, Pattern 1: High-level guide with references, Pattern 2: Domain-specific organization, Pattern 3: Conditional details, Progressive disclosure patterns, Skill structure, Structure longer reference files with table of contents (+2 more)
 
 ### Community 59 - "8. Advanced Patterns"
-Cohesion: 0.40
-Nodes (5): 8.1 Do Not Put Effect Events in Dependency Arrays, 8.2 Initialize App Once, Not Per Mount, 8.3 Store Event Handlers in Refs, 8.4 useEffectEvent for Stable Callback Refs, 8. Advanced Patterns
+Cohesion: 0.22
+Nodes (9): Avoid time-sensitive information, Common patterns, Content guidelines, Implement feedback loops, Skill authoring best practices, Template pattern, Use consistent terminology, Use workflows for complex tasks (+1 more)
 
 ### Community 60 - "Web Interface Guidelines"
 Cohesion: 0.40
@@ -502,9 +513,13 @@ Nodes (5): Global Constraints, Interactive Support Dashboard Implementation Plan
 Cohesion: 0.50
 Nodes (3): framework, installCommand, $schema
 
+### Community 158 - "Deterministic Support Chat Implementation Plan"
+Cohesion: 0.33
+Nodes (5): Deterministic Support Chat Implementation Plan, File Structure, Global Constraints, Plan Self-Review, Task 1: Deliver and verify the local deterministic chat journey
+
 ### Community 165 - "scaffold.spec.ts"
-Cohesion: 0.07
-Nodes (36): geist, metadata, ChatShell(), LanguageSwitcher(), MarketingHome(), SiteHeader(), ActivityVisualization, activityVisualizations (+28 more)
+Cohesion: 0.06
+Nodes (44): geist, metadata, ChatShell(), QUICK_ACTIONS, ChatEvent, ChatIntent, ChatMessage, ChatPhase (+36 more)
 
 ### Community 168 - "Nexa Support 工程交接"
 Cohesion: 0.11
@@ -526,8 +541,28 @@ Nodes (4): Answer, Outcome, Q: 这次的经验是否让你对devenv有了什么�
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Where are Issue #2 scaffolding, quality gates, and the next implementation entry point?, Source Nodes
 
+### Community 174 - "4. Client-Side Data Fetching"
+Cohesion: 0.40
+Nodes (5): 4.1 Deduplicate Global Event Listeners, 4.2 Use Passive Event Listeners for Scrolling Performance, 4.3 Use SWR for Automatic Deduplication, 4.4 Version and Minimize localStorage Data, 4. Client-Side Data Fetching
+
+### Community 175 - "anthropic-best-practices.md"
+Cohesion: 0.40
+Nodes (4): [Analysis Title], Executive summary, Key findings, Recommendations
+
+### Community 176 - "Evaluation and iteration"
+Cohesion: 0.50
+Nodes (4): Build evaluations first, Develop Skills iteratively with the agent, Evaluation and iteration, Observe how agents navigate Skills
+
+### Community 177 - "Checklist for effective Skills"
+Cohesion: 0.50
+Nodes (4): Checklist for effective Skills, Code and scripts, Core quality, Testing
+
+### Community 178 - "Core principles"
+Cohesion: 0.50
+Nodes (4): Concise is key, Core principles, Set appropriate degrees of freedom, Test with all models you plan to use
+
 ## Knowledge Gaps
-- **813 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+808 more)
+- **820 isolated node(s):** `crypto`, `http`, `fs`, `path`, `OPCODES` (+815 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **81 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -540,17 +575,17 @@ Nodes (4): Answer, Outcome, Q: Where are Issue #2 scaffolding, quality gates, an
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `5. Re-render Optimization`, `7. JavaScript Performance`, `8. Advanced Patterns`, `6. Rendering Performance`, `3. Server-Side Performance`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `React Best Practices` connect `React Best Practices` to `1. Eliminating Waterfalls`, `2. Bundle Size Optimization`, `4. Client-Side Data Fetching`, `5. Re-render Optimization`, `7. JavaScript Performance`, `6. Rendering Performance`, `3. Server-Side Performance`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `7. JavaScript Performance` connect `7. JavaScript Performance` to `React Best Practices`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `crypto`, `http`, `fs` to the rest of the system?**
-  _813 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _820 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `server.cjs` be split into smaller, more focused modules?**
   _Cohesion score 0.05868118572292801 - nodes in this community are weakly interconnected._
-- **Should `[Analysis Title]` be split into smaller, more focused modules?**
-  _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `Testing Skills With Subagents` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
+- **Should `scripts` be split into smaller, more focused modules?**
+  _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
