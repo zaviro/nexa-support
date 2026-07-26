@@ -366,7 +366,13 @@ export function MarketingHome() {
             />
           </p>
         </div>
-        <nav aria-label="Footer navigation" className="site-footer__nav">
+        <nav
+          aria-labelledby="footer-navigation-label"
+          className="site-footer__nav"
+        >
+          <span className="visually-hidden" id="footer-navigation-label">
+            <LocalizedText en="Footer navigation" zhCN="页脚导航" />
+          </span>
           <Link href="#features">
             <LocalizedText
               en={catalog.en.navigation.product}

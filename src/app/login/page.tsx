@@ -6,7 +6,10 @@ import { LocalizedText } from "~/i18n/localized-text";
 export default function LoginPage() {
   return (
     <main className="login-page">
-      <nav aria-label="Demo navigation" className="login-page__nav">
+      <nav aria-labelledby="demo-navigation-label" className="login-page__nav">
+        <span className="visually-hidden" id="demo-navigation-label">
+          <LocalizedText en="Demo navigation" zhCN="演示导航" />
+        </span>
         <Link className="login-page__brand" href="/#top">
           Nexa Support
         </Link>

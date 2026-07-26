@@ -1,5 +1,36 @@
 import { expect, type Page, test } from "@playwright/test";
 
+function relativeLuminance(hex: string) {
+  const normalizedHex =
+    /^#[0-9a-f]{3}$/i.test(hex) && hex.length === 4
+      ? `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}`
+      : hex;
+  const channels = normalizedHex.match(/[0-9a-f]{2}/gi);
+
+  if (channels === null || channels.length !== 3) {
+    throw new Error(
+      `Expected a three- or six-digit hex color, received ${hex}`,
+    );
+  }
+
+  const [red = 0, green = 0, blue = 0] = channels.map((channel) => {
+    const value = Number.parseInt(channel, 16) / 255;
+    return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+  });
+
+  return 0.2126 * red + 0.7152 * green + 0.0722 * blue;
+}
+
+function contrastRatio(first: string, second: string) {
+  const firstLuminance = relativeLuminance(first);
+  const secondLuminance = relativeLuminance(second);
+
+  return (
+    (Math.max(firstLuminance, secondLuminance) + 0.05) /
+    (Math.min(firstLuminance, secondLuminance) + 0.05)
+  );
+}
+
 async function expectEveryLinkToNavigate(
   page: Page,
   name: string,
@@ -32,6 +63,24 @@ test("navigates the English marketing journey and login placeholder", async ({
       exact: true,
     }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", {
+      name: "Primary navigation",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", {
+      name: "Footer navigation",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", { name: "主导航", exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("navigation", { name: "页脚导航", exact: true }),
+  ).toHaveCount(0);
   await expect(page.getByText("70%")).toBeVisible();
   await expect(page.getByText("automated", { exact: true })).toBeVisible();
   await expect(page.getByText("24/7", { exact: true })).toBeVisible();
@@ -68,6 +117,15 @@ test("navigates the English marketing journey and login placeholder", async ({
       level: 1,
     }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", {
+      name: "Demo navigation",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", { name: "演示导航", exact: true }),
+  ).toHaveCount(0);
 });
 
 test("persists Simplified Chinese across routes and reloads", async ({
@@ -81,6 +139,24 @@ test("persists Simplified Chinese across routes and reloads", async ({
   await expect(
     page.getByText("面向成长型 SaaS 团队的 AI 客服助手。", { exact: true }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", { name: "主导航", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", { name: "页脚导航", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", {
+      name: "Primary navigation",
+      exact: true,
+    }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("navigation", {
+      name: "Footer navigation",
+      exact: true,
+    }),
+  ).toHaveCount(0);
   const outcomes = page.getByRole("region", { name: "客服成效" });
   await expect(outcomes.getByText("70%", { exact: true })).toBeVisible();
   await expect(outcomes.getByText("自动解决", { exact: true })).toBeVisible();
@@ -102,6 +178,15 @@ test("persists Simplified Chinese across routes and reloads", async ({
       level: 1,
     }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", { name: "演示导航", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("navigation", {
+      name: "Demo navigation",
+      exact: true,
+    }),
+  ).toHaveCount(0);
   await page.reload();
   await expect(
     page.getByRole("heading", {
@@ -131,6 +216,26 @@ test("falls back to English without hydration errors for an invalid saved locale
     }),
   ).toBeVisible();
   expect(hydrationErrors).toEqual([]);
+});
+
+test("keeps the signal color at normal-text AA contrast", async ({ page }) => {
+  await page.goto("/");
+  const colors = await page.evaluate(() => {
+    const styles = getComputedStyle(document.documentElement);
+
+    return {
+      paper: styles.getPropertyValue("--paper").trim(),
+      signal: styles.getPropertyValue("--signal").trim(),
+      surface: styles.getPropertyValue("--surface").trim(),
+    };
+  });
+
+  expect(contrastRatio(colors.signal, colors.paper)).toBeGreaterThanOrEqual(
+    4.5,
+  );
+  expect(contrastRatio(colors.signal, colors.surface)).toBeGreaterThanOrEqual(
+    4.5,
+  );
 });
 
 for (const width of [375, 768, 1440]) {

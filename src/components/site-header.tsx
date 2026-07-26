@@ -10,7 +10,13 @@ export function SiteHeader() {
         <Link className="site-header__brand" href="/#top">
           Nexa Support
         </Link>
-        <nav aria-label="Primary navigation" className="site-header__nav">
+        <nav
+          aria-labelledby="primary-navigation-label"
+          className="site-header__nav"
+        >
+          <span className="visually-hidden" id="primary-navigation-label">
+            <LocalizedText en="Primary navigation" zhCN="主导航" />
+          </span>
           <Link href="#features">
             <LocalizedText
               en={catalog.en.navigation.product}
