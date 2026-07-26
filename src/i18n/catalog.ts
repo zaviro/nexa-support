@@ -4,6 +4,17 @@ export const SUPPORTED_LOCALES = ["en", "zh-CN"] as const;
 
 export type Locale = "en" | "zh-CN";
 
+export type FeatureStoryCopy = {
+  title: string;
+  description: string;
+  visualLabel: string;
+};
+
+export type WorkflowStepCopy = {
+  title: string;
+  description: string;
+};
+
 export type SiteCopy = {
   navigation: {
     product: string;
@@ -47,6 +58,22 @@ export type SiteCopy = {
   features: {
     title: string;
     description: string;
+  };
+  featureWorkflow: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    stories: {
+      aiAnswers: FeatureStoryCopy;
+      humanTakeover: FeatureStoryCopy;
+      analytics: FeatureStoryCopy;
+    };
+    workflow: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      steps: readonly [WorkflowStepCopy, WorkflowStepCopy, WorkflowStepCopy];
+    };
   };
   pricing: {
     title: string;
@@ -157,6 +184,54 @@ export const catalog: Record<Locale, SiteCopy> = {
       title: "Support that follows the question",
       description:
         "Give every customer a clear path from their first question to the right answer.",
+    },
+    featureWorkflow: {
+      eyebrow: "Product preview",
+      title: "Support that follows the question",
+      description:
+        "Give every customer a clear path from their first question to the right answer.",
+      stories: {
+        aiAnswers: {
+          title: "Answer with context",
+          description:
+            "Turn product knowledge into a direct, useful first response.",
+          visualLabel: "Context match · 96%",
+        },
+        humanTakeover: {
+          title: "Keep the handoff human",
+          description:
+            "Pass the question and its context to a teammate when judgment matters.",
+          visualLabel: "Escalation queue · 2 waiting",
+        },
+        analytics: {
+          title: "See where questions land",
+          description:
+            "Give the team a readable view of recurring questions and outcomes.",
+          visualLabel: "Question outcomes · 7 days",
+        },
+      },
+      workflow: {
+        eyebrow: "Support workflow",
+        title: "One visible route to resolution",
+        description:
+          "Each step keeps the original question and its context moving forward.",
+        steps: [
+          {
+            title: "Visitor question",
+            description: "A customer asks from the page they are viewing.",
+          },
+          {
+            title: "AI answer",
+            description:
+              "The assistant finds the relevant product context and responds.",
+          },
+          {
+            title: "Human takeover",
+            description:
+              "A teammate receives the full thread when judgment is needed.",
+          },
+        ],
+      },
     },
     pricing: {
       title: "Simple pricing for growing support teams",
@@ -327,6 +402,47 @@ export const catalog: Record<Locale, SiteCopy> = {
     features: {
       title: "让支持跟随每一个问题",
       description: "从第一个问题到合适答案，为每位客户提供清晰的解决路径。",
+    },
+    featureWorkflow: {
+      eyebrow: "产品预览",
+      title: "让支持跟随每一个问题",
+      description: "从第一个问题到合适答案，为每位客户提供清晰的解决路径。",
+      stories: {
+        aiAnswers: {
+          title: "结合上下文回答",
+          description: "将产品知识转化为直接、实用的首次回复。",
+          visualLabel: "上下文匹配 · 96%",
+        },
+        humanTakeover: {
+          title: "顺畅转接人工",
+          description: "需要人工判断时，将问题及其上下文一并交给团队成员。",
+          visualLabel: "升级队列 · 2 项等待",
+        },
+        analytics: {
+          title: "掌握问题去向",
+          description: "让团队清楚了解重复问题及其处理结果。",
+          visualLabel: "问题结果 · 7 天",
+        },
+      },
+      workflow: {
+        eyebrow: "客服流程",
+        title: "一条清晰可见的解决路径",
+        description: "每一步都会保留原始问题及其上下文，确保信息持续传递。",
+        steps: [
+          {
+            title: "访客提问",
+            description: "客户在当前浏览的页面中提出问题。",
+          },
+          {
+            title: "AI 回答",
+            description: "客服助手找到相关产品信息并给出回复。",
+          },
+          {
+            title: "人工接管",
+            description: "需要人工判断时，团队成员会收到完整对话。",
+          },
+        ],
+      },
     },
     pricing: {
       title: "为成长中的客服团队提供简单定价",

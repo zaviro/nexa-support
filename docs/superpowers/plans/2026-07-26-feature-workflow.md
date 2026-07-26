@@ -48,7 +48,7 @@
 - Produces: `FeatureWorkflowSection(): JSX.Element`, a client component that renders `section#features`, three `article` feature stories, and an ordered `<ol>` workflow from `copy.featureWorkflow`.
 - Public browser contract: English exposes headings `Answer with context`, `Keep the handoff human`, `See where questions land`, and ordered labels `Visitor question`, `AI answer`, `Human takeover`; Simplified Chinese exposes their catalog equivalents and no English feature-story heading is visible after the locale toggle.
 
-- [ ] **Step 1: Write the failing focused component tests**
+- [x] **Step 1: Write the failing focused component tests**
 
 Create `src/components/feature-workflow.test.tsx` with one English render test and one selected-Chinese render test. Mock `useLocale` rather than testing the locale store; the component test should prove the section’s public localized output, not `localStorage` behavior already covered elsewhere.
 
@@ -93,13 +93,13 @@ describe("FeatureWorkflowSection", () => {
 });
 ```
 
-- [ ] **Step 2: Run the focused component test and verify RED**
+- [x] **Step 2: Run the focused component test and verify RED**
 
 Run: `bun run test:unit -- src/components/feature-workflow.test.tsx`
 
 Expected: FAIL because `./feature-workflow` and the `featureWorkflow` catalog branch do not exist.
 
-- [ ] **Step 3: Add the typed locale copy and the semantic component**
+- [x] **Step 3: Add the typed locale copy and the semantic component**
 
 Add the `FeatureStoryCopy`, `WorkflowStepCopy`, and `featureWorkflow` fields to `src/i18n/catalog.ts`; populate both locales completely. Use the existing English feature titles and Chinese equivalents, retain one concise explanation per item, and use workflow labels exactly as the public contract. Keep all copy selection in `FeatureWorkflowSection` via `const { copy } = useLocale()` so only the active locale is rendered by this component.
 
@@ -117,7 +117,7 @@ Implement original, non-interactive visual primitives: an answer card with quest
 
 After the stories, add a workflow subsection with its own `h3` and a native `<ol className="feature-workflow__steps">`. Render `copy.featureWorkflow.workflow.steps` in catalog order, assigning visual step numbers `01`, `02`, and `03` with `aria-hidden="true"`. Do not create buttons, state, API seams, or a fourth marketing route.
 
-- [ ] **Step 4: Compose the section and implement responsive, motion-safe styling**
+- [x] **Step 4: Compose the section and implement responsive, motion-safe styling**
 
 In `src/components/marketing-home.tsx`, import `FeatureWorkflowSection` and replace the whole existing static `.features-section` / `.feature-ledger` block with `<FeatureWorkflowSection />`. Do not change the adjacent dashboard, pricing, footer, or chat shell.
 
@@ -133,7 +133,7 @@ In `src/styles/globals.css`, remove the obsolete `.feature-ledger`, `.feature-ro
 
 Use `minmax(0, …)` grid columns and `min-width: 0` on text/visual children; do not use fixed widths that exceed the mobile viewport. At 375px stack a story’s visual below its copy, preserve readable labels, and keep the workflow order top-to-bottom. At 768px retain generous spacing without a horizontal strip. At 1440px show the three stories as a deliberate editorial grid with varied visual surface treatments, not three cloned cards. Put any hover/transition rules behind the existing `@media (prefers-reduced-motion: no-preference)` pattern and retain a stable non-animated state when motion is reduced.
 
-- [ ] **Step 5: Run focused tests and static checks to verify GREEN**
+- [x] **Step 5: Run focused tests and static checks to verify GREEN**
 
 Run: `bun run test:unit -- src/components/feature-workflow.test.tsx`
 
@@ -143,7 +143,7 @@ Run: `bun run check && bun run typecheck`
 
 Expected: both commands exit 0 with no formatting or TypeScript errors.
 
-- [ ] **Step 6: Add failing public browser assertions, then make them pass**
+- [x] **Step 6: Add failing public browser assertions, then make them pass**
 
 Extend `tests/e2e/marketing-journey.spec.ts` with a browser-level test that uses the public section landmark and ordered list rather than CSS classes:
 
@@ -176,7 +176,7 @@ Run: `bun run test:e2e`
 
 Expected: both desktop Chromium and mobile Chromium projects pass, including the feature-flow locale and viewport evidence.
 
-- [ ] **Step 7: Update the graph and commit the independently testable deliverable**
+- [x] **Step 7: Update the graph and commit the independently testable deliverable**
 
 Run: `graphify update .`
 

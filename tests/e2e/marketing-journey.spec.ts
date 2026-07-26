@@ -186,6 +186,40 @@ test("shows truthful localized decision information and an observable FAQ accord
   }
 });
 
+test("explains the three support capabilities in workflow order", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const features = page.getByRole("region", {
+    name: "Support that follows the question",
+  });
+
+  await expect(features.getByRole("article")).toHaveCount(3);
+  await expect(
+    features.getByRole("heading", {
+      name: "Answer with context",
+      level: 3,
+    }),
+  ).toBeVisible();
+  await expect(
+    features.getByRole("heading", {
+      name: "Keep the handoff human",
+      level: 3,
+    }),
+  ).toBeVisible();
+  await expect(
+    features.getByRole("heading", {
+      name: "See where questions land",
+      level: 3,
+    }),
+  ).toBeVisible();
+  await expect(features.getByRole("list").getByRole("listitem")).toHaveText([
+    /Visitor question/,
+    /AI answer/,
+    /Human takeover/,
+  ]);
+});
+
 test("changes the visible dashboard conversation", async ({ page }) => {
   await page.goto("/");
   const dashboard = page.getByRole("region", {
@@ -317,6 +351,24 @@ test("persists Simplified Chinese across routes and reloads", async ({
   await expect(outcomes.getByText("支持在线", { exact: true })).toBeVisible();
   await expect(outcomes.getByText("30 秒", { exact: true })).toBeVisible();
   await expect(outcomes.getByText("完成部署", { exact: true })).toBeVisible();
+  const features = page.getByRole("region", {
+    name: "让支持跟随每一个问题",
+  });
+  await expect(features).toBeVisible();
+  await expect(
+    features.getByRole("heading", { name: "结合上下文回答", level: 3 }),
+  ).toBeVisible();
+  await expect(
+    features.getByRole("heading", {
+      name: "Answer with context",
+      level: 3,
+    }),
+  ).toHaveCount(0);
+  await expect(features.getByRole("list").getByRole("listitem")).toHaveText([
+    /访客提问/,
+    /AI 回答/,
+    /人工接管/,
+  ]);
   await expect
     .poll(() => page.evaluate(() => localStorage.getItem("nexa-language:v1")))
     .toBe("zh-CN");
@@ -909,8 +961,16 @@ test("protects Nexa brand names from automatic translation", async ({
 
 for (const width of [375, 768, 1440]) {
   for (const locale of [
-    { regionName: "Nexa Support dashboard", storageValue: "en" },
-    { regionName: "Nexa Support 客服看板", storageValue: "zh-CN" },
+    {
+      featureRegionName: "Support that follows the question",
+      regionName: "Nexa Support dashboard",
+      storageValue: "en",
+    },
+    {
+      featureRegionName: "让支持跟随每一个问题",
+      regionName: "Nexa Support 客服看板",
+      storageValue: "zh-CN",
+    },
   ] as const) {
     test(`keeps the ${locale.storageValue} marketing shell inside the viewport at ${width}px`, async ({
       page,
@@ -952,6 +1012,23 @@ for (const width of [375, 768, 1440]) {
           (element) => element.scrollWidth <= element.clientWidth,
         ),
       ).toBe(true);
+
+      const features = page.getByRole("region", {
+        name: locale.featureRegionName,
+        exact: true,
+      });
+      const featureBounds = await features.boundingBox();
+
+      expect(featureBounds).not.toBeNull();
+
+      if (featureBounds === null) {
+        throw new Error(
+          "Feature workflow must be visible to verify its viewport bounds.",
+        );
+      }
+
+      expect(featureBounds.x).toBeGreaterThanOrEqual(0);
+      expect(featureBounds.x + featureBounds.width).toBeLessThanOrEqual(width);
     });
   }
 }

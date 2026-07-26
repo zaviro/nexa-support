@@ -3,6 +3,7 @@ import { catalog } from "~/i18n/catalog";
 import { LocalizedText } from "~/i18n/localized-text";
 import { ChatShell } from "./chat-shell";
 import { DecisionPath } from "./decision-path";
+import { FeatureWorkflowSection } from "./feature-workflow";
 import { SiteHeader } from "./site-header";
 import { SupportDashboard } from "./support-dashboard";
 
@@ -185,93 +186,7 @@ export function MarketingHome() {
 
         <SupportDashboard />
 
-        <section
-          aria-labelledby="features-title"
-          className="editorial-section features-section"
-          id="features"
-        >
-          <div className="section-heading">
-            <p className="section-kicker">
-              <span aria-hidden="true">N—02</span>
-              <LocalizedText en="Product preview" zhCN="产品预览" />
-            </p>
-            <h2 id="features-title">
-              <LocalizedText
-                en={catalog.en.features.title}
-                zhCN={catalog["zh-CN"].features.title}
-              />
-            </h2>
-            <p>
-              <LocalizedText
-                en={catalog.en.features.description}
-                zhCN={catalog["zh-CN"].features.description}
-              />
-            </p>
-          </div>
-
-          <div className="feature-ledger">
-            <article className="feature-row">
-              <span className="feature-row__number">01</span>
-              <div>
-                <h3>
-                  <LocalizedText
-                    en="Answer with context"
-                    zhCN="结合上下文回答"
-                  />
-                </h3>
-                <p>
-                  <LocalizedText
-                    en="Turn product knowledge into a direct, useful first response."
-                    zhCN="将产品知识转化为直接、实用的首次回复。"
-                  />
-                </p>
-              </div>
-              <span className="feature-row__tag">
-                <LocalizedText en="AI answer" zhCN="AI 回答" />
-              </span>
-            </article>
-            <article className="feature-row">
-              <span className="feature-row__number">02</span>
-              <div>
-                <h3>
-                  <LocalizedText
-                    en="Keep the handoff human"
-                    zhCN="顺畅转接人工"
-                  />
-                </h3>
-                <p>
-                  <LocalizedText
-                    en="Pass the question and its context to a teammate when judgment matters."
-                    zhCN="需要人工判断时，将问题及其上下文一并交给团队成员。"
-                  />
-                </p>
-              </div>
-              <span className="feature-row__tag">
-                <LocalizedText en="Handoff" zhCN="人工接管" />
-              </span>
-            </article>
-            <article className="feature-row">
-              <span className="feature-row__number">03</span>
-              <div>
-                <h3>
-                  <LocalizedText
-                    en="See where questions land"
-                    zhCN="掌握问题去向"
-                  />
-                </h3>
-                <p>
-                  <LocalizedText
-                    en="Give the team a readable view of recurring questions and outcomes."
-                    zhCN="让团队清楚了解重复问题及其处理结果。"
-                  />
-                </p>
-              </div>
-              <span className="feature-row__tag">
-                <LocalizedText en="Team view" zhCN="团队视图" />
-              </span>
-            </article>
-          </div>
-        </section>
+        <FeatureWorkflowSection />
 
         <DecisionPath />
       </main>
