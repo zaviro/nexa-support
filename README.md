@@ -86,6 +86,6 @@ bunx vercel deploy --yes
 bunx vercel deploy --prod --yes
 ```
 
-生产命令只能在 `main` 上、一次新鲜的 `devenv test --no-tui` 通过后，以已授权的 Vercel 账户执行。部署流程不添加 Vercel 环境变量、token、分析、遥测或凭据；项目的 `build` 脚本会显式关闭 Next 的匿名遥测。实时 URL 只记录在对应的 Issue #11 证据评论中。
+生产命令只能在 `main` 上、一次新鲜的 `devenv test --no-tui` 通过后，以已授权的 Vercel 账户执行。部署流程不添加 Vercel 环境变量、token、分析、遥测或凭据；`.vercelignore` 会排除本地 `.env*` 文件，项目的 `build` 脚本会显式关闭 Next 的匿名遥测。实时 URL 只记录在对应的 Issue #11 证据评论中。
 
 详细交接见 [`HANDOFF.md`](HANDOFF.md)，后续 Agent 流程见 [`docs/agents/development-workflow.md`](docs/agents/development-workflow.md)，实际障碍见 [`docs/implementation-obstacles.md`](docs/implementation-obstacles.md)，产品工作项见 [GitHub Issues](https://github.com/zaviro/nexa-support/issues)。
